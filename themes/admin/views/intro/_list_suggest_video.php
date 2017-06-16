@@ -1,0 +1,128 @@
+<!-- Main popup -->
+<div class="bg-overlay"></div>
+<div class="<?php echo $class;?> popup-wrapper">
+	<div class="main-popup">
+		<a class="popup-close" onclick="hidenPopUp('<?php echo $class?>');return false;"></a>
+		<div class="content-popup">
+			<div class="popup_title"><?php echo iPhoenixLang::admin_t('List videos');?></div>
+			<div class="folder-content" style="max-height: 700px;">
+				<ul>
+					<?php 
+						Yii::app()->clientScript->registerScript('search-video-suggest', "
+							$('#video-search').submit(function(){
+							$.fn.yiiGridView.update('video-list', {
+								data: $(this).serialize()});
+								return false;
+							});");
+					?>
+					<?php $form=$this->beginWidget('CActiveForm', array('method'=>'get','id'=>'video-search')); ?>
+					<li>
+				     	<?php echo $form->label($suggest,'name'); ?>
+				       	<?php $this->widget('CAutoComplete', array(
+				        	            	'model'=>$suggest,
+				                         	'attribute'=>'name',
+											'url'=>array('video/suggestName'),
+											'htmlOptions'=>array(
+												'style'=>'width:230px;',
+				       							'name'=>'SuggestVideo[name]'
+												),
+										)); ?>								
+				    </li>
+					<?php 
+						$list=array(''=>iPhoenixLang::admin_t('All video categories'));
+						foreach ($list_category_video as $id=>$level){
+							$cat=VideoCategory::model()->findByPk($id);
+							$view = "";
+							for($i=1;$i<$level;$i++){
+								$view .="---";
+							}
+							$list[$id]=$view." ".$cat->name." ".$view;
+						}
+					?>
+					<li>
+						<label><?php echo iPhoenixLang::admin_t('Category');?></label>
+						<?php echo $form->dropDownList($suggest,'cat_id',$list,array('style'=>'width:200px','name'=>'SuggestVideo[cat_id]')); ?>
+					</li>            
+					<li>
+					<label>&nbsp;</label> 
+					<input type="submit" class="button" value="<?php echo iPhoenixLang::admin_t('Filter','main');?>">
+					</li>
+					<?php $this->endWidget(); ?>	
+					<li>
+					  <?php 
+							$this->widget('iPhoenixGridView', array(
+				  				'id'=>'video-list',
+				  				'iclass'=>$class_checkbox,
+				  				'dataProvider'=>$suggest->search($condition_search),		
+				  				'columns'=>array(
+									array(
+				      					'class'=>'CCheckBoxColumn',
+										'selectableRows'=>2,
+										'headerHtmlOptions'=>array('width'=>'2%','class'=>'table-title'),
+										'checked'=>'in_array($data->id,Yii::app()->session["checked-video-list"])'
+				    				),			
+				    				array(
+										'name'=>'name',
+										'headerHtmlOptions'=>array('width'=>'20%','class'=>'table-title'),		
+									),
+									array(
+										'name'=>'cat_id',
+										'value'=>'$data->category->name',
+										'headerHtmlOptions'=>array('width'=>'10%','class'=>'table-title'),		
+									), 		
+									array(
+										'name'=>'created_by',
+										'value'=>'isset($data->author)?$data->author->fullname:""',
+										'headerHtmlOptions'=>array('width'=>'10%','class'=>'table-title'),		
+									), 						
+									array(
+										'name'=>'created_time',
+										'value'=>'date("H:i d/m/Y",$data->created_time)',
+										'headerHtmlOptions'=>array('width'=>'10%','class'=>'table-title'),		
+									), 	
+								),			
+				 	 			'template'=>'{displaybox}{checkbox}{summary}{items}{pager}',
+				  				'summaryText'=>'{count} '.iPhoenixLang::admin_t('Introduction'),
+				 	 			'pager'=>array('class'=>'CLinkPager','header'=>'','prevPageLabel'=>'< '.iPhoenixLang::admin_t('Previous'),'nextPageLabel'=>iPhoenixLang::admin_t('Next').' >','htmlOptions'=>array('class'=>'pages fr')),
+				 	 			)); ?>
+					</li>
+					<div class="clear"></div>
+					<li>
+						<input  class="fr button" id="update_suggest_video" type="submit" value="<?php echo iPhoenixLang::admin_t('Update','main');?>" style="width:100px; margin-top:10px; margin-right:5px;" />
+						<input type="reset" class="fr button p-close" value="<?php echo iPhoenixLang::admin_t('Cancel','main');?>" style="width:100px; margin-top:10px; margin-right:5px;" onclick="hidenPopUp('<?php echo $class?>');return false;"/>
+					</li>
+				</ul>
+			</div>
+		</div>
+		<!--content-popup-->
+	</div>
+	<!--main-popup-->
+</div>
+<script type="text/javascript">
+jQuery(window).load(function() {
+	$("#update_suggest_video").click(
+  		function(){  	
+  			name=$("thead :checkbox", $('#video-list')).attr("name");
+			name=name.substring(0, name.length - 4) + "[]";
+  			list_checked=new Array();
+			$('input[name="'+name+'"]:checked').each(function(i){
+				console.log($(this).val());
+				list_checked[i] = $(this).val();
+			});	
+			list_unchecked = new Array();
+            $('input[name="'+name+'"]').not(':checked').each(function(i){
+            	list_unchecked[i]=$(this).val();
+			});	
+			jQuery.ajax({
+				data: {'<?php echo $class_checkbox?>[list-checked]':list_checked.toString(), '<?php echo $class_checkbox?>[list-unchecked]':list_unchecked.toString(),},
+				success:function(data){
+					$('#Intro_tmp_suggest_video').val(data);
+					hidenPopUp('<?php echo $class?>');
+				},
+				type:'POST',
+				url:'<?php echo iPhoenixUrl::createUrl('admin/intro/updateSuggestVideo');?>',
+				});
+			return false;
+		});
+});
+</script>

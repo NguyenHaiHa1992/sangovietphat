@@ -1,0 +1,583 @@
+html, body{
+    font-family: "Roboto Light" ;
+    font-size: 14px;
+    width: 100%;
+    color: #323132;
+}
+@font-face {
+    font-family: "Roboto Thin";
+    src: url("../fonts/Roboto-Thin.ttf");
+}
+@font-face {
+    font-family: "Roboto";
+    src: url("../fonts/Roboto-Regular.ttf");
+}
+@font-face {
+    font-family: "Roboto Light";
+    src: url("../fonts/Roboto-Light.ttf");
+}
+@font-face {
+    font-family: "Roboto Medium";
+    src: url("../fonts/Roboto-Medium.ttf");
+}
+@font-face {
+    font-family: "Roboto Italic";
+    src: url("../fonts/Roboto-Italic.ttf");
+}
+@font-face {
+    font-family: "Roboto Bold";
+    src: url("../fonts/Roboto-Bold.ttf");
+}
+a{
+    text-decoration: none !important;
+}
+/*general class*/
+
+*{
+    margin: 0;
+    padding: 0;
+}
+ul{
+    margin-bottom: 0;
+}
+/*---------- index.html file -------------*/
+/*header*/
+header{
+    box-shadow: 0 0 3px 1px #555;
+    overflow:hidden ;
+}
+#container-header{
+    height: 127px;
+    background: url("../images/header.png") no-repeat center;
+    background-size: 100% 100%;
+}
+#logo{
+    margin-top: 20px;
+    margin-left: 40px;
+    display: inline-block;
+}
+header .brand{
+    text-transform: uppercase;
+    font-family: "Roboto Bold";
+    color: #18469E;
+    font-size: 18px;
+    margin-left: 40px;
+}
+#main-search-box{
+    position: absolute;
+    top: 10px;
+    right: 10px;
+}
+#main-search-box button{
+    border: none;
+    background: none;
+    position: absolute;
+    top: 0;
+    font-size: 12px;
+    height: 20px;
+    line-height: 20px;
+    left: 5px;
+}
+#main-search-box input{
+    height: 20px;
+    line-height: 20px;
+    border-radius: 5px;
+    border: none;
+    box-shadow: 0px 0 1px 1px #0F7650 inset;
+    width: 150px;
+    padding: 0 10px 0 25px;
+}
+.wContentBox .contentBox > .title_box{
+    height: 30px;
+    line-height: 30px;
+    text-transform: uppercase;
+    color: #ffffff;
+    padding: 0 10px;
+    font-family: "Roboto Medium";
+}
+.wContentBox .contentBox > .title_box > a{
+    text-transform: uppercase;
+    color: #ffffff;
+}
+#sub-content .wContentBox > .contentBox >.title_box{
+    background: url("../images/title_box_bgr.png") repeat-x center;
+    background-size: auto 100%;
+}
+#sub-content .wContentBox > .contentBox >.content_box{
+    background: #F4EFE6;
+}
+.wContentBox .contentBox >.content_box{
+    padding: 10px;
+    overflow: hidden;
+}
+#main-content .wContentBox > .contentBox >.title_box{
+    background: url("../images/title_box_bgr_02.png") repeat-x center;
+    background-size: auto 100%;
+}
+#main-content .wContentBox .contentBox >.content_box{
+    background: #E1F4E1;
+}
+.category{
+    clear: both;
+}
+.category .content_box li{
+    float: left;
+}
+#category-02.wContentBox > .contentBox > .title_box{
+    background: url("../images/title_box_bgr_03.png") repeat-x center;
+}
+#category-03.wContentBox > .contentBox > .title_box{
+    background: url("../images/title_box_bgr_04.png") repeat-x center;
+}
+
+#main-products .content_box li{
+    padding: 10px 0;
+    border-bottom: 1px dotted #C3BFB8;
+}
+#main-products .content_box li:last-child{
+    padding-bottom:  3px;
+    border-bottom: none;
+}
+#main-products .content_box li:first-child{
+    padding-top:  0;
+}
+#main-products .content_box li a img{
+    margin: 0 auto;
+}
+#support .phone{
+    display: block;
+    color: #C62026;
+}
+#support li.mobile{
+    padding: 0 0 10px 35px;
+    background: url("../images/icons/phone-icon.png") no-repeat left top;
+}
+#support li.email{
+    height: 45px;
+    line-height: 45px;
+    padding-left: 35px;
+    background: url("../images/icons/email-icon.png") no-repeat left center;
+    border-top: 1px dotted #C3BFB8;
+    color: #C62026;
+}
+#new-products .item{
+    overflow: hidden ;
+    margin-bottom: 10px;
+}
+#new-products .item:last-child, #warehouse .item:last-child, #news .item:last-child{
+    margin-bottom: 0;
+    border-bottom: none !important;
+}
+#new-products .item > .image{
+    float: left;
+    width: 135px;
+    margin-right: 10px;
+}
+#new-products .item > .information > a{
+    color: #5B5B5B;
+}
+#warehouse .item, #news .item{
+    margin-bottom: 15px;
+}
+#warehouse .item > .image{
+    width: 100%;
+}
+#warehouse .item > .information > a{
+    color: #231F20;
+    display: inline-block;
+    margin-top: 5px;
+}
+#news .item{
+    border-bottom: 1px dotted #5B5B5B;
+}
+#news .item > .image{
+    float: left;
+    width: 120px;
+    margin-right: 10px;
+}
+
+#news .item > .information{
+    font-size: 12px;
+    height: 72px;
+    overflow: hidden ;
+}
+#news .item > .information a.title{
+    font-family: "Roboto Medium";
+    font-size: 14px;
+    color: #231F20;
+}
+#news .read-more{
+    text-align: right;
+    font-size: 12px;
+    color: #0F7650;
+    margin-top: 10px;
+    margin-bottom: 15px;
+}
+#news .read-more a{
+    font-size: 12px;
+    color: #0F7650;
+    font-family: "Roboto Italic";
+}
+.category li{
+    width: 33.3333333333%;
+    padding: 0 5px;
+}
+.category li:nth-child(1), .category li:nth-child(2), .category li:nth-child(3){
+    margin-bottom: 15px;
+}
+.category ul{
+    margin: 0 -5px;
+}
+.category .item .image img{
+    width: 100%;
+}
+.category .item .information{
+    text-align: center;
+}
+.category .item .information a{
+    display: inline-block;
+    margin: 5px 0;
+    color: #231F20;
+}
+section{
+    overflow: hidden;
+    width: 100%;
+    margin-bottom: 20px;
+}
+footer #company-name{
+    background: url("../images/nav-background.png") repeat-x center;
+    background-size:  auto 100%;
+    color: #ffffff;
+    text-transform: uppercase;
+    height: 40px;
+    line-height: 40px;
+    font-size: 18px;
+    font-family: "Roboto Medium";
+    text-align: center;
+}
+footer #info-company{
+    text-align: center;
+    padding-top: 20px;
+    padding-bottom: 40px;
+    background: #ECFFEC;
+}
+footer #info-company span{
+    display: block;
+    font-family: Roboto;
+    color: #231F20;
+}
+/*---------- index.html file -------------*/
+/*---------- list-news.html file -------------*/
+#content-news .detailBox > .title_box{
+    color: #F02223;
+    font-size: 18px;
+    font-family: "Roboto Medium";
+}
+#content-news .detailBox > .time{
+    color: #686868;
+    font-size: 12px;
+    font-family: "Roboto Light";
+}
+.breadcrumb{
+    padding: 0;
+    margin-bottom: 0;
+    background: transparent;
+}
+.breadcrumb a{
+    color: #ffffff;
+}
+.breadcrumb .active{
+    text-transform: none;
+}
+#list-news .item{
+    margin-bottom: 20px;
+}
+#list-news .item .image{
+    float: left;
+    width: 220px;
+    margin-right: 10px;
+}
+#list-news .item .information > .title{
+    color: #F02223;
+    font-size: 18px;
+    font-family: "Roboto Medium";
+}
+#list-news .item .information > .quote{
+    color: #231F20;
+    font-family: "Roboto Medium";
+    height: 80px;
+    overflow: hidden ;
+}
+#list-news .item .information >.time{
+    color: #686868;
+    font-size: 12px;
+    font-family: "Roboto Light";
+}
+#list-news .read-more a{
+    color: #0F7650;
+    font-size: 12px;
+    font-family: "Roboto Italic";
+}
+#list-news .read-more:hover a{
+    font-family: "Roboto Bold";
+}
+#relate-news .title, #plugin-social .title, #comment-box > .title{
+    color: #0F7650;
+    font-size: 16px;
+    font-family: "Roboto Medium";
+    margin-bottom: 10px;
+}
+#relate-news li{
+    padding: 3px 0 3px 10px;
+    background: url("../images/icons/list-image.png") no-repeat left;
+}
+#relate-news li a{
+    color: #686868;
+    font-size: 12px;
+    font-family: "Roboto Bold";
+}
+#relate-news li:hover a{
+    color: #0F7650;
+
+}
+#relate-news{
+    clear: both;
+    overflow: hidden ;
+}
+#pager{
+    float: right;
+    clear: both;
+    overflow: hidden ;
+    padding: 10px 0;
+}
+#pager li{
+    float: left;
+    padding: 0 3px;
+}
+#pager li a{
+    color: #676767;
+    padding: 1px 3px ;
+}
+#pager li.active a, #pager li:hover a{
+    color: #0F7650;
+    border-bottom: 1px solid #0F7650;
+}
+.write-cm-box .title{
+    font-size: 16px;
+    color: #323132;
+}
+.write-cm-box textarea{
+    width: 100%;
+    border: 1px solid #0F7650;
+    margin: 5px 0 5px;
+    border-radius: 5px ;
+    padding: 0 10px;
+}
+.write-cm-box .content{
+    overflow: hidden;
+}
+.write-cm-box input.userName{
+    height: 30px;
+    line-height: 30px;
+    font-size: 14px;
+    padding: 0 10px;
+    width: 220px;
+    border: 1px solid #0F7650;
+    border-radius: 5px;
+}
+.write-cm-box button.submit-btn{
+    float: right;
+    border: none;
+    background: url("../images/nav-background.png") repeat-x center;
+    background-size: auto 100%;
+    border-radius: 5px;
+    height: 30px;
+    line-height: 30px;
+    padding: 0 10px;
+    font-size: 16px;
+    font-family: Roboto;
+    color:  #ffffff;
+}
+#list-comments{
+    clear: both;
+    list-style: none;
+    overflow: hidden ;
+}
+#list-comments li{
+    padding: 20px 0 0 0;
+}
+#list-comments .avatar-user{
+    padding: 5px;
+    border: 1px solid #0F7650;
+    border-radius: 5px;
+    float: left;
+    height: 40px;
+    width: 40px;
+    margin-right: 10px;
+
+}
+#list-comments .author{
+    font-size: 18px;
+    font-family: "Roboto";
+    margin-right: 15px;
+    color: #0F7650;
+}
+#list-comments .time{
+    color: #999B9E;
+    font-size: 12px;
+    padding-top: 5px ;
+    display: block;
+    font-family: "Roboto";
+}
+#list-comments .content{
+    clear: both;
+    color: #565656 ;
+    font-family: "Roboto" ;
+    padding-top: 5px ;
+    margin-left: 50px;
+}
+#list-comments .features button{
+    border: none;
+    background: none;
+    margin-left: 10px;
+}
+#list-comments .features button span{
+    color: #7F7872;
+    font-size: 14px;
+}
+#list-comments .features span{
+    font-size: 12px;
+    color: #BBBBBC;
+}
+/*---------- list-news.html file -------------*/
+/*---------- list-products.html file -------------*/
+#list-products .content_box .wListItem{
+    margin: 0 -5px 30px ;
+    overflow: hidden;
+}
+#list-products .item{
+    float: left;
+    width: 33.33333333333%;
+    padding: 10px 5px;
+}
+#list-products .item .title{
+    color:  #0F7650;
+    font-family: Roboto;
+    font-size: 12px;
+    height: 40px;
+    overflow: hidden;
+}
+#list-products .item .price{
+    color: #231F20;
+    height: 30px;
+    line-height: 30px;
+    text-align: center;
+    background: url("../images/price-bgr.png") repeat-x center;
+    background-size:  auto 100%;
+    border-radius: 0 0 5px 5px;
+ }
+/*---------- list-products.html file -------------*/
+.image#main-image{
+    float: left;
+    margin-right: 10px;
+    height: 136px;
+}
+#short-description{
+    overflow: hidden;
+    position: relative;
+}
+
+#short-description > .title{
+    color: #F02223;
+    font-size: 18px;
+    font-family: "Roboto Medium";
+}
+#short-description> .quote{
+    color: #000000;
+    font-family: Roboto;
+}
+#short-description > .price{
+    height: 30px;
+    line-height: 30px;
+    padding: 0 10px;
+    background: #0F7650;
+    color: #ffffff;
+    font-family: "Roboto Italic";
+    display: inline-block;
+    position: absolute;
+    top: 106px;
+}
+#short-description .notice{
+    color: #8E8E8E;
+    font-size: 12px;
+    font-family: "Roboto Italic";
+    position: absolute;
+    top: 106px;
+    right: 0;
+}
+#specifications tr td{
+    color: #000000;
+    font-family: "Roboto Italic";
+    min-width: 150px;
+    height: 25px;
+    line-height: 25px;
+    padding-left: 10px;
+}
+#description{
+    color: #565656;
+}
+#description .content{
+    margin-top: 10px;
+}
+#detail-product .info_box{
+    clear: both;
+}
+#detail-product .info_box > .title{
+    color: #0F7650;
+    font-size: 18px;
+    font-family: "Roboto Medium";
+    margin-top: 20px;
+}
+#contact > .contentBox > .content_box{
+    padding: 20px ;
+}
+#contact .content_box .form-group label{
+    width: 150px;
+    margin-right: 20px;
+    font-size: 18px;
+}
+#contact .content_box .form-group input{
+    width: 220px;
+    height: 30px;
+    border: 1px solid #0F7650;
+    line-height: 30px;
+    padding: 0 10px;
+}
+#contact .content_box .form-group select{
+    height: 30px;
+    border: 1px solid #0F7650;
+    line-height: 30px;
+    padding: 0 10px ;
+}
+#contact .content_box .form-group textarea{
+    border: 1px solid #0F7650;
+    padding: 10px ;
+}
+#contact .group-btn{
+    text-align: right;
+}
+#content-news .author{
+    font-size: 12px;
+    color: #000000;
+    font-family: "Roboto";
+    float: right;
+}
+#content-news .detailBox{
+    overflow: hidden;
+}
+#content-news .image{
+    text-align: center;
+}
+#content-news .image img{
+    margin: 0 auto;
+}

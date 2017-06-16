@@ -1,0 +1,40 @@
+﻿<!-- wSlider -->
+<div id="$[![id]!]" class="wSlider">
+	<div class="box_title">$[![Label]!]</div>
+	<div class="slider_content"> 
+		<div class="item_wrapper">
+			<!-- Repeat 3 -->
+			<div class="item">
+				<img class="thumb" alt="" src="images/data/$[![slider1.jpg]!]"/>
+				<a class="title" href="#" title="">$[![Tiêu đề 1]!]</a>
+			</div>
+			<div class="item">
+				<img class="thumb" alt="" src="images/data/$[![slider2.jpg]!]"/>
+				<a class="title" href="#">$[![Tiêu đề 2]!]</a>
+			</div>
+			<div class="item">
+				<img class="thumb" alt="" src="images/data/$[![slider3.jpg]!]"/>
+				<a class="title" href="#">$[![Tiêu đề 3]!]</a>
+			</div>
+			<!-- end of repeat 3 -->
+		</div>
+		<span class="next_btn"></span>
+		<span class="prev_btn"></span>
+	</div>
+</div>
+<!-- end of wSlider -->
+<script>
+$('.item_wrapper', $('#$[![id]!]')).bxSlider({
+		captions: true,
+		slideSelector: '.item',
+		minSlides: 5,
+		maxSlides: 5,
+		slideWidth: 198,
+		slideMargin: 60,
+		pager: false,
+		nextText: " ",
+		prevText: " ",
+		nextSelector: ".next_btn",
+		prevSelector: ".prev_btn"
+});
+</script>

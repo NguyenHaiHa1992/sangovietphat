@@ -1,0 +1,40 @@
+*{
+	margin: 0;
+	padding: 0;
+}
+html,body{
+	font-size: 13px;
+	font-family: Tahoma;
+	color: #333;
+}
+input[type="text"], select{
+	padding: 5px;
+	border: 1px solid #DDD;
+	border-radius: 2px;
+	width: 200px;
+}
+input[type="submit"]{
+	padding: 5px;
+	font-weight: bold;
+	font-size: 16px;
+}
+h1, .title{
+	padding: 10px;
+}
+.title{
+	font-size: 16px;
+}
+form{
+	width: 500px;
+	padding: 10px;
+}
+.form_input{
+	padding: 5px 0;
+}
+label{
+	width: 120px;
+	display: inline-block;
+}
+.group_input{
+	padding: 10px 0;
+}

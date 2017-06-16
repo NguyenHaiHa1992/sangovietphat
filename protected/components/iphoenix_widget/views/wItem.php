@@ -1,0 +1,1 @@
+<?php echo iPhoenixTemplate::parseTemplate($data, $template);?>

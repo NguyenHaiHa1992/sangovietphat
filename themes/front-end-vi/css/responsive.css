@@ -1,0 +1,140 @@
+@media (min-width: 992px) {
+    body > .container{
+        width: 960px;
+    }
+    .navbar{
+        height: 40px;
+    }
+    section > .col-md-4{
+        width: 250px;
+    }
+    section > .col-md-8{
+        width: 710px;
+    }
+    .wContentBox{
+        margin: 20px 10px 0 10px;
+    }
+    #hot-products{
+        margin-right: 10px !important;
+    }
+    #sub-content .wContentBox{
+        margin-left: 0;
+    }
+    #main-content .wContentBox{
+        margin-right: 0;
+    }
+    #slider_sm{
+        display: none;
+    }
+    
+}
+@media (max-width: 991px) {
+    .wContentBox{
+        margin: 20px 10px 0 10px;
+    }
+    #list-products .item{
+        width: 50% !important;
+    }
+    #list-products .item > .thumb{
+        width: 100%;
+    }
+    #logo{
+        margin: 10px auto !important;
+    }
+    .col-md-4, .col-md-8{
+        width: 100%;
+    }
+    .navbar-toggle{
+        float: left;
+        margin-left: 10px;
+    }
+    .navbar-collapse.in{
+        padding: 0 20px;
+    }
+    .navbar-default .navbar-nav>li>a{
+        background-image: none !important;
+    }
+    .navbar #homepage{
+        padding: 0 30px ;
+        background: url("../images/icons/homepage.png") no-repeat center !important;
+    }
+    .navbar-nav .open .dropdown-menu{
+        position: absolute;
+        top: 0;
+        left: 120px;
+        background: #ffffff;
+        border-radius: 5px;
+    }
+    .navbar-nav .open .dropdown-menu:after{
+        content:"";
+        width:0;
+        height:0;
+        position:absolute;
+        border:10px solid transparent;
+        border-right: 10px solid #ffffff;
+        top: 10px;
+        left: -20px;
+    }
+    .nav .open>a, .nav .open>a:hover, .nav .open>a:focus{
+        background: none !important; ;
+    }
+    .navbar-default .navbar-nav .open .dropdown-menu>li>a{
+        color: #000000;
+        font-family: Roboto;
+    }
+    #main-search-box{
+        top: 15px !important;
+    }
+    #short-description .notice{
+        top: 86px !important;
+    }
+    #slider{
+        display: none;
+    }
+    #slider_sm{
+        display: block;
+    }
+    #container-header{
+        height: 180px;
+    }
+    #container-header .image-bacground{
+        width: 100%;
+        height: 100%;
+    }
+    header .brand{
+        display: none;
+    }
+    #list-news .item .image{
+        float: none;
+    }
+    #header-pc{
+    	display:none!important;
+    }
+    #header-mobile{
+    	display:block!important;
+    }
+    footer #company-name{
+    	font-size:12px;
+    }
+}
+@media (min-width: 768px) and (max-width:991px) {
+    .navbar-nav>li>a{
+        padding: 0 10px !important;
+    }
+    #logo{
+        display: block !important;
+        text-align: center;
+    }
+    #logo .brand{
+        text-align: center !important;
+    }
+    #main-products, #support{
+        width: 50%;
+        float: left;
+        margin: 0;
+        padding: 10px;
+    }
+    #new-products{
+        clear: both;
+    }
+}
