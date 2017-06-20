@@ -4,6 +4,11 @@
     $this->widget('wMetaTag',array(
         'data'=>$data,
     ));
+    // set og_image
+    if(isset($data->introimage) && $data->introimage ){
+        $image = $data->introimage->getAbsoluteUrl();
+        $this->og_image = $image;
+    }    
 ?>
 <div class="col-md-8" id="main-content">
     <div class="col-sm-12">

@@ -3,6 +3,11 @@ $data = Product::getItemById($_GET['id']);
 $this->widget('wMetaTag',array(
     'data'=>$data,
 ));
+// set og_image
+if(isset($data->introimage)){
+       $image = $data->introimage->getAbsoluteUrl();
+       $this->og_image = $image;
+}
 ?>
 
 

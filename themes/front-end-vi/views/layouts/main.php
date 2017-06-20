@@ -9,6 +9,21 @@
     <link rel="canonical" href="<?php echo $this->canonical;?>" />
     <base href="<?php echo Yii::app()->getBaseurl(true);?>"/>
     <title><?php echo $this->meta_title;?></title>
+    <?php if(isset($this->og_image) && $this->og_image ){?>
+    <meta property="og:image" content="<?=$this->og_image?>"/>
+    <?php }?>
+    <meta property="og:site_name" content="<?= $this->meta_title?>" />
+    <meta property="og:title" content="<?=$this->meta_title?>" />
+    <meta property="og:description" content="<?=$this->meta_description?>" />
+	
+    <meta name="twitter:card" content="summary">
+    <meta name="twitter:site" content="<?=$this->meta_title?>">
+    <meta name="twitter:title" content="<?=$this->meta_title?>">
+    <meta name="twitter:description" content="<?=$this->meta_description?>">
+    <?php if(isset($this->og_image) && $this->og_image ){?>
+    <meta property="twitter:image:src" content="<?=$this->og_image?>"/>
+    <?php }?>
+
     <?php $this->widget('wScript', array('js'=>'jquery.js,bootstrap.min.js,style.js,flux.js','css'=>'bootstrap-theme.min.css,bootstrap.min.css,customize.css,responsive.css,style.css'));?>
     <script>
   (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){

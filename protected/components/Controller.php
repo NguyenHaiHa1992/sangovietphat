@@ -12,6 +12,7 @@ class Controller extends CController {
 	public $meta_description = '';
 	public $meta_keyword = '';
 	public $canonical = '';
+        public $og_image= '';
 
 	public $breadcrumbs;
 
