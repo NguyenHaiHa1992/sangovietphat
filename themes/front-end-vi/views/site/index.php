@@ -86,7 +86,10 @@
                     $this->widget('wCarouselSlider', array(
                         'id'=>'carousel-hot-products',
                         'class'=>'slide',
-                        'data'=>Product::getItems(12),
+                        'data'=>Product::getItems(12, array(
+                            'status' => true,
+                            'best_sell' => 1
+                        )),
                     ));
                     ?>
                     <!-- end of wCarouselSlider -->

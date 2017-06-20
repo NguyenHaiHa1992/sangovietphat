@@ -18,6 +18,7 @@
  * @property string $other
  * @property integer $created_by
  * @property integer $created_time
+ * @property integer $best_sell
  */
 class Product extends CActiveRecord
 {
@@ -109,7 +110,7 @@ class Product extends CActiveRecord
 			array('tmp_suggest_ids, tmp_news_ids ,tmp_image_ids, tmp_suggest_video','safe'),
 			// The following rule is used by search().
 			// Please remove those attributes that should not be searched.
-			array('status, list_city, name, cat_id, home, new', 'safe', 'on'=>'search'),
+			array('status, list_city, name, cat_id, home, new, best_sell', 'safe', 'on'=>'search'),
 		);
 	}
 
@@ -253,6 +254,7 @@ class Product extends CActiveRecord
             'warranty' => 'Bảo hành',
             'model' => 'Model',
             'detailimage_id' => 'Ảnh chi tiết',
+            'best_sell'  => 'Bán chạy'
 		);
 	}
 
@@ -927,5 +929,13 @@ class Product extends CActiveRecord
         $pages->applyLimit($criteria);
 
         return $pages;
+    }
+    
+    public function getAttributeImageStatus($attribute)
+    {
+        if($this->$attribute) 
+            return Yii::app()->theme->baseUrl.'/images/enable.png';
+        else
+            return Yii::app()->theme->baseUrl.'/images/disable.png';
     }
 }

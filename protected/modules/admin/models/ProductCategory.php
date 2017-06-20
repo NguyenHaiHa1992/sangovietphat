@@ -538,7 +538,7 @@ class ProductCategory extends CActiveRecord
 
 
     public function getBoximage_thumb($width,$height,$ratio = true){
-        if(isset($this->introimage))
+        if(isset($this->boximage))
             return $this->boximage->getAbsoluteThumbUrl($width,$height,$ratio);
         return null;
     }
@@ -621,7 +621,6 @@ class ProductCategory extends CActiveRecord
 		}
 		$criteria->order = "order_view";
 		$list_item = $model::model()->findAll($criteria);
-
 		if(!isset($list_item)){
 			throw new CHttpException(404,'The specified post cannot be found.');
 		}
