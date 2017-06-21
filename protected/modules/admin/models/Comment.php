@@ -86,7 +86,7 @@ class Comment extends CActiveRecord
 			array('reply,content, reply', 'length', 'max'=>2048),
 			// The following rule is used by search().
 			// Please remove those attributes that should not be searched.
-			array('id, status,parent_class, created_time, search_start_time, search_end_time, vote', 'safe', 'on'=>'search'),
+			array('id, status,parent_class, created_time, search_start_time, search_end_time, vote, comment_parent', 'safe', 'on'=>'search'),
 		);
 	}
 

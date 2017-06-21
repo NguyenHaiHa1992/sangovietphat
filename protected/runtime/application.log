@@ -8659,3 +8659,459 @@ Stack trace:
 REQUEST_URI=/favicon.ico
 HTTP_REFERER=http://sangovietphat.dev/
 ---
+2017/06/18 04:14:06 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'Không thể giải quyết yêu cầu "favicon.ico".' in F:\setup\xampp\htdocs\sangovietphat\framework\web\CWebApplication.php:286
+Stack trace:
+#0 F:\setup\xampp\htdocs\sangovietphat\framework\web\CWebApplication.php(141): CWebApplication->runController('favicon.ico')
+#1 F:\setup\xampp\htdocs\sangovietphat\framework\base\CApplication.php(180): CWebApplication->processRequest()
+#2 F:\setup\xampp\htdocs\sangovietphat\index.php(19): CApplication->run()
+#3 {main}
+REQUEST_URI=/favicon.ico
+HTTP_REFERER=http://sangovietphat.dev/
+---
+2017/06/18 05:37:15 [error] [exception.CHttpException.403] exception 'CHttpException' with message 'Bạn không có quyền để thực hiện hành động này.' in F:\setup\xampp\htdocs\sangovietphat\framework\web\auth\CAccessControlFilter.php:182
+Stack trace:
+#0 F:\setup\xampp\htdocs\sangovietphat\framework\web\auth\CAccessControlFilter.php(145): CAccessControlFilter->accessDenied(Object(iPhoenixUser), 'B\xE1\xBA\xA1n kh\xC3\xB4ng c\xC3...')
+#1 F:\setup\xampp\htdocs\sangovietphat\framework\web\filters\CFilter.php(38): CAccessControlFilter->preFilter(Object(CFilterChain))
+#2 F:\setup\xampp\htdocs\sangovietphat\framework\web\CController.php(1145): CFilter->filter(Object(CFilterChain))
+#3 F:\setup\xampp\htdocs\sangovietphat\framework\web\filters\CInlineFilter.php(58): CController->filterAccessControl(Object(CFilterChain))
+#4 F:\setup\xampp\htdocs\sangovietphat\framework\web\filters\CFilterChain.php(130): CInlineFilter->filter(Object(CFilterChain))
+#5 F:\setup\xampp\htdocs\sangovietphat\framework\web\CController.php(291): CFilterChain->run()
+#6 F:\setup\xampp\htdocs\sangovietphat\framework\web\CController.php(265): CController->runActionWithFilters(Object(CInlineAction), Array)
+#7 F:\setup\xampp\htdocs\sangovietphat\framework\web\CWebApplication.php(282): CController->run('reverseBestSell')
+#8 F:\setup\xampp\htdocs\sangovietphat\framework\web\CWebApplication.php(141): CWebApplication->runController('admin/product/r...')
+#9 F:\setup\xampp\htdocs\sangovietphat\framework\base\CApplication.php(180): CWebApplication->processRequest()
+#10 F:\setup\xampp\htdocs\sangovietphat\index.php(19): CApplication->run()
+#11 {main}
+REQUEST_URI=/admin/product/reverseBestSell/id/65
+HTTP_REFERER=http://sangovietphat.dev/admin/product/index
+---
+2017/06/18 05:38:32 [error] [exception.CHttpException.403] exception 'CHttpException' with message 'Bạn không có quyền để thực hiện hành động này.' in F:\setup\xampp\htdocs\sangovietphat\framework\web\auth\CAccessControlFilter.php:182
+Stack trace:
+#0 F:\setup\xampp\htdocs\sangovietphat\framework\web\auth\CAccessControlFilter.php(145): CAccessControlFilter->accessDenied(Object(iPhoenixUser), 'B\xE1\xBA\xA1n kh\xC3\xB4ng c\xC3...')
+#1 F:\setup\xampp\htdocs\sangovietphat\framework\web\filters\CFilter.php(38): CAccessControlFilter->preFilter(Object(CFilterChain))
+#2 F:\setup\xampp\htdocs\sangovietphat\framework\web\CController.php(1145): CFilter->filter(Object(CFilterChain))
+#3 F:\setup\xampp\htdocs\sangovietphat\framework\web\filters\CInlineFilter.php(58): CController->filterAccessControl(Object(CFilterChain))
+#4 F:\setup\xampp\htdocs\sangovietphat\framework\web\filters\CFilterChain.php(130): CInlineFilter->filter(Object(CFilterChain))
+#5 F:\setup\xampp\htdocs\sangovietphat\framework\web\CController.php(291): CFilterChain->run()
+#6 F:\setup\xampp\htdocs\sangovietphat\framework\web\CController.php(265): CController->runActionWithFilters(Object(CInlineAction), Array)
+#7 F:\setup\xampp\htdocs\sangovietphat\framework\web\CWebApplication.php(282): CController->run('reverseBestSell')
+#8 F:\setup\xampp\htdocs\sangovietphat\framework\web\CWebApplication.php(141): CWebApplication->runController('admin/product/r...')
+#9 F:\setup\xampp\htdocs\sangovietphat\framework\base\CApplication.php(180): CWebApplication->processRequest()
+#10 F:\setup\xampp\htdocs\sangovietphat\index.php(19): CApplication->run()
+#11 {main}
+REQUEST_URI=/admin/product/reverseBestSell/id/65
+HTTP_REFERER=http://sangovietphat.dev/admin/product/index
+---
+2017/06/18 05:47:19 [warning] [application] Failed to set unsafe attribute "catimage_id" of "ProductCategory".
+in F:\setup\xampp\htdocs\sangovietphat\protected\modules\admin\models\ProductCategory.php (49)
+in F:\setup\xampp\htdocs\sangovietphat\protected\modules\admin\controllers\ProductCategoryController.php (186)
+in F:\setup\xampp\htdocs\sangovietphat\index.php (19)
+2017/06/18 05:47:51 [warning] [application] Failed to set unsafe attribute "catimage_id" of "ProductCategory".
+in F:\setup\xampp\htdocs\sangovietphat\protected\modules\admin\models\ProductCategory.php (49)
+in F:\setup\xampp\htdocs\sangovietphat\protected\modules\admin\controllers\ProductCategoryController.php (186)
+in F:\setup\xampp\htdocs\sangovietphat\index.php (19)
+2017/06/18 05:47:52 [warning] [application] Failed to set unsafe attribute "catimage_id" of "ProductCategory".
+in F:\setup\xampp\htdocs\sangovietphat\protected\modules\admin\models\ProductCategory.php (49)
+in F:\setup\xampp\htdocs\sangovietphat\protected\modules\admin\controllers\ProductCategoryController.php (186)
+in F:\setup\xampp\htdocs\sangovietphat\index.php (19)
+2017/06/18 05:47:54 [warning] [application] Failed to set unsafe attribute "catimage_id" of "ProductCategory".
+in F:\setup\xampp\htdocs\sangovietphat\protected\modules\admin\models\ProductCategory.php (49)
+in F:\setup\xampp\htdocs\sangovietphat\protected\modules\admin\controllers\ProductCategoryController.php (186)
+in F:\setup\xampp\htdocs\sangovietphat\index.php (19)
+2017/06/18 05:48:02 [warning] [application] Failed to set unsafe attribute "catimage_id" of "ProductCategory".
+in F:\setup\xampp\htdocs\sangovietphat\protected\modules\admin\models\ProductCategory.php (49)
+in F:\setup\xampp\htdocs\sangovietphat\protected\modules\admin\controllers\ProductCategoryController.php (219)
+in F:\setup\xampp\htdocs\sangovietphat\index.php (19)
+2017/06/18 05:48:25 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'Không thể giải quyết yêu cầu "favicon.ico".' in F:\setup\xampp\htdocs\sangovietphat\framework\web\CWebApplication.php:286
+Stack trace:
+#0 F:\setup\xampp\htdocs\sangovietphat\framework\web\CWebApplication.php(141): CWebApplication->runController('favicon.ico')
+#1 F:\setup\xampp\htdocs\sangovietphat\framework\base\CApplication.php(180): CWebApplication->processRequest()
+#2 F:\setup\xampp\htdocs\sangovietphat\index.php(19): CApplication->run()
+#3 {main}
+REQUEST_URI=/favicon.ico
+HTTP_REFERER=http://sangovietphat.dev/
+---
+2017/06/18 05:48:57 [warning] [application] Failed to set unsafe attribute "catimage_id" of "ProductCategory".
+in F:\setup\xampp\htdocs\sangovietphat\protected\modules\admin\models\ProductCategory.php (49)
+in F:\setup\xampp\htdocs\sangovietphat\protected\modules\admin\controllers\ProductCategoryController.php (186)
+in F:\setup\xampp\htdocs\sangovietphat\index.php (19)
+2017/06/18 05:49:00 [warning] [application] Failed to set unsafe attribute "catimage_id" of "ProductCategory".
+in F:\setup\xampp\htdocs\sangovietphat\protected\modules\admin\models\ProductCategory.php (49)
+in F:\setup\xampp\htdocs\sangovietphat\protected\modules\admin\controllers\ProductCategoryController.php (219)
+in F:\setup\xampp\htdocs\sangovietphat\index.php (19)
+2017/06/18 06:14:38 [warning] [application] Failed to set unsafe attribute "catimage_id" of "ProductCategory".
+in F:\setup\xampp\htdocs\sangovietphat\protected\modules\admin\models\ProductCategory.php (49)
+in F:\setup\xampp\htdocs\sangovietphat\protected\modules\admin\controllers\ProductCategoryController.php (186)
+in F:\setup\xampp\htdocs\sangovietphat\index.php (19)
+2017/06/18 06:14:40 [warning] [application] Failed to set unsafe attribute "catimage_id" of "ProductCategory".
+in F:\setup\xampp\htdocs\sangovietphat\protected\modules\admin\models\ProductCategory.php (49)
+in F:\setup\xampp\htdocs\sangovietphat\protected\modules\admin\controllers\ProductCategoryController.php (219)
+in F:\setup\xampp\htdocs\sangovietphat\index.php (19)
+2017/06/19 15:21:29 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'Không thể giải quyết yêu cầu "favicon.ico".' in F:\setup\xampp\htdocs\sangovietphat\framework\web\CWebApplication.php:286
+Stack trace:
+#0 F:\setup\xampp\htdocs\sangovietphat\framework\web\CWebApplication.php(141): CWebApplication->runController('favicon.ico')
+#1 F:\setup\xampp\htdocs\sangovietphat\framework\base\CApplication.php(180): CWebApplication->processRequest()
+#2 F:\setup\xampp\htdocs\sangovietphat\index.php(19): CApplication->run()
+#3 {main}
+REQUEST_URI=/favicon.ico
+HTTP_REFERER=http://sangovietphat.dev/
+---
+2017/06/19 16:00:55 [warning] [application] Failed to set unsafe attribute "catimage_id" of "ProductCategory".
+in F:\setup\xampp\htdocs\sangovietphat\protected\modules\admin\models\ProductCategory.php (49)
+in F:\setup\xampp\htdocs\sangovietphat\protected\modules\admin\controllers\ProductCategoryController.php (186)
+in F:\setup\xampp\htdocs\sangovietphat\index.php (19)
+2017/06/19 16:00:57 [warning] [application] Failed to set unsafe attribute "catimage_id" of "ProductCategory".
+in F:\setup\xampp\htdocs\sangovietphat\protected\modules\admin\models\ProductCategory.php (49)
+in F:\setup\xampp\htdocs\sangovietphat\protected\modules\admin\controllers\ProductCategoryController.php (219)
+in F:\setup\xampp\htdocs\sangovietphat\index.php (19)
+2017/06/19 16:02:52 [warning] [application] Failed to set unsafe attribute "catimage_id" of "ProductCategory".
+in F:\setup\xampp\htdocs\sangovietphat\protected\modules\admin\models\ProductCategory.php (49)
+in F:\setup\xampp\htdocs\sangovietphat\protected\modules\admin\controllers\ProductCategoryController.php (186)
+in F:\setup\xampp\htdocs\sangovietphat\index.php (19)
+2017/06/19 16:02:54 [warning] [application] Failed to set unsafe attribute "catimage_id" of "ProductCategory".
+in F:\setup\xampp\htdocs\sangovietphat\protected\modules\admin\models\ProductCategory.php (49)
+in F:\setup\xampp\htdocs\sangovietphat\protected\modules\admin\controllers\ProductCategoryController.php (219)
+in F:\setup\xampp\htdocs\sangovietphat\index.php (19)
+2017/06/19 16:22:47 [warning] [application] Failed to set unsafe attribute "catimage_id" of "ProductCategory".
+in F:\setup\xampp\htdocs\sangovietphat\protected\modules\admin\models\ProductCategory.php (49)
+in F:\setup\xampp\htdocs\sangovietphat\protected\modules\admin\controllers\ProductCategoryController.php (186)
+in F:\setup\xampp\htdocs\sangovietphat\index.php (19)
+2017/06/19 16:22:51 [warning] [application] Failed to set unsafe attribute "catimage_id" of "ProductCategory".
+in F:\setup\xampp\htdocs\sangovietphat\protected\modules\admin\models\ProductCategory.php (49)
+in F:\setup\xampp\htdocs\sangovietphat\protected\modules\admin\controllers\ProductCategoryController.php (219)
+in F:\setup\xampp\htdocs\sangovietphat\index.php (19)
+2017/06/19 16:23:06 [warning] [application] Failed to set unsafe attribute "catimage_id" of "ProductCategory".
+in F:\setup\xampp\htdocs\sangovietphat\protected\modules\admin\models\ProductCategory.php (49)
+in F:\setup\xampp\htdocs\sangovietphat\protected\modules\admin\controllers\ProductCategoryController.php (186)
+in F:\setup\xampp\htdocs\sangovietphat\index.php (19)
+2017/06/19 16:23:08 [warning] [application] Failed to set unsafe attribute "catimage_id" of "ProductCategory".
+in F:\setup\xampp\htdocs\sangovietphat\protected\modules\admin\models\ProductCategory.php (49)
+in F:\setup\xampp\htdocs\sangovietphat\protected\modules\admin\controllers\ProductCategoryController.php (219)
+in F:\setup\xampp\htdocs\sangovietphat\index.php (19)
+2017/06/19 16:38:59 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'Không thể giải quyết yêu cầu "favicon.ico".' in F:\setup\xampp\htdocs\sangovietphat\framework\web\CWebApplication.php:286
+Stack trace:
+#0 F:\setup\xampp\htdocs\sangovietphat\framework\web\CWebApplication.php(141): CWebApplication->runController('favicon.ico')
+#1 F:\setup\xampp\htdocs\sangovietphat\framework\base\CApplication.php(180): CWebApplication->processRequest()
+#2 F:\setup\xampp\htdocs\sangovietphat\index.php(19): CApplication->run()
+#3 {main}
+REQUEST_URI=/favicon.ico
+HTTP_REFERER=http://sangovietphat.dev/
+---
+2017/06/19 18:19:58 [error] [exception.CHttpException.400] exception 'CHttpException' with message 'Yêu cầu của bạn không hợp lệ.' in F:\setup\xampp\htdocs\sangovietphat\framework\web\CController.php:336
+Stack trace:
+#0 F:\setup\xampp\htdocs\sangovietphat\framework\web\CController.php(309): CController->invalidActionParams(Object(CInlineAction))
+#1 F:\setup\xampp\htdocs\sangovietphat\framework\web\filters\CFilterChain.php(133): CController->runAction(Object(CInlineAction))
+#2 F:\setup\xampp\htdocs\sangovietphat\framework\web\filters\CFilter.php(40): CFilterChain->run()
+#3 F:\setup\xampp\htdocs\sangovietphat\framework\web\CController.php(1145): CFilter->filter(Object(CFilterChain))
+#4 F:\setup\xampp\htdocs\sangovietphat\framework\web\filters\CInlineFilter.php(58): CController->filterAccessControl(Object(CFilterChain))
+#5 F:\setup\xampp\htdocs\sangovietphat\framework\web\filters\CFilterChain.php(130): CInlineFilter->filter(Object(CFilterChain))
+#6 F:\setup\xampp\htdocs\sangovietphat\framework\web\CController.php(291): CFilterChain->run()
+#7 F:\setup\xampp\htdocs\sangovietphat\framework\web\CController.php(265): CController->runActionWithFilters(Object(CInlineAction), Array)
+#8 F:\setup\xampp\htdocs\sangovietphat\framework\web\CWebApplication.php(282): CController->run('update')
+#9 F:\setup\xampp\htdocs\sangovietphat\framework\web\CWebApplication.php(141): CWebApplication->runController('admin/news/upda...')
+#10 F:\setup\xampp\htdocs\sangovietphat\framework\base\CApplication.php(180): CWebApplication->processRequest()
+#11 F:\setup\xampp\htdocs\sangovietphat\index.php(19): CApplication->run()
+#12 {main}
+REQUEST_URI=/admin/news/update/images/icons/phone-icon.png
+HTTP_REFERER=http://sangovietphat.dev/admin/news/update/id/31
+---
+2017/06/19 18:19:59 [error] [exception.CHttpException.400] exception 'CHttpException' with message 'Yêu cầu của bạn không hợp lệ.' in F:\setup\xampp\htdocs\sangovietphat\framework\web\CController.php:336
+Stack trace:
+#0 F:\setup\xampp\htdocs\sangovietphat\framework\web\CController.php(309): CController->invalidActionParams(Object(CInlineAction))
+#1 F:\setup\xampp\htdocs\sangovietphat\framework\web\filters\CFilterChain.php(133): CController->runAction(Object(CInlineAction))
+#2 F:\setup\xampp\htdocs\sangovietphat\framework\web\filters\CFilter.php(40): CFilterChain->run()
+#3 F:\setup\xampp\htdocs\sangovietphat\framework\web\CController.php(1145): CFilter->filter(Object(CFilterChain))
+#4 F:\setup\xampp\htdocs\sangovietphat\framework\web\filters\CInlineFilter.php(58): CController->filterAccessControl(Object(CFilterChain))
+#5 F:\setup\xampp\htdocs\sangovietphat\framework\web\filters\CFilterChain.php(130): CInlineFilter->filter(Object(CFilterChain))
+#6 F:\setup\xampp\htdocs\sangovietphat\framework\web\CController.php(291): CFilterChain->run()
+#7 F:\setup\xampp\htdocs\sangovietphat\framework\web\CController.php(265): CController->runActionWithFilters(Object(CInlineAction), Array)
+#8 F:\setup\xampp\htdocs\sangovietphat\framework\web\CWebApplication.php(282): CController->run('update')
+#9 F:\setup\xampp\htdocs\sangovietphat\framework\web\CWebApplication.php(141): CWebApplication->runController('admin/news/upda...')
+#10 F:\setup\xampp\htdocs\sangovietphat\framework\base\CApplication.php(180): CWebApplication->processRequest()
+#11 F:\setup\xampp\htdocs\sangovietphat\index.php(19): CApplication->run()
+#12 {main}
+REQUEST_URI=/admin/news/update/images/icons/email-icon.png
+HTTP_REFERER=http://sangovietphat.dev/admin/news/update/id/31
+---
+2017/06/19 19:13:53 [warning] [application] Failed to set unsafe attribute "catimage_id" of "ProductCategory".
+in F:\setup\xampp\htdocs\sangovietphat\protected\modules\admin\models\ProductCategory.php (49)
+in F:\setup\xampp\htdocs\sangovietphat\protected\modules\admin\controllers\ProductCategoryController.php (186)
+in F:\setup\xampp\htdocs\sangovietphat\index.php (19)
+2017/06/19 19:13:55 [warning] [application] Failed to set unsafe attribute "catimage_id" of "ProductCategory".
+in F:\setup\xampp\htdocs\sangovietphat\protected\modules\admin\models\ProductCategory.php (49)
+in F:\setup\xampp\htdocs\sangovietphat\protected\modules\admin\controllers\ProductCategoryController.php (219)
+in F:\setup\xampp\htdocs\sangovietphat\index.php (19)
+2017/06/19 19:15:03 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'Không thể giải quyết yêu cầu "abc".' in F:\setup\xampp\htdocs\sangovietphat\framework\web\CWebApplication.php:286
+Stack trace:
+#0 F:\setup\xampp\htdocs\sangovietphat\framework\web\CWebApplication.php(141): CWebApplication->runController('abc')
+#1 F:\setup\xampp\htdocs\sangovietphat\framework\base\CApplication.php(180): CWebApplication->processRequest()
+#2 F:\setup\xampp\htdocs\sangovietphat\index.php(19): CApplication->run()
+#3 {main}
+REQUEST_URI=/abc
+HTTP_REFERER=http://sangovietphat.dev/
+---
+2017/06/19 19:16:51 [warning] [application] Failed to set unsafe attribute "catimage_id" of "ProductCategory".
+in F:\setup\xampp\htdocs\sangovietphat\protected\modules\admin\models\ProductCategory.php (49)
+in F:\setup\xampp\htdocs\sangovietphat\protected\modules\admin\controllers\ProductCategoryController.php (186)
+in F:\setup\xampp\htdocs\sangovietphat\index.php (19)
+2017/06/19 19:16:54 [warning] [application] Failed to set unsafe attribute "catimage_id" of "ProductCategory".
+in F:\setup\xampp\htdocs\sangovietphat\protected\modules\admin\models\ProductCategory.php (49)
+in F:\setup\xampp\htdocs\sangovietphat\protected\modules\admin\controllers\ProductCategoryController.php (219)
+in F:\setup\xampp\htdocs\sangovietphat\index.php (19)
+2017/06/19 19:19:15 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'Không thể giải quyết yêu cầu "themes/front-end-vi/images/data/no_image.jpg".' in F:\setup\xampp\htdocs\sangovietphat\framework\web\CWebApplication.php:286
+Stack trace:
+#0 F:\setup\xampp\htdocs\sangovietphat\framework\web\CWebApplication.php(141): CWebApplication->runController('themes/front-en...')
+#1 F:\setup\xampp\htdocs\sangovietphat\framework\base\CApplication.php(180): CWebApplication->processRequest()
+#2 F:\setup\xampp\htdocs\sangovietphat\index.php(19): CApplication->run()
+#3 {main}
+REQUEST_URI=/themes/front-end-vi/images/data/no_image.jpg
+HTTP_REFERER=http://sangovietphat.dev/nhom-tin/3/gioi-thieu
+---
+2017/06/20 16:17:47 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'Không thể giải quyết yêu cầu "favicon.ico".' in F:\setup\xampp\htdocs\sangovietphat\framework\web\CWebApplication.php:286
+Stack trace:
+#0 F:\setup\xampp\htdocs\sangovietphat\framework\web\CWebApplication.php(141): CWebApplication->runController('favicon.ico')
+#1 F:\setup\xampp\htdocs\sangovietphat\framework\base\CApplication.php(180): CWebApplication->processRequest()
+#2 F:\setup\xampp\htdocs\sangovietphat\index.php(19): CApplication->run()
+#3 {main}
+REQUEST_URI=/favicon.ico
+HTTP_REFERER=http://sangovietphat.dev/
+---
+2017/06/20 16:27:49 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'Không thể giải quyết yêu cầu "tinymce/tiny_mce/themes/advanced/skins/bootstrap/img/iframe.gif".' in F:\setup\xampp\htdocs\sangovietphat\framework\web\CWebApplication.php:286
+Stack trace:
+#0 F:\setup\xampp\htdocs\sangovietphat\framework\web\CWebApplication.php(141): CWebApplication->runController('tinymce/tiny_mc...')
+#1 F:\setup\xampp\htdocs\sangovietphat\framework\base\CApplication.php(180): CWebApplication->processRequest()
+#2 F:\setup\xampp\htdocs\sangovietphat\index.php(19): CApplication->run()
+#3 {main}
+REQUEST_URI=/tinymce/tiny_mce/themes/advanced/skins/bootstrap/img/iframe.gif
+HTTP_REFERER=http://sangovietphat.dev/tinymce/tiny_mce/themes/advanced/skins/bootstrap/content.css
+---
+2017/06/20 16:28:20 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'Không thể giải quyết yêu cầu "tinymce/tiny_mce/themes/advanced/skins/bootstrap/img/iframe.gif".' in F:\setup\xampp\htdocs\sangovietphat\framework\web\CWebApplication.php:286
+Stack trace:
+#0 F:\setup\xampp\htdocs\sangovietphat\framework\web\CWebApplication.php(141): CWebApplication->runController('tinymce/tiny_mc...')
+#1 F:\setup\xampp\htdocs\sangovietphat\framework\base\CApplication.php(180): CWebApplication->processRequest()
+#2 F:\setup\xampp\htdocs\sangovietphat\index.php(19): CApplication->run()
+#3 {main}
+REQUEST_URI=/tinymce/tiny_mce/themes/advanced/skins/bootstrap/img/iframe.gif
+HTTP_REFERER=http://sangovietphat.dev/tinymce/tiny_mce/themes/advanced/skins/bootstrap/content.css
+---
+2017/06/20 16:33:20 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'Không thể giải quyết yêu cầu "themes/front-end-vi/images/data/no_image.jpg".' in F:\setup\xampp\htdocs\sangovietphat\framework\web\CWebApplication.php:286
+Stack trace:
+#0 F:\setup\xampp\htdocs\sangovietphat\framework\web\CWebApplication.php(141): CWebApplication->runController('themes/front-en...')
+#1 F:\setup\xampp\htdocs\sangovietphat\framework\base\CApplication.php(180): CWebApplication->processRequest()
+#2 F:\setup\xampp\htdocs\sangovietphat\index.php(19): CApplication->run()
+#3 {main}
+REQUEST_URI=/themes/front-end-vi/images/data/no_image.jpg
+HTTP_REFERER=http://sangovietphat.dev/nhom-tin/3/gioi-thieu
+---
+2017/06/20 16:48:13 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'Không thể giải quyết yêu cầu "themes/front-end-vi/images/data/no_image.jpg".' in F:\setup\xampp\htdocs\sangovietphat\framework\web\CWebApplication.php:286
+Stack trace:
+#0 F:\setup\xampp\htdocs\sangovietphat\framework\web\CWebApplication.php(141): CWebApplication->runController('themes/front-en...')
+#1 F:\setup\xampp\htdocs\sangovietphat\framework\base\CApplication.php(180): CWebApplication->processRequest()
+#2 F:\setup\xampp\htdocs\sangovietphat\index.php(19): CApplication->run()
+#3 {main}
+REQUEST_URI=/themes/front-end-vi/images/data/no_image.jpg
+HTTP_REFERER=http://sangovietphat.dev/nhom-tin/3/gioi-thieu
+---
+2017/06/20 16:50:51 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'Không thể giải quyết yêu cầu "themes/front-end-vi/images/data/no_image.jpg".' in F:\setup\xampp\htdocs\sangovietphat\framework\web\CWebApplication.php:286
+Stack trace:
+#0 F:\setup\xampp\htdocs\sangovietphat\framework\web\CWebApplication.php(141): CWebApplication->runController('themes/front-en...')
+#1 F:\setup\xampp\htdocs\sangovietphat\framework\base\CApplication.php(180): CWebApplication->processRequest()
+#2 F:\setup\xampp\htdocs\sangovietphat\index.php(19): CApplication->run()
+#3 {main}
+REQUEST_URI=/themes/front-end-vi/images/data/no_image.jpg
+HTTP_REFERER=http://sangovietphat.dev/nhom-tin/9/he-thong
+---
+2017/06/20 16:51:20 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'Không thể giải quyết yêu cầu "themes/front-end-vi/images/data/no_image.jpg".' in F:\setup\xampp\htdocs\sangovietphat\framework\web\CWebApplication.php:286
+Stack trace:
+#0 F:\setup\xampp\htdocs\sangovietphat\framework\web\CWebApplication.php(141): CWebApplication->runController('themes/front-en...')
+#1 F:\setup\xampp\htdocs\sangovietphat\framework\base\CApplication.php(180): CWebApplication->processRequest()
+#2 F:\setup\xampp\htdocs\sangovietphat\index.php(19): CApplication->run()
+#3 {main}
+REQUEST_URI=/themes/front-end-vi/images/data/no_image.jpg
+HTTP_REFERER=http://sangovietphat.dev/nhom-tin/3/gioi-thieu
+---
+2017/06/20 16:51:38 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'Không thể giải quyết yêu cầu "themes/front-end-vi/images/data/no_image.jpg".' in F:\setup\xampp\htdocs\sangovietphat\framework\web\CWebApplication.php:286
+Stack trace:
+#0 F:\setup\xampp\htdocs\sangovietphat\framework\web\CWebApplication.php(141): CWebApplication->runController('themes/front-en...')
+#1 F:\setup\xampp\htdocs\sangovietphat\framework\base\CApplication.php(180): CWebApplication->processRequest()
+#2 F:\setup\xampp\htdocs\sangovietphat\index.php(19): CApplication->run()
+#3 {main}
+REQUEST_URI=/themes/front-end-vi/images/data/no_image.jpg
+HTTP_REFERER=http://sangovietphat.dev/nhom-tin/3/gioi-thieu
+---
+2017/06/20 17:02:13 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'Không thể giải quyết yêu cầu "themes/front-end-vi/images/data/no_image.jpg".' in F:\setup\xampp\htdocs\sangovietphat\framework\web\CWebApplication.php:286
+Stack trace:
+#0 F:\setup\xampp\htdocs\sangovietphat\framework\web\CWebApplication.php(141): CWebApplication->runController('themes/front-en...')
+#1 F:\setup\xampp\htdocs\sangovietphat\framework\base\CApplication.php(180): CWebApplication->processRequest()
+#2 F:\setup\xampp\htdocs\sangovietphat\index.php(19): CApplication->run()
+#3 {main}
+REQUEST_URI=/themes/front-end-vi/images/data/no_image.jpg
+HTTP_REFERER=http://sangovietphat.dev/nhom-tin/9/he-thong
+---
+2017/06/20 17:02:22 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'Không thể giải quyết yêu cầu "themes/front-end-vi/images/data/no_image.jpg".' in F:\setup\xampp\htdocs\sangovietphat\framework\web\CWebApplication.php:286
+Stack trace:
+#0 F:\setup\xampp\htdocs\sangovietphat\framework\web\CWebApplication.php(141): CWebApplication->runController('themes/front-en...')
+#1 F:\setup\xampp\htdocs\sangovietphat\framework\base\CApplication.php(180): CWebApplication->processRequest()
+#2 F:\setup\xampp\htdocs\sangovietphat\index.php(19): CApplication->run()
+#3 {main}
+REQUEST_URI=/themes/front-end-vi/images/data/no_image.jpg
+HTTP_REFERER=http://sangovietphat.dev/nhom-tin/9/he-thong
+---
+2017/06/20 17:18:50 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'Không thể giải quyết yêu cầu "tinymce/tiny_mce/themes/advanced/skins/bootstrap/img/iframe.gif".' in F:\setup\xampp\htdocs\sangovietphat\framework\web\CWebApplication.php:286
+Stack trace:
+#0 F:\setup\xampp\htdocs\sangovietphat\framework\web\CWebApplication.php(141): CWebApplication->runController('tinymce/tiny_mc...')
+#1 F:\setup\xampp\htdocs\sangovietphat\framework\base\CApplication.php(180): CWebApplication->processRequest()
+#2 F:\setup\xampp\htdocs\sangovietphat\index.php(19): CApplication->run()
+#3 {main}
+REQUEST_URI=/tinymce/tiny_mce/themes/advanced/skins/bootstrap/img/iframe.gif
+HTTP_REFERER=http://sangovietphat.dev/tinymce/tiny_mce/themes/advanced/skins/bootstrap/content.css
+---
+2017/06/20 19:52:28 [error] [exception.CException] exception 'CException' with message 'ProductController and its behaviors do not have a method or closure named "getTableAlias".' in F:\setup\xampp\htdocs\sangovietphat\framework\base\CComponent.php:266
+Stack trace:
+#0 F:\setup\xampp\htdocs\sangovietphat\framework\db\ar\CActiveRecord.php(1517): CComponent->__call('getTableAlias', Array)
+#1 F:\setup\xampp\htdocs\sangovietphat\framework\db\ar\CActiveRecord.php(1517): ProductController->getTableAlias(true)
+#2 F:\setup\xampp\htdocs\sangovietphat\themes\front-end-vi\views\product\list.php(18): CActiveRecord->findByAttributes(Array)
+#3 F:\setup\xampp\htdocs\sangovietphat\framework\web\CBaseController.php(126): require('F:\\setup\\xampp\\...')
+#4 F:\setup\xampp\htdocs\sangovietphat\framework\web\CBaseController.php(95): CBaseController->renderInternal('F:\\setup\\xampp\\...', NULL, true)
+#5 F:\setup\xampp\htdocs\sangovietphat\framework\web\CController.php(869): CBaseController->renderFile('F:\\setup\\xampp\\...', NULL, true)
+#6 F:\setup\xampp\htdocs\sangovietphat\framework\web\CController.php(782): CController->renderPartial('list', NULL, true)
+#7 F:\setup\xampp\htdocs\sangovietphat\protected\components\Controller.php(51): CController->render('list')
+#8 F:\setup\xampp\htdocs\sangovietphat\framework\web\actions\CInlineAction.php(49): Controller->actionList()
+#9 F:\setup\xampp\htdocs\sangovietphat\framework\web\CController.php(308): CInlineAction->runWithParams(Array)
+#10 F:\setup\xampp\htdocs\sangovietphat\framework\web\CController.php(286): CController->runAction(Object(CInlineAction))
+#11 F:\setup\xampp\htdocs\sangovietphat\framework\web\CController.php(265): CController->runActionWithFilters(Object(CInlineAction), Array)
+#12 F:\setup\xampp\htdocs\sangovietphat\framework\web\CWebApplication.php(282): CController->run('list')
+#13 F:\setup\xampp\htdocs\sangovietphat\framework\web\CWebApplication.php(141): CWebApplication->runController('product/list')
+#14 F:\setup\xampp\htdocs\sangovietphat\framework\base\CApplication.php(180): CWebApplication->processRequest()
+#15 F:\setup\xampp\htdocs\sangovietphat\index.php(19): CApplication->run()
+#16 {main}
+REQUEST_URI=/nhom-san-pham/1/thaigreen
+HTTP_REFERER=http://sangovietphat.dev/san-pham/65/bt8---m105
+---
+2017/06/20 20:07:12 [warning] [application] Failed to set unsafe attribute "catimage_id" of "ProductCategory".
+in F:\setup\xampp\htdocs\sangovietphat\protected\modules\admin\models\ProductCategory.php (49)
+in F:\setup\xampp\htdocs\sangovietphat\protected\modules\admin\controllers\ProductCategoryController.php (219)
+in F:\setup\xampp\htdocs\sangovietphat\index.php (19)
+2017/06/20 20:10:55 [error] [php] Undefined variable: product_limit (F:\setup\xampp\htdocs\sangovietphat\themes\front-end-vi\views\product\list.php:112)
+Stack trace:
+#0 F:\setup\xampp\htdocs\sangovietphat\framework\web\CController.php(869): ProductController->renderFile()
+#1 F:\setup\xampp\htdocs\sangovietphat\framework\web\CController.php(782): ProductController->renderPartial()
+#2 F:\setup\xampp\htdocs\sangovietphat\protected\components\Controller.php(51): ProductController->render()
+#3 F:\setup\xampp\htdocs\sangovietphat\framework\web\actions\CInlineAction.php(49): ProductController->actionList()
+#4 F:\setup\xampp\htdocs\sangovietphat\framework\web\CController.php(308): CInlineAction->runWithParams()
+#5 F:\setup\xampp\htdocs\sangovietphat\framework\web\CController.php(286): ProductController->runAction()
+#6 F:\setup\xampp\htdocs\sangovietphat\framework\web\CController.php(265): ProductController->runActionWithFilters()
+#7 F:\setup\xampp\htdocs\sangovietphat\framework\web\CWebApplication.php(282): ProductController->run()
+#8 F:\setup\xampp\htdocs\sangovietphat\framework\web\CWebApplication.php(141): CWebApplication->runController()
+#9 F:\setup\xampp\htdocs\sangovietphat\framework\base\CApplication.php(180): CWebApplication->processRequest()
+#10 F:\setup\xampp\htdocs\sangovietphat\index.php(19): CWebApplication->run()
+REQUEST_URI=/nhom-san-pham/1/thaigreen
+in F:\setup\xampp\htdocs\sangovietphat\themes\front-end-vi\views\product\list.php (112)
+in F:\setup\xampp\htdocs\sangovietphat\protected\components\Controller.php (51)
+in F:\setup\xampp\htdocs\sangovietphat\index.php (19)
+2017/06/20 21:41:11 [error] [php] Undefined index: cat_id (F:\setup\xampp\htdocs\sangovietphat\themes\front-end-vi\views\product\list.php:18)
+Stack trace:
+#0 F:\setup\xampp\htdocs\sangovietphat\framework\web\CController.php(869): ProductController->renderFile()
+#1 F:\setup\xampp\htdocs\sangovietphat\framework\web\CController.php(782): ProductController->renderPartial()
+#2 F:\setup\xampp\htdocs\sangovietphat\protected\components\Controller.php(51): ProductController->render()
+#3 F:\setup\xampp\htdocs\sangovietphat\framework\web\actions\CInlineAction.php(49): ProductController->actionList()
+#4 F:\setup\xampp\htdocs\sangovietphat\framework\web\CController.php(308): CInlineAction->runWithParams()
+#5 F:\setup\xampp\htdocs\sangovietphat\framework\web\CController.php(286): ProductController->runAction()
+#6 F:\setup\xampp\htdocs\sangovietphat\framework\web\CController.php(265): ProductController->runActionWithFilters()
+#7 F:\setup\xampp\htdocs\sangovietphat\framework\web\CWebApplication.php(282): ProductController->run()
+#8 F:\setup\xampp\htdocs\sangovietphat\framework\web\CWebApplication.php(141): CWebApplication->runController()
+#9 F:\setup\xampp\htdocs\sangovietphat\framework\base\CApplication.php(180): CWebApplication->processRequest()
+#10 F:\setup\xampp\htdocs\sangovietphat\index.php(19): CWebApplication->run()
+REQUEST_URI=/san-pham
+in F:\setup\xampp\htdocs\sangovietphat\themes\front-end-vi\views\product\list.php (18)
+in F:\setup\xampp\htdocs\sangovietphat\protected\components\Controller.php (51)
+in F:\setup\xampp\htdocs\sangovietphat\index.php (19)
+2017/06/20 21:41:33 [error] [php] Undefined index: cat_id (F:\setup\xampp\htdocs\sangovietphat\themes\front-end-vi\views\product\list.php:18)
+Stack trace:
+#0 F:\setup\xampp\htdocs\sangovietphat\framework\web\CController.php(869): ProductController->renderFile()
+#1 F:\setup\xampp\htdocs\sangovietphat\framework\web\CController.php(782): ProductController->renderPartial()
+#2 F:\setup\xampp\htdocs\sangovietphat\protected\components\Controller.php(51): ProductController->render()
+#3 F:\setup\xampp\htdocs\sangovietphat\framework\web\actions\CInlineAction.php(49): ProductController->actionList()
+#4 F:\setup\xampp\htdocs\sangovietphat\framework\web\CController.php(308): CInlineAction->runWithParams()
+#5 F:\setup\xampp\htdocs\sangovietphat\framework\web\CController.php(286): ProductController->runAction()
+#6 F:\setup\xampp\htdocs\sangovietphat\framework\web\CController.php(265): ProductController->runActionWithFilters()
+#7 F:\setup\xampp\htdocs\sangovietphat\framework\web\CWebApplication.php(282): ProductController->run()
+#8 F:\setup\xampp\htdocs\sangovietphat\framework\web\CWebApplication.php(141): CWebApplication->runController()
+#9 F:\setup\xampp\htdocs\sangovietphat\framework\base\CApplication.php(180): CWebApplication->processRequest()
+#10 F:\setup\xampp\htdocs\sangovietphat\index.php(19): CWebApplication->run()
+REQUEST_URI=/san-pham
+in F:\setup\xampp\htdocs\sangovietphat\themes\front-end-vi\views\product\list.php (18)
+in F:\setup\xampp\htdocs\sangovietphat\protected\components\Controller.php (51)
+in F:\setup\xampp\htdocs\sangovietphat\index.php (19)
+2017/06/20 22:11:01 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'Không thể giải quyết yêu cầu "commentChild".' in F:\setup\xampp\htdocs\sangovietphat\framework\web\CWebApplication.php:286
+Stack trace:
+#0 F:\setup\xampp\htdocs\sangovietphat\framework\web\CWebApplication.php(141): CWebApplication->runController('commentChild')
+#1 F:\setup\xampp\htdocs\sangovietphat\framework\base\CApplication.php(180): CWebApplication->processRequest()
+#2 F:\setup\xampp\htdocs\sangovietphat\index.php(19): CApplication->run()
+#3 {main}
+REQUEST_URI=/commentChild?ids=5%2C3
+HTTP_REFERER=http://sangovietphat.dev/san-pham/52/bt8-n103
+---
+2017/06/21 05:32:45 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'Không thể giải quyết yêu cầu "favicon.ico".' in F:\setup\xampp\htdocs\sangovietphat\framework\web\CWebApplication.php:286
+Stack trace:
+#0 F:\setup\xampp\htdocs\sangovietphat\framework\web\CWebApplication.php(141): CWebApplication->runController('favicon.ico')
+#1 F:\setup\xampp\htdocs\sangovietphat\framework\base\CApplication.php(180): CWebApplication->processRequest()
+#2 F:\setup\xampp\htdocs\sangovietphat\index.php(19): CApplication->run()
+#3 {main}
+REQUEST_URI=/favicon.ico
+HTTP_REFERER=http://sangovietphat.dev/
+---
+2017/06/21 06:57:52 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'Không thể giải quyết yêu cầu "favicon.ico".' in F:\setup\xampp\htdocs\sangovietphat\framework\web\CWebApplication.php:286
+Stack trace:
+#0 F:\setup\xampp\htdocs\sangovietphat\framework\web\CWebApplication.php(141): CWebApplication->runController('favicon.ico')
+#1 F:\setup\xampp\htdocs\sangovietphat\framework\base\CApplication.php(180): CWebApplication->processRequest()
+#2 F:\setup\xampp\htdocs\sangovietphat\index.php(19): CApplication->run()
+#3 {main}
+REQUEST_URI=/favicon.ico
+HTTP_REFERER=http://sangovietphat.dev/san-pham/52/bt8-n103
+---
+2017/06/21 07:08:57 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'Không thể giải quyết yêu cầu "favicon.ico".' in F:\setup\xampp\htdocs\sangovietphat\framework\web\CWebApplication.php:286
+Stack trace:
+#0 F:\setup\xampp\htdocs\sangovietphat\framework\web\CWebApplication.php(141): CWebApplication->runController('favicon.ico')
+#1 F:\setup\xampp\htdocs\sangovietphat\framework\base\CApplication.php(180): CWebApplication->processRequest()
+#2 F:\setup\xampp\htdocs\sangovietphat\index.php(19): CApplication->run()
+#3 {main}
+REQUEST_URI=/favicon.ico
+HTTP_REFERER=http://sangovietphat.dev/san-pham/52/bt8-n103
+---
+2017/06/21 07:11:07 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'Không thể giải quyết yêu cầu "favicon.ico".' in F:\setup\xampp\htdocs\sangovietphat\framework\web\CWebApplication.php:286
+Stack trace:
+#0 F:\setup\xampp\htdocs\sangovietphat\framework\web\CWebApplication.php(141): CWebApplication->runController('favicon.ico')
+#1 F:\setup\xampp\htdocs\sangovietphat\framework\base\CApplication.php(180): CWebApplication->processRequest()
+#2 F:\setup\xampp\htdocs\sangovietphat\index.php(19): CApplication->run()
+#3 {main}
+REQUEST_URI=/favicon.ico
+HTTP_REFERER=http://sangovietphat.dev/san-pham/52/bt8-n103
+---
+2017/06/21 07:25:18 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'Không thể giải quyết yêu cầu "favicon.ico".' in F:\setup\xampp\htdocs\sangovietphat\framework\web\CWebApplication.php:286
+Stack trace:
+#0 F:\setup\xampp\htdocs\sangovietphat\framework\web\CWebApplication.php(141): CWebApplication->runController('favicon.ico')
+#1 F:\setup\xampp\htdocs\sangovietphat\framework\base\CApplication.php(180): CWebApplication->processRequest()
+#2 F:\setup\xampp\htdocs\sangovietphat\index.php(19): CApplication->run()
+#3 {main}
+REQUEST_URI=/favicon.ico
+HTTP_REFERER=http://sangovietphat.dev/tin/41/san-go-cong-nghiep-xuong-ca
+---
+2017/06/21 07:32:34 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'Không thể giải quyết yêu cầu "themes/front-end-vi/images/data/no_image.jpg".' in F:\setup\xampp\htdocs\sangovietphat\framework\web\CWebApplication.php:286
+Stack trace:
+#0 F:\setup\xampp\htdocs\sangovietphat\framework\web\CWebApplication.php(141): CWebApplication->runController('themes/front-en...')
+#1 F:\setup\xampp\htdocs\sangovietphat\framework\base\CApplication.php(180): CWebApplication->processRequest()
+#2 F:\setup\xampp\htdocs\sangovietphat\index.php(19): CApplication->run()
+#3 {main}
+REQUEST_URI=/themes/front-end-vi/images/data/no_image.jpg
+HTTP_REFERER=http://sangovietphat.dev/nhom-tin/9/he-thong
+---
+2017/06/21 10:17:49 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'Không thể giải quyết yêu cầu "favicon.ico".' in F:\setup\xampp\htdocs\sangovietphat\framework\web\CWebApplication.php:286
+Stack trace:
+#0 F:\setup\xampp\htdocs\sangovietphat\framework\web\CWebApplication.php(141): CWebApplication->runController('favicon.ico')
+#1 F:\setup\xampp\htdocs\sangovietphat\framework\base\CApplication.php(180): CWebApplication->processRequest()
+#2 F:\setup\xampp\htdocs\sangovietphat\index.php(19): CApplication->run()
+#3 {main}
+REQUEST_URI=/favicon.ico
+HTTP_REFERER=http://sangovietphat.dev/
+---

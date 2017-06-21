@@ -639,8 +639,13 @@ class News extends CActiveRecord
             if(array_key_exists($key,$model->attributes) && $value !=null)
                 $criteria->compare($key, $value);
         }
+        //ignore some new
+        $notIds = array(Setting::s('FOOTER_ID', 'INFORMATION'));
+        $notIdsString = implode(',', $notIds);
+        $criteria->addCondition('id NOT IN('.$notIdsString.')');
+        
         $criteria->order = "order_view desc, id desc";
-
+        
         //Apply pager
         $count = $model::model()->count($criteria);
         $pages = new CPagination($count);
@@ -649,7 +654,7 @@ class News extends CActiveRecord
 
         $item_count = ceil($count/$pageSize);
         $pages->applyLimit($criteria);
-
+        
         $list_item = $model::model()->findAll($criteria);
 
         if(!isset($list_item)){
