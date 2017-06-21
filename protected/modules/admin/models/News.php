@@ -644,7 +644,7 @@ class News extends CActiveRecord
         $notIdsString = implode(',', $notIds);
         $criteria->addCondition('id NOT IN('.$notIdsString.')');
         
-        $criteria->order = "order_view desc, id desc";
+        $criteria->order = "order_view desc, created_time desc, id desc";
         
         //Apply pager
         $count = $model::model()->count($criteria);

@@ -77,7 +77,7 @@
     </div>
     <div class="col-sm-12 col-md-12">
         <!-- wContentBox -->
-        <div id="hot-products" class="wContentBox">
+        <div id="hot-products" class="wContentBox category">
             <div class="contentBox">
                 <div class="title_box">Sản phẩm bán chạy</div>
                 <div class="content_box">
