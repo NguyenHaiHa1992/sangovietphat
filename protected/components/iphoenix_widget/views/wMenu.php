@@ -110,12 +110,12 @@
 		</div><!-- /.navbar-collapse -->
 		<?php endif;?>
         <!-- wSearchBox -->
-        <div id="main-search-box" class="wSearchBox">
+<!--        <div id="main-search-box" class="wSearchBox">
             <form id="search_form" action="<?php echo Yii::app()->createUrl('site/search');?>" method="post">
                 <input id="input_keyword" name="keyword" type="text" placeholder="Search"/>
                 <button id="search_btn" type="submit"><span class="glyphicon glyphicon-search"></span> </button>
             </form>
-        </div>
+        </div>-->
         <!-- end of wSearchBox #main-search-box-->
 	</nav>
 </div>

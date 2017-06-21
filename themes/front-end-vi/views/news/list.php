@@ -40,7 +40,11 @@ $this->widget('wMetaTag',array(
                             'class'=>'list-unstyled',
                             'data'=>$data,
                             'template'=>'
-                                    <div class="image"><img src="[getIntroimage_thumb(220,135,false)]" alt="" title="" class="img-responsive"></div>
+                                    <div class="image">
+                                        <a href="{detail_url}">
+                                            <img src="[getIntroimage_thumb(220,135,false)]" alt="" title="" class="img-responsive">
+                                        </a>
+                                    </div>
                                     <div class="information">
                                         <a href="{detail_url}" class="title">{name}</a>
                                         <div class="quote">{introtext}</div>

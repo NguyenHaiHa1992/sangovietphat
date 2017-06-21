@@ -75,7 +75,7 @@
         ));
         ?>
     </div>
-    <div class="col-sm-6 col-md-6">
+    <div class="col-sm-12 col-md-12">
         <!-- wContentBox -->
         <div id="hot-products" class="wContentBox">
             <div class="contentBox">
@@ -83,14 +83,29 @@
                 <div class="content_box">
                     <!-- wCarouselSlider -->
                     <?php
-                    $this->widget('wCarouselSlider', array(
-                        'id'=>'carousel-hot-products',
-                        'class'=>'slide',
-                        'data'=>Product::getItems(12, array(
-                            'status' => true,
-                            'best_sell' => 1
-                        )),
-                    ));
+//                    $this->widget('wCarouselSlider', array(
+//                        'id'=>'carousel-hot-products',
+//                        'class'=>'slide',
+//                        'data'=>Product::getItems(12, array(
+//                            'status' => true,
+//                            'best_sell' => 1
+//                        )),
+//                    ));
+                    ?>
+                    <?php
+                        $this->widget('wListItem', array(
+                            'class'=>'list-unstyled',
+                            'data'=>Product::getItems(12, array(
+                                'status' => true,
+                                'best_sell' => 1
+                            )),
+                            'template'=>'
+                                <div class="image"><a href="{detail_url}" title="{name}"><img src="[getIntroimage_thumb(220,137)]" alt="{name}" title="{name}" class="img-responsive"></a></div>
+                                <div class="information">
+                                    <a href="{detail_url}" title="{name}">[getTitle_text(6)]</a>
+                                </div>
+                            ',
+                        ));
                     ?>
                     <!-- end of wCarouselSlider -->
                 </div>
@@ -98,33 +113,7 @@
         </div>
         <!-- end of wContentBox #hot-products-->
     </div>
-    <div class="col-sm-6 col-md-6">
-        <!-- wContentBox -->
-        <div id="news" class="wContentBox">
-            <div class="contentBox">
-                <div class="title_box">Tin tức</div>
-                <div class="content_box">
-                    <!-- wListItem -->
-                    <?php
-                    $this->widget('wListItem', array(
-                        'class'=>'list-unstyled',
-                        'data'=>News::getItems(2,array('cat_id'=>2,'home'=>true)),
-                        'template'=>'
-                            <div class="image"><a href="{detail_url}" title="{name}"><img src="[getIntroimage_thumb(120,85)]" alt="{name}" title="{name}" class="img-responsive"></a></div>
-                            <div class="information">
-                                <a href="{detail_url}" title="{name}" class="title">{title_text}</a>
-                                <div class="quote">[getIntro_text(20)]</div>
-                            </div>
-                            <div class="read-more"><a href="{detail_url}" title="{name}">Xem thêm >></a> </div>
-                        ',
-                    ));
-                    ?>
-                    <!-- end of wListItem -->
-                </div>
-            </div>
-        </div>
-        <!-- end of wContentBox #news-->
-    </div>
+    
     <?php if(isset($list_category) && sizeof($list_category) !=0):?>
         <?php foreach($list_category as $key => $category):?>
             <div class="col-sm-12">
@@ -141,9 +130,9 @@
                                     'class'=>'list-unstyled',
                                     'data'=>Product::getItems(6,array('cat_id'=>$category->id)),
                                     'template'=>'
-                                        <div class="image"><a href="{category_url}" title="{name}"><img src="[getIntroimage_thumb(220,137)]" alt="{name}" title="{name}" class="img-responsive"></a></div>
+                                        <div class="image"><a href="{detail_url}" title="{name}"><img src="[getIntroimage_thumb(220,137)]" alt="{name}" title="{name}" class="img-responsive"></a></div>
                                         <div class="information">
-                                            <a href="{category_url}" title="{name}">[getTitle_text(6)]</a>
+                                            <a href="{detail_url}" title="{name}">[getTitle_text(6)]</a>
                                         </div>
                                     ',
                                 ));
@@ -156,4 +145,39 @@
             </div>
         <?php endforeach;?>
     <?php endif;?>
+    
+    <div class="col-sm-12 col-md-12">
+        <!-- wContentBox -->
+        <div id="news" class="wContentBox category">
+            <div class="contentBox">
+                <div class="title_box">Tin tức</div>
+                <div class="content_box">
+                    <!-- wListItem -->
+                    <?php
+                    $this->widget('wListItem', array(
+                        'class'=>'list-unstyled',
+                        'data'=>News::getItems(2,array('cat_id'=>2,'home'=>true)),
+//                        'template'=>'
+//                            <div class="image"><a href="{detail_url}" title="{name}"><img src="[getIntroimage_thumb(120,85)]" alt="{name}" title="{name}" class="img-responsive"></a></div>
+//                            <div class="information">
+//                                <a href="{detail_url}" title="{name}" class="title">{title_text}</a>
+//                                <div class="quote">[getIntro_text(20)]</div>
+//                            </div>
+//                            <div class="read-more"><a href="{detail_url}" title="{name}">Xem thêm >></a> </div>
+//                        ',
+                        'template'=>'
+                            <div class="image"><a href="{detail_url}" title="{name}"><img src="[getIntroimage_thumb(220,137)]" alt="{name}" title="{name}" class="img-responsive"></a></div>
+                            <div class="information">
+                                <a href="{detail_url}" title="{name}"><b>{title_text}</b></a>
+                                <div class="quote">[getIntro_text(20)]</div>
+                            </div>
+                        '
+                    ));
+                    ?>
+                    <!-- end of wListItem -->
+                </div>
+            </div>
+        </div>
+        <!-- end of wContentBox #news-->
+    </div>
 </div>

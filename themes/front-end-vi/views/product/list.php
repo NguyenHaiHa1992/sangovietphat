@@ -13,6 +13,10 @@ if(isset($_GET['cat_id'])){
 $this->widget('wMetaTag',array(
     'setting'=>'PRODUCT',
 ));
+
+//for sub category
+$sub_categories = ProductCategory::model()->findAllByAttributes(array(
+    'parent_id' => isset($_GET['cat_id']) ? $_GET['cat_id'] : null));
 ?>
 
 <div class="col-md-8 pull-right" id="main-content">
@@ -20,7 +24,7 @@ $this->widget('wMetaTag',array(
         <!-- wContentBox -->
         <div id="list-products" class="wContentBox">
             <div class="contentBox">
-                <?php if(isset($category)):?>
+                <?php if(isset($category) && !$sub_categories):?>
                     <div class="title_box">
                         <!-- wBreadcrumb -->
                             <?php
@@ -70,7 +74,17 @@ $this->widget('wMetaTag',array(
                             </ul>
                         </div>
                     </div>
-                <?php else:?>
+                <?php 
+                else:
+                    $product_limit = 3;
+                    if($sub_categories){
+                        $product_limit = 6;
+                        $list_category = $sub_categories;
+                        if($category){
+                            $list_category[] = $category;
+                        }
+                    }
+                ?>
                     <div class="title_box">
                         <!-- wBreadcrumb -->
                         <?php
@@ -96,7 +110,7 @@ $this->widget('wMetaTag',array(
                                         <?php
                                         $this->widget('wListItem', array(
                                             'class'=>'list-unstyled',
-                                            'data'=>Product::getItems(3,array('cat_id'=>$category->id)),
+                                            'data'=>Product::getItems($product_limit, array('cat_id'=>$category->id)),
                                             'template'=>'
                                         <div class="image"><a href="{detail_url}" title="{name}"><img src="[getIntroimage_thumb(220,137)]" alt="{name}" title="{name}" class="img-responsive"></a></div>
                                         <div class="information">

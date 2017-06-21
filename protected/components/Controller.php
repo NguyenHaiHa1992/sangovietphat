@@ -68,6 +68,9 @@ class Controller extends CController {
             if(isset($_POST['comment']['content'])){
                 $comment->content = $_POST['comment']['content'];
             }
+            if(isset($_POST['comment']['comment_parent'])){
+                $comment->comment_parent = $_POST['comment']['comment_parent'];
+            }
 
             if($comment->save()){
                 $html = $this->renderPartial('/site/_commentBox',array(
@@ -77,6 +80,8 @@ class Controller extends CController {
 
                 $result['success'] = true;
                 $result['html'] = $html;
+                $result['id'] = $comment->id;
+                $result['created_time'] = date('H:i d-m-Y', $comment->created_time);
             }
             else{
                 $result['success'] = false;
@@ -165,5 +170,28 @@ class Controller extends CController {
 
         echo $shtml;
     }
-
+    
+    public function actionCommentChild($ids){   
+        $result = array('success' => true);
+        if(!$ids){
+            echo json_encode($result);
+            Yii::app()->end();
+        }
+        $idArray = explode(',', $ids);
+        foreach($idArray as $id){
+            $comments = Comment::model()->findAllByAttributes(array(
+                'comment_parent' => $id
+            ));
+            foreach($comments as $comment){
+                $result['comments'][$id][] = array(
+                    'id' => $comment->id,
+                    'name' => $comment->name,
+                    'content' => $comment->content,
+                    'created_time' => date('H:i d-m-Y', $comment->created_time)
+                );
+            }
+        }
+        echo json_encode($result);
+        Yii::app()->end();
+    }
 }
