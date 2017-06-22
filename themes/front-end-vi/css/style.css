@@ -782,3 +782,7 @@ footer #info-company span{
     min-height: 50px;
     height: 50px;
 }
+.dropdown:hover .dropdown-menu {
+    display: block;
+    margin-top: 0; // remove the gap so it doesn't close
+ }
