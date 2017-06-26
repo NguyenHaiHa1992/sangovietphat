@@ -138,7 +138,7 @@ class SettingController extends Controller
 	 */
 	public function actionIndex($category)
 	{
-		$this->initCheckbox('checked-setting-list','Setting');
+                $this->initCheckbox('checked-setting-list','Setting');
 		$model=new Setting('search');
 		$model->unsetAttributes();  // clear any default values
 		if(isset($_GET['Setting']))

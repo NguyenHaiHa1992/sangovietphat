@@ -620,6 +620,7 @@ class ProductCategory extends CActiveRecord
 				$criteria->compare($key, $value);
 		}
 		$criteria->order = "order_view";
+                
 		$list_item = $model::model()->findAll($criteria);
 		if(!isset($list_item)){
 			throw new CHttpException(404,'The specified post cannot be found.');

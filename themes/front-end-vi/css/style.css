@@ -471,10 +471,8 @@ footer #info-company span{
     color: #231F20;
     height: 30px;
     line-height: 30px;
-    text-align: center;
-    background: url("../images/price-bgr.png") repeat-x center;
-    background-size:  auto 100%;
-    border-radius: 0 0 5px 5px;
+    text-align: left;
+    padding: 10px auto;
  }
 /*---------- list-products.html file -------------*/
 .image#main-image{
@@ -782,3 +780,8 @@ footer #info-company span{
     min-height: 50px;
     height: 50px;
 }
+.dropdown:hover .dropdown-menu {
+    display: block;
+    margin-top: 0; // remove the gap so it doesn't close
+ }
+.price_lienhe{color: #F02223;display: inline-block}

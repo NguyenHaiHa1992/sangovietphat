@@ -669,7 +669,12 @@ class Product extends CActiveRecord
         return iPhoenixString::createIntrotext($this->name,$lenght);
     }
 
-
+    public function getPrice_text(){
+        if($this->price)
+            return $this->price.'';
+        return '<span class="price_lienhe">Liên hệ</span>';
+    }
+    
     public function getIntroimage_src(){
         if(isset($this->introimage))
             return $this->introimage->getAbsoluteThumbUrl(100,100,false);

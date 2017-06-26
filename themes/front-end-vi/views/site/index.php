@@ -121,7 +121,11 @@
                 <div id="category-0<?php echo $key+1;?>" class="wContentBox category">
                     <div class="contentBox">
                         <div class="title_box">
-                            <a href="<?php echo $category->detail_url;?>" title="<?php echo $category->name;?>"><img src="<?php echo $category->getBoximage_thumb(184,18);?>" alt="<?php echo $category->name;?>" title="<?php echo $category->name;?>"></a>
+                            <a href="<?php echo $category->detail_url;?>" title="<?php echo $category->name;?>">
+                                <!--replace image by category name-->
+                                <!--<img src="<?ph echo $category->getBoximage_thumb(184,18);?>" alt="<?ph echo $category->name;?>" title="<?ph echo $category->name;?>">-->
+                                <?php echo $category->name;?>
+                            </a>
                         </div>
                         <div class="content_box">
                             <!-- wListItem -->

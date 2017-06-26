@@ -100,7 +100,7 @@
                     $this->widget('wListItemHome', array(
                         'id'=>'list-main-producst',
                         'class'=>'list-products list-unstyled',
-                        'data'=>ProductCategory::getItems(4),
+                        'data'=>ProductCategory::getItems(LIMIT_MAIN_PRODUCT,array('status' => true,'parent_id' => 0)),
                         'template'=>'
                             <a href="{detail_url}" title={name}>
                                 <img src="[getIntroimage_thumb(160,46)]" class="img-responsive">
@@ -132,6 +132,9 @@
     </div>-->
     <!-- end of wContentBox #support-->
     <!-- wContentBox -->
+    
+    <!--hide new products 26/06/2017-->
+    <?php if(false):?>
     <div id="new-products" class="wContentBox">
         <div class="contentBox">
             <div class="title_box">Sản phẩm mới</div>
@@ -154,6 +157,7 @@
             </div>
         </div>
     </div>
+    <?php endif;?>
     <!-- end of wContentBox -->
     <!-- wContentBox -->
     <?php $category = NewsCategory::model()->findbyPk(49);?>

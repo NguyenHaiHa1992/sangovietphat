@@ -102,7 +102,7 @@ if(isset($data->introimage)){
                                         Mã: [getTitle_text(5)]
                                         <img class="thumb img-responsive" width="" height="" src="[getIntroimage_thumb(217,142)]" alt="..." title=""/>
                                     </a>
-                                    <div class="price">Giá: {price}</div>
+                                    <div class="price">Giá: [getPrice_text()]</div>
                                 ',
                             ));
                             ?>
