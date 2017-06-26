@@ -100,24 +100,24 @@
                         </div>
                     </div>
                 </div>
-                <div id="support" class="wContentBox">
+<!--                <div id="support" class="wContentBox">
                     <div class="contentBox">
                         <div class="title_box">Hỗ trợ khách hàng</div>
                         <div class="content_box">
-                            <!-- wListItem -->
+                             wListItem 
                             <ul class="wListItem list-unstyled">
-                                <!-- Repeat 5 -->
+                                 Repeat 5 
                                 <li class="item mobile"><span class="department">Phòng kinh doanh Hà Nội</span><span class="phone"><?php echo Setting::s('KD_HANOI','INFORMATION') ?></span> </li>
                                 <li class="item mobile"><span class="department">Phòng kinh doanh TP.Hồ Chí Minh</span><span class="phone"><?php echo Setting::s('KD_TPHCM','INFORMATION') ?></span> </li>
                                 <li class="item mobile"><span class="department">Phòng kinh doanh Đà Nẵng</span><span class="phone"><?php echo Setting::s('KD_DANANG','INFORMATION') ?></span> </li>
                                 <li class="item mobile"><span class="department">Phòng kinh doanh Hải Phòng</span><span class="phone"><?php echo Setting::s('KD_HAIPHONG','INFORMATION') ?></span> </li>
                                 <li class="item email"><?php echo Setting::s('EMAIL','INFORMATION') ?> </li>
-                                <!-- end of repeat 5 -->
+                                 end of repeat 5 
                             </ul>
-                            <!-- end of wListItem -->
+                             end of wListItem 
                         </div>
                     </div>
-                </div>
+                </div>-->
                 <!-- end of wContentBox #support-->
                 <!-- wContentBox -->
                 <div id="new-products" class="wContentBox">
@@ -146,37 +146,37 @@
                 <!-- wContentBox -->
                 <?php $category = NewsCategory::model()->findbyPk(49);?>
                 <?php if(isset($category)):?>
-                    <div id="warehouse" class="wContentBox">
+<!--                    <div id="warehouse" class="wContentBox">
                         <div class="contentBox">
                             <div class="title_box"><?php echo $category->name;?></div>
                             <div class="content_box">
-                                <!-- wListItem -->
+                                 wListItem 
                                 <?php
-                                $this->widget('wListItem', array(
-                                    'class'=>'list-unstyled',
-                                    'data'=>News::getItems(3,array('cat_id'=>49,'home'=>true)),
-                                    'template'=>'
-                        <div class="image"><a href="{detail_url}"><img src="[getIntroimage_thumb(220,200)]"></a></div>
-                        <div class="information">
-                            <a href="{detail_url}">[getTitle_text(10)]</a>
-                        </div>
-                    ',
-                                ));
+//                                $this->widget('wListItem', array(
+//                                    'class'=>'list-unstyled',
+//                                    'data'=>News::getItems(3,array('cat_id'=>49,'home'=>true)),
+//                                    'template'=>'
+//                        <div class="image"><a href="{detail_url}"><img src="[getIntroimage_thumb(220,200)]"></a></div>
+//                        <div class="information">
+//                            <a href="{detail_url}">[getTitle_text(10)]</a>
+//                        </div>
+//                    ',
+//                                ));
                                 ?>
-                                <!-- end of wListItem -->
+                                 end of wListItem 
                             </div>
                         </div>
-                    </div>
+                    </div>-->
                 <?php endif;?>
                 <!-- end of wContentBox -->
                 <?php
-                $this->widget('wBanner', array(
-                    'id'=>'banner_partner',
-                    'class'=>'interested-news wContentBox',
-                    'data'=>Banner::getBannerPosition(Banner::CAT_BANNER_PARTNER,1),
-                ));
+//                $this->widget('wBanner', array(
+//                    'id'=>'banner_partner',
+//                    'class'=>'interested-news wContentBox',
+//                    'data'=>Banner::getBannerPosition(Banner::CAT_BANNER_PARTNER,1),
+//                ));
                 ?>
-                <div id="count-traffic">
+<!--                <div id="count-traffic">
                 <div class="item">
                     <span class="title">Người truy cập: </span><span class="quantity"><?php echo Yii::app()->counter->getTotal(); ?></span>
                 </div>
@@ -186,7 +186,7 @@
                 <div class="item">
                     <span class="title">Người online: </span><span class="quantity"><?php echo Yii::app()->counter->getOnline(); ?></span>
                 </div>
-            </div>
+            </div>-->
             </div>
             <?php echo $content;?>				                    
         </section>

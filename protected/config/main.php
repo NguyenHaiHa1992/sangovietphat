@@ -83,12 +83,12 @@ return array(
 				''=>array('site/index'),
 
 				'nhom-tin/<cat_id>/<cat_alias>'=>array('news/list'),
-				'tin'=>array('news/list'),
-				'tin/<id>/<news_alias>'=>array('news/view'),
+				'tin-tuc'=>array('news/list'),
+				'tin-tuc/<news_alias>/<id>'=>array('news/view'),
 
-				'nhom-san-pham/<cat_id>/<alias>'=>array('product/list'),
+				'nhom-san-pham/<alias>/<cat_id>'=>array('product/list'),
 				'san-pham'=>array('product/list'),
-				'san-pham/<id>/<product_alias>'=>array('product/view'),
+				'san-pham/<product_alias>/<id>'=>array('product/view'),
 
 				'gui-lien-he'=>array('contact/add'),
 				'lien-he'=>array('contact/index'),
