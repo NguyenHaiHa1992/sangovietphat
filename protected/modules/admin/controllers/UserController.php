@@ -137,14 +137,14 @@ class UserController extends Controller
 				$model->password=$model->hashPassword($clear_password,$model->salt);
 							
 				if($model->save()){					
-					if($model->email != ''){
-						$email = new YiiMailMessage ();
-						$email->setTo ( $model->email );
-						$email->from = array(Yii::app()->params['adminEmail']=>'IHB Việt Nam');
-						$email->setSubject ( 'Thông tin tài khoản' );
-						$email->setBody('Tài khoản đăng nhập của bạn là: Email : '.$model->email.' & Password : '.$clear_password);
-						Yii::app()->mail->send($email);		
-					}						
+//					if($model->email != ''){
+//						$email = new YiiMailMessage ();
+//						$email->setTo ( $model->email );
+//						$email->from = array(Yii::app()->params['adminEmail']=>'IHB Việt Nam');
+//						$email->setSubject ( 'Thông tin tài khoản' );
+//						$email->setBody('Tài khoản đăng nhập của bạn là: Email : '.$model->email.' & Password : '.$clear_password);
+//						Yii::app()->mail->send($email);		
+//					}						
 					$result['success']=true;
 				}	
 				else{

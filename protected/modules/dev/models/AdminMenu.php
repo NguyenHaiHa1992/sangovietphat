@@ -115,6 +115,9 @@ class AdminMenu extends CActiveRecord
 		
 		'issue_index'=>'Support Contact - Lỗi',
 		'issue_create'=>'Support Contact - Thêm Lỗi',
+            
+                'systemStore_index'=> 'Hệ thống cửa hàng',
+                'systemStore_create'=> 'Tạo mới hệ thống',
 	);
 	
 	/*
@@ -207,6 +210,9 @@ class AdminMenu extends CActiveRecord
 			
 			'issue_index'=> iPhoenixUrl::createUrl('admin/issue/index'),
 			'issue_create'=> iPhoenixUrl::createUrl('admin/issue/create'),
+                        
+                        'systemStore_index'=> iPhoenixUrl::createUrl('admin/systemStore/index'),
+                        'systemStore_create'=> iPhoenixUrl::createUrl('admin/systemStore/create'),
 		);
 	 }
 	
