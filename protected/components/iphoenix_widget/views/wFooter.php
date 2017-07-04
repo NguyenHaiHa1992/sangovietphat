@@ -3,7 +3,6 @@
 	$tdWid = 100 / $countMenu .'%';
 ?>
 <div class="footer-top " id="pavo-footer-top">
-	<div class="container">
 		<div class="inner">
 			<div class="row">	
 				<div class="col-lg-12 col-md-12 col-sm-12 col-xs-12 border-line ">
@@ -63,5 +62,4 @@
 				</div>
 			</div>
 		</div>
-	</div>
 </div>

@@ -233,6 +233,6 @@
 </footer>
 </div>
 </div>
-<?php echo Setting::s('ADD_THIS_SCRIPT','INFORMATION'); ?>
+<?php echo Setting::s('ADD_THIS_SCRIPT','INFORMATION');?>
 </body>
 </html>
