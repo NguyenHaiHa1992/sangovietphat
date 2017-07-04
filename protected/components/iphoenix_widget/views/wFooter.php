@@ -15,14 +15,14 @@
 										HỆ THỐNG BÁN HÀNG<br>
 									</p>
 									<div class="panel panel-default" style="background:#ffffff">
-										<div class="panel-heading" style="background:#f26b35">
+										<div class="panel-heading">
 											<div class="table-responsive">
 												<table width="100%" height="25">
 													<tbody>
 														<tr>
-														<?php foreach($menus as $menu): ?>
+														<?php foreach($menus as $key => $menu): ?>
 															<td width="<?php echo $tdWid;?>"> 
-																<a href="#<?php echo $menu['hashtag']?>" data-parent="#accordion" data-toggle="collapse" style="color: #ffffff;" class="">
+																<a href="#<?php echo $menu['hashtag']?>" data-parent="#accordion" data-toggle="collapse" <?php if($key == 0){echo 'aria-expanded="true"';}?>style="color: #ffffff;" class="">
 																	<?php echo $menu['name'];?>
 																</a>
 															</td> 
@@ -34,16 +34,18 @@
 										</div>
 										<!-- panel collapse -->  
 										<?php foreach($childs as $parent => $child) :?>
-											<div class="panel-collapse collapse" id="<?php echo $parent;?>">
+											<div class="panel-collapse collapse <?php if($parent === $menus[0]['hashtag']){echo 'in';}?>" id="<?php echo $parent;?>">
 												<div class="panel-body"> 
 													<div class="table-responsive">
 														<table class="table">
 															<tbody>   
 																<tr>
 																	<?php foreach($child as $c):?>
-																	<td class="border-rb no-border-top"> 
-																		<div class="tit-mart"><?php echo $c->name;?></div>
-																		<div class="tit-content"><?php echo $c->content;?></div>
+																	<td class="border-rb no-border-top">
+																		<?php if(isset($c->name) && $c->name) :?><div class="tit-mart"><?php echo $c->name;?></div><?php endif;?>
+																		<?php if(isset($c->address) && $c->address) :?><div class="address"><?php echo $c->address;?></div><?php endif;?>
+																		<?php if(isset($c->mobile) && $c->mobile) :?><div class="mobile"><?php echo $c->mobile;?></div><?php endif;?>
+																		<?php if(isset($c->content) && $c->content) :?><div class="tit-content"><?php echo $c->content;?></div><?php endif;?>
 																	</td>
 																	<?php endforeach;?>                                                                                                
 																</tr>

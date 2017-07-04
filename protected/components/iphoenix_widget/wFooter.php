@@ -25,7 +25,7 @@ class wFooter extends CWidget
 			);
 			array_push($menus, $m);
 			$criteria  = new CDbCriteria;
-			$criteria->select = 'id , name , parent_id , content';
+			$criteria->select = 'id , name , parent_id , content, mobile, address';
 			$criteria->condition ='status = 1 AND parent_id =:parent_id';
 			$criteria->order = 'order_view , id';
 			$criteria->params =array(':parent_id' => $menu->id);

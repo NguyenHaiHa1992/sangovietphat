@@ -256,7 +256,7 @@ footer #company-name{
     text-align: center;
 }
 footer #info-company{
-    text-align: center;
+    /*text-align: center;*/
     /* padding-top: 20px; 
     padding-bottom: 40px; */
     background: #ECFFEC;
@@ -785,3 +785,12 @@ footer #info-company span{
     margin-top: 0; // remove the gap so it doesn't close
  }
 .price_lienhe{color: #F02223;display: inline-block}
+
+#accordion .panel-heading {
+    background: url("../images/nav-background.png") repeat-x center;
+}
+
+.table>tbody>tr>td {
+    color: #666;
+    vertical-align: middle;
+}
