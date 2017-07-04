@@ -104,4 +104,5 @@ class SystemStore extends CActiveRecord
 	{
 		return parent::model($className);
 	}
+
 }

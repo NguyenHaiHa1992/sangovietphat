@@ -100,5 +100,19 @@ class iPhoenixString {
 	    // split
 	    return array_reverse(array_merge(array(substr($str,0,$mod)), str_split(substr($str,$mod),$sz)));
 	}
+
+	static function removeWhiteSpace($str){
+		return preg_replace('/(\s)+/', '', $str);
+	}
+
+	static function getHashtashFromname($name){
+		// remove unicode character
+		$name = self::remove_vietnamese_accents($name);
+		$name = self::replaceWhitespace($name);
+		// remove whitespace
+		$name = self::removeWhiteSpace($name);
+		$name = strtolower($name);
+		return $name;
+	}
 }
 ?>
