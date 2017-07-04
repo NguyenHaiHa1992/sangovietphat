@@ -1,0 +1,23 @@
+-- add table system store
+CREATE TABLE `tbl_system_store` (
+  `id` int(10) unsigned NOT NULL AUTO_INCREMENT,
+  `name` varchar(255) NOT NULL,
+  `order_view` int(11) DEFAULT NULL,
+  `status` tinyint(4) DEFAULT NULL,
+  `created_by` int(11) DEFAULT NULL,
+  `created_time` int(11) DEFAULT NULL,
+  PRIMARY KEY (`id`)
+) ENGINE=InnoDB AUTO_INCREMENT=3 DEFAULT CHARSET=utf8;
+
+-- add table system_address
+CREATE TABLE `tbl_system_address` (
+  `id` int(10) unsigned NOT NULL AUTO_INCREMENT,
+  `parent_id` int(11) NOT NULL,
+  `name` varchar(255) DEFAULT NULL,
+  `content` text,
+  `status` int(11) DEFAULT NULL,
+  `order_view` int(11) DEFAULT NULL,
+  `created_time` int(11) DEFAULT NULL,
+  `created_by` int(11) DEFAULT NULL,
+  PRIMARY KEY (`id`)
+) ENGINE=InnoDB AUTO_INCREMENT=4 DEFAULT CHARSET=utf8;
