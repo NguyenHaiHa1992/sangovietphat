@@ -794,3 +794,40 @@ footer #info-company span{
     color: #666;
     vertical-align: middle;
 }
+#info-company{
+    padding-top: 20px;
+    margin-top: 20px;
+}
+.footer-link {
+    clear: both;
+    text-align: center;
+    padding: 5px 0 15px;
+}
+
+.footer-link a {
+    display: inline-block;
+    border-left: 1px solid #909090;
+    margin-left: 8px;
+    margin-bottom: 5px;
+    padding-left: 6px;
+    font-size: 11px;
+    line-height: 9px;
+    color: #676767;
+    white-space: nowrap;
+}
+.footer-link a:first-child {
+    border-left: none;
+    margin-left: 0;
+    padding-left: 0;
+}
+.footer-link a {
+    display: inline-block;
+    border-left: 1px solid #909090;
+    margin-left: 8px;
+    margin-bottom: 5px;
+    padding-left: 6px;
+    font-size: 11px;
+    line-height: 9px;
+    color: #676767;
+    white-space: nowrap;
+}

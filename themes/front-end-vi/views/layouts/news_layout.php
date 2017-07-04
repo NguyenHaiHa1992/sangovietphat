@@ -202,7 +202,6 @@
         </footer>
     </div>
 </div>
-<!-- Go to www.addthis.com/dashboard to customize your tools --> 
-<script type="text/javascript" src="//s7.addthis.com/js/300/addthis_widget.js#pubid=ra-594a6c2b7eb40513"></script> 
+<?php echo Setting::s('ADD_THIS_SCRIPT','INFORMATION') ?>
 </body>
 </html>

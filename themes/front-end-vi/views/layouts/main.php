@@ -207,9 +207,21 @@
 </div>
 </section>
 <footer>	
-    <div id="company-name"><?php echo Setting::s('COMPANY_NAME','INFORMATION'); ?></div>
+    <!-- <div id="company-name"><?php echo Setting::s('COMPANY_NAME','INFORMATION'); ?></div> -->
+    <div id="footer">
+        <?php $this->widget('wFooter');?>
+    </div>
+
+    <div class="col-xs-12 col-sm-6 col-md-3 column">
+        <?php  Setting::s('ADDRESS_GOOGLE_MAPS','INFORMATION');?>
+   </div>
+    <?php $this->widget('wFooterLink',array(
+            'id'=>'footer_link',
+            'class'=>'footer-link',
+            'data'=>UserMenu::getListItem(),
+    ))?>
+
     <div id="info-company">
-    	<?php $this->widget('wFooter');?>
     	<!--
         <span>Địa chỉ: <?php echo Setting::s('ADDRESS','INFORMATION'); ?></span>
         <span>Điện thoại: <?php echo Setting::s('PHONE','INFORMATION'); ?> - Hotline: <?php echo Setting::s('HOT_LINE','INFORMATION'); ?></span>
@@ -221,7 +233,6 @@
 </footer>
 </div>
 </div>
-<!-- Go to www.addthis.com/dashboard to customize your tools --> 
-<script type="text/javascript" src="//s7.addthis.com/js/300/addthis_widget.js#pubid=ra-594a6c2b7eb40513"></script> 
+<?php echo Setting::s('ADD_THIS_SCRIPT','INFORMATION'); ?>
 </body>
 </html>
