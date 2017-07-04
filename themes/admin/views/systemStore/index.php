@@ -5,32 +5,31 @@ Yii::app()->clientScript->registerScriptFile(Yii::app()->theme->baseUrl . '/js/j
 <div id="main-content" class="folder top">
     <!--begin name-->
     <div class="folder-header">
-        <h1><?php echo iPhoenixLang::admin_t('Product Management'); ?></h1>
+        <h1><?php echo iPhoenixLang::admin_t('System Store Management'); ?></h1>
         <div class="header-menu">
             <ul>
-                <li class="ex-show"><a class="activities-icon"><span><?php echo iPhoenixLang::admin_t('List products'); ?></span></a></li>
+                <li class="ex-show"><a class="activities-icon"><span><?php echo iPhoenixLang::admin_t('List System Store'); ?></span></a></li>
             </ul>
         </div>
     </div>
     <!--end name-->
     <div class="folder-content">
         <div>
-            <input type="button" class="button" value="<?php echo iPhoenixLang::admin_t('Product categories'); ?>" style="width:180px;" onClick="parent.location = '<?php echo iPhoenixUrl::createUrl('admin/productCategory/index') ?>'"/>
-            <input type="button" class="button" value="<?php echo iPhoenixLang::admin_t('Add product'); ?>" style="width:180px;" onClick="parent.location = '<?php echo iPhoenixUrl::createUrl('admin/product/create') ?>'"/>
+            <input type="button" class="button" value="<?php echo iPhoenixLang::admin_t('Add new system Store'); ?>" style="width:180px;" onClick="parent.location = '<?php echo iPhoenixUrl::createUrl('admin/systemStore/create') ?>'"/>
             <div class="line top bottom"></div>	
         </div>
         <!--begin box search-->
         <?php
         Yii::app()->clientScript->registerScript('search', "
-			$('#product-search').submit(function(){
-			$.fn.yiiGridView.update('product-list', {
+			$('#systemStore-search').submit(function(){
+			$.fn.yiiGridView.update('system-store-list', {
 				data: $(this).serialize()});
 				return false;
 			});");
         ?>
         <div class="box-search">            
             <h2><?php echo iPhoenixLang::admin_t('Search', 'main'); ?></h2>
-            <?php $form = $this->beginWidget('CActiveForm', array('method' => 'get', 'id' => 'product-search')); ?>
+            <?php $form = $this->beginWidget('CActiveForm', array('method' => 'get', 'id' => 'systemStore-search')); ?>
             <!--begin left content-->
             <div class="fl" style="width:600px;">
                 <ul>
@@ -40,28 +39,13 @@ Yii::app()->clientScript->registerScriptFile(Yii::app()->theme->baseUrl . '/js/j
                         $this->widget('CAutoComplete', array(
                             'model' => $model,
                             'attribute' => 'name',
-                            'url' => array('product/suggestName'),
+                            'url' => array('systemStore/suggestName'),
                             'htmlOptions' => array(
                                 'style' => 'width:230px;',
                             ),
                         ));
                         ?>		
                     </li>  
-                    <?php
-                    $list = array('' => iPhoenixLang::admin_t('All product categories'));
-                    foreach ($list_category as $id => $level) {
-                        $cat = ProductCategory::model()->findByPk($id);
-                        $view = "";
-                        for ($i = 1; $i < $level; $i++) {
-                            $view .="---";
-                        }
-                        $list[$id] = $view . " " . $cat->name . " " . $view;
-                    }
-                    ?>
-                    <li>
-<?php echo $form->label($model, 'cat_id', array('style' => 'width:200px')); ?>
-<?php echo $form->dropDownList($model, 'cat_id', $list, array('style' => 'width:200px')); ?>
-                    </li>				                              
                 </ul>
             </div>
             <!--end left content-->
@@ -72,14 +56,6 @@ Yii::app()->clientScript->registerScriptFile(Yii::app()->theme->baseUrl . '/js/j
 <?php echo $form->label($model, 'status', array('style' => 'width:200px')); ?>
                         <?php echo $form->dropDownList($model, 'status', array('' => iPhoenixLang::admin_t('All', 'main'), 0 => iPhoenixLang::admin_t('Hide', 'main'), 1 => iPhoenixLang::admin_t('Show', 'main')), array('style' => 'width:200px')); ?>
                     </li> 	             
-                    <li>
-<?php echo $form->label($model, 'new', array('style' => 'width:200px')); ?>
-                    <?php echo $form->dropDownList($model, 'new', array('' => iPhoenixLang::admin_t('All', 'main'), 1 => iPhoenixLang::admin_t('Display in homepage')), array('style' => 'width:200px')); ?>
-                    </li> 
-                    <!-- <li>
-<?php echo $form->label($model, 'home', array('style' => 'width:200px')); ?>
-<?php echo $form->dropDownList($model, 'home', array('' => 'Tất cả', 1 => 'Sản phẩm hiển thị ở trang chủ'), array('style' => 'width:200px')); ?>
-                    </li> -->
                 </ul>
             </div>
             <div>
@@ -112,43 +88,6 @@ Yii::app()->clientScript->registerScriptFile(Yii::app()->theme->baseUrl . '/js/j
                     'name' => 'name',
                     'headerHtmlOptions' => array('width' => '10%', 'class' => 'table-title'),
                 ),
-                // best sell
-                array(
-                    'header' => iPhoenixLang::admin_t('Bán chạy', 'main'),
-                    'class' => 'iPhoenixStatusButtonColumn',
-                    'template' => '{best_sell_status}',
-                    'buttons' => array
-                        (
-                        'best_sell_status' => array
-                            (
-                            'label' => $model->getAttributeLabel('best_sell'),
-                            'imageUrl' => '$data->getAttributeImageStatus("best_sell")',
-                            'url' => 'iPhoenixUrl::createUrl("admin/product/reverseBestSell", array("id"=>$data->id))',
-                            'click' => 'function(){
-								var th=this;									
-								jQuery.ajax({
-									type:"POST",
-									dataType:"json",
-									url:$(this).attr("href"),
-									success:function(data) {
-										if(data.success){
-											$(th).find("img").attr("src",data.src);
-										}
-									},
-									error: function (request, status, error) {
-    										jAlert(request.responseText);
-									}
-									});
-							return false;}',
-                        ),
-                    ),
-                    'headerHtmlOptions' => array('width' => '5%', 'class' => 'table-title'),
-                ),
-                array(
-                    'name' => 'cat_id',
-                    'value' => '$data->category->name',
-                    'headerHtmlOptions' => array('width' => '8%', 'class' => 'table-title'),
-                ),
                 array(
                     'name' => 'order_view',
                     'type' => 'html',
@@ -164,10 +103,6 @@ Yii::app()->clientScript->registerScriptFile(Yii::app()->theme->baseUrl . '/js/j
                     'name' => 'created_time',
                     'value' => 'date("d/m/Y H:i",$data->created_time)',
                     'headerHtmlOptions' => array('width' => '10%', 'class' => 'table-title'),
-                ),
-                array(
-                    'name' => 'visits',
-                    'headerHtmlOptions' => array('width' => '5%', 'class' => 'table-news'),
                 ),
                 array(
                     'header' => iPhoenixLang::admin_t('Display', 'main'),
