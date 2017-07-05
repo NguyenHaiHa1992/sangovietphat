@@ -842,10 +842,28 @@ footer #info-company span{
     font-family: "Roboto Medium";
     border-top: none !important;
 }
-#footer_link a{font-weight: bold;font-size: 1em;}
+
+#footer_link a{font-weight: bold;font-size: 1em;color:#323132;}
 
 #accordion a:not(.collapsed){
      text-decoration: underline !important;
      font-weight: bold;
      color: #2957a4 !important;
 }
+
+.list-unstyled {
+    list-style: none;
+    padding-left: 0;
+}
+
+#footer_link ul, #footer_link ol, #footer ul, #footer ol {
+    margin: 0;
+}
+#footer_link ul, #footer_link ol, #footer ul li, #footer ol li {
+    line-height: 35px;
+}
+
+.none-shadow{box-shadow:none !important;-webkit-box-shadow: none !important;}
+#footer_link{background: #f9fbff;}
+#footer_link .panel-body{background: #f9fbff;}
+.bg-blur{background: #f9fbff;}
