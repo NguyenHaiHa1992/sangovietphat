@@ -1,11 +1,13 @@
 <?php
 $countMenu = count($menus);
-
-$tdWid = 100 / $countMenu . '%';
+if($countMenu){
+    $tdWid = 100 / $countMenu . '%';
+}else{
+    $tdWid = '100%';
+}
 ?>
 <div class="footer-top " id="pavo-footer-top">
-    <div class="inner">
-        <div class="row">	
+    <div class="inner">	
             <div class="col-lg-12 col-md-12 col-sm-12 col-xs-12 border-line ">
                 <div class="widget-html">
                     <div class="widget-inner">
@@ -24,7 +26,7 @@ $tdWid = 100 / $countMenu . '%';
                                                             <td width="<?php echo $tdWid; ?>"> 
                                                                 <a href="#<?php echo $menu['hashtag'] ?>" data-parent="#accordion" data-toggle="collapse" <?php if ($key == 0) {
                                                             echo 'aria-expanded="true"';
-                                                        } ?>style="color: #ffffff;" class="">
+                                                        } ?>style="color: #ffffff;" class="<?php if($key !== 0){echo 'collapsed';}?>">
                                                             <?php echo $menu['name']; ?>
                                                                 </a>
                                                             </td> 
@@ -66,7 +68,6 @@ $tdWid = 100 / $countMenu . '%';
                 </div>
             </div>
         </div>
-    </div>
 </div>
-?>
+
 

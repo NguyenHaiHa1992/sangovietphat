@@ -607,7 +607,7 @@ class ProductCategory extends CActiveRecord
 		return $item;
 	}
 
-	static function getItems($limit = 5, $condition = array('status'=>true)){
+	static function getItems($limit = 5,$condition = array('status'=>true)){
 		$model = new ProductCategory();
 		$criteria = new CDbcriteria();
 		if(!isset($limit)) $limit = 10;
@@ -620,7 +620,6 @@ class ProductCategory extends CActiveRecord
 				$criteria->compare($key, $value);
 		}
 		$criteria->order = "order_view";
-                
 		$list_item = $model::model()->findAll($criteria);
 		if(!isset($list_item)){
 			throw new CHttpException(404,'The specified post cannot be found.');

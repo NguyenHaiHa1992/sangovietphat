@@ -25,4 +25,7 @@ CREATE TABLE `tbl_system_address` (
 
 ALTER TABLE tbl_system_address
   ADD COLUMN `mobile` varchar(255) DEFAULT NULL CHARACTER SET utf8,
-  ADD COLUMN `address` text DEFAULT NULL CHARACTER SET utf8 
+  ADD COLUMN `address` text DEFAULT NULL CHARACTER SET utf8 ;
+
+INSERT INTO `sangovietphat`.`tbl_setting`(`language` ,`name` , `value`, `category`, `description`) VALUES('vi','ADD_THIS_SCRIPT','<!-- Go to www.addthis.com/dashboard to customize your tools -->  <script type="text/javascript" src="//s7.addthis.com/js/300/addthis_widget.js#pubid=ra-594a6c2b7eb40513"></script>' ,'INFORMATION','script for add this plugin for share');
+INSERT INTO `sangovietphat`.`tbl_setting`(`language` ,`name` , `value`, `category`, `description`) VALUES('en','ADD_THIS_SCRIPT','<!-- Go to www.addthis.com/dashboard to customize your tools -->  <script type="text/javascript" src="//s7.addthis.com/js/300/addthis_widget.js#pubid=ra-594a6c2b7eb40513"></script>' ,'INFORMATION','script for add this plugin for share');
