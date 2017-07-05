@@ -1,5 +1,6 @@
 <?php
 $countMenu = count($menus);
+
 $tdWid = 100 / $countMenu . '%';
 ?>
 <div class="footer-top " id="pavo-footer-top">
