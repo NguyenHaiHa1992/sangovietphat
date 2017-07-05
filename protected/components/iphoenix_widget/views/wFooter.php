@@ -3,8 +3,7 @@ $countMenu = count($menus);
 $tdWid = 100 / $countMenu . '%';
 ?>
 <div class="footer-top " id="pavo-footer-top">
-    <div class="inner">
-        <div class="row">	
+    <div class="inner">	
             <div class="col-lg-12 col-md-12 col-sm-12 col-xs-12 border-line ">
                 <div class="widget-html">
                     <div class="widget-inner">
@@ -65,7 +64,6 @@ $tdWid = 100 / $countMenu . '%';
                 </div>
             </div>
         </div>
-    </div>
 </div>
-?>
+
 

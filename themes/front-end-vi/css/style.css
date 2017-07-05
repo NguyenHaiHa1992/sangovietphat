@@ -256,10 +256,10 @@ footer #company-name{
     text-align: center;
 }
 footer #info-company{
-    /*text-align: center;*/
-    /* padding-top: 20px; 
-    padding-bottom: 40px; */
-    background: #ECFFEC;
+    text-align: center;
+     padding-top: 20px; 
+    padding-bottom: 20px;
+    /*background: #ECFFEC;*/
 }
 footer #info-company span{
     display: block;
@@ -706,7 +706,7 @@ footer #info-company span{
 .navbar-default .navbar-nav>li:hover, .navbar-default .navbar-nav>li:focus,.navbar-default .navbar-nav > .active{
     background: #3EBF27;
 }
-#main-content .wContentBox .contentBox >.content_box, footer #info-company {
+#main-content .wContentBox .contentBox >.content_box{
     background: white;
 }
 #main-products .contentBox >.content_box, #support .content_box{
@@ -794,10 +794,6 @@ footer #info-company span{
     color: #666;
     vertical-align: middle;
 }
-#info-company{
-    padding-top: 20px;
-    margin-top: 20px;
-}
 .footer-link {
     clear: both;
     text-align: center;
@@ -830,4 +826,17 @@ footer #info-company span{
     line-height: 9px;
     color: #676767;
     white-space: nowrap;
+}
+
+#accordion{
+    height: 30px;
+    line-height: 30px;
+    text-transform: uppercase;
+    color: #ffffff;
+    padding: 0 10px;
+    font-family: "Roboto Medium";
+}
+
+.no-border-top{
+    border-top:none !important;
 }
