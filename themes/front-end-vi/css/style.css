@@ -188,7 +188,7 @@ header .brand{
     margin-top: 5px;
 }
 #news .item{
-    border-bottom: 1px dotted #5B5B5B;
+    /*border-bottom: 1px dotted #5B5B5B;*/
 }
 #news .item > .image{
     float: left;
@@ -265,6 +265,8 @@ footer #info-company span{
     display: block;
     font-family: Roboto;
     color: #231F20;
+    font-size: 1em;
+    font-weight: bold;
 }
 /*---------- index.html file -------------*/
 /*---------- list-news.html file -------------*/
@@ -824,19 +826,26 @@ footer #info-company span{
     padding-left: 6px;
     font-size: 11px;
     line-height: 9px;
-    color: #676767;
+    color: #231F20;
     white-space: nowrap;
-}
-
-#accordion{
-    height: 30px;
-    line-height: 30px;
-    text-transform: uppercase;
-    color: #ffffff;
-    padding: 0 10px;
-    font-family: "Roboto Medium";
 }
 
 .no-border-top{
     border-top:none !important;
+}
+
+#accordion .panel-body{
+    background: #e8eef7;
+    text-transform: uppercase;
+    color: #ffffff;
+    padding: 0 10px;
+    font-family: "Roboto Medium";
+    border-top: none !important;
+}
+#footer_link a{font-weight: bold;font-size: 1em;}
+
+#accordion a:not(.collapsed){
+     text-decoration: underline !important;
+     font-weight: bold;
+     color: #2957a4 !important;
 }

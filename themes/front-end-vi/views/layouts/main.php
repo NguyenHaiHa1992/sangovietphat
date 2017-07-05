@@ -95,12 +95,12 @@
         <div class="contentBox">
             <div class="title_box">Sản phẩm chính</div>
             <div class="content_box">
-                <!-- wListItem -->
+                <!-- wListItem -->                
                 <?php
                     $this->widget('wListItemHome', array(
                         'id'=>'list-main-producst',
                         'class'=>'list-products list-unstyled',
-                        'data'=>ProductCategory::getItems(LIMIT_MAIN_PRODUCT,array('status' => true,'parent_id' => 0)),
+                        'data'=>ProductCategory::getItems(10,array('status' => true,'parent_id' => 0)),
                         'template'=>'
                             <a href="{detail_url}" title={name}>
                                 <img src="[getIntroimage_thumb(160,46)]" class="img-responsive">
@@ -208,16 +208,17 @@
 </section>
 <footer>	
     <!-- <div id="company-name"><?php echo Setting::s('COMPANY_NAME','INFORMATION'); ?></div> -->
+    
     <div id="footer">
         <?php $this->widget('wFooter');?>
     </div>
-
-    <div class="col-xs-12 col-sm-6 col-md-3 column">
+    
+    <!-- <div class="col-xs-12 col-sm-6 col-md-3 column"> -->
         <?php  Setting::s('ADDRESS_GOOGLE_MAPS','INFORMATION');?>
-   </div>
+   <!-- </div> -->
     <?php $this->widget('wFooterLink',array(
             'id'=>'footer_link',
-            'class'=>'footer-link',
+            'class'=>'footer-center',
             'data'=>UserMenu::getListItem(),
     ))?>
 
