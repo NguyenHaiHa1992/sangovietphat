@@ -13,7 +13,7 @@ if($countMenu){
                     <div class="widget-inner">
                         <div class="col-lg-12  listmap hidden-xs footer-nm">
                             <div id="accordion" class="panel-group">
-                                <p style="text-align: center;color: #2957a4;font-weight: 600;font-size: 20px;">
+                                <p style="text-align: center;color: #666;font-weight: 600;font-size: 20px;">
                                     HỆ THỐNG BÁN HÀNG<br>
                                 </p>
                                 <div class="panel panel-default" style="background:#ffffff">
@@ -26,7 +26,7 @@ if($countMenu){
                                                             <td width="<?php echo $tdWid; ?>"> 
                                                                 <a href="#<?php echo $menu['hashtag'] ?>" data-parent="#accordion" data-toggle="collapse" <?php if ($key == 0) {
                                                             echo 'aria-expanded="true"';
-                                                        } ?>style="color: #ffffff;" class="<?php if($key !== 0){echo 'collapsed';}?>">
+                                                        } ?>style="color: #666;" class="<?php if($key !== 0){echo 'collapsed';}?>">
                                                             <?php echo $menu['name']; ?>
                                                                 </a>
                                                             </td> 

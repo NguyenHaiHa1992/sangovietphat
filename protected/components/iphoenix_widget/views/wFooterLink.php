@@ -28,7 +28,7 @@ $datas = array_chunk($data, $row);
                               </div>
                               <?php endforeach;?>
 
-                            <div class="col-xs-12 col-sm-6 col-md-4 pull-right">
+                            <div class="col-xs-12 col-sm-6 col-md-6 pull-right">
                                 <iframe width="100%" height="220" src="https://www.google.com/maps/d/embed?mid=1xHioeCHPf5Iaj6FQeLRtVjrfeX0"></iframe>
                             </div>
                     </div>

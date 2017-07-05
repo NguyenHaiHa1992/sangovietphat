@@ -789,7 +789,7 @@ footer #info-company span{
 .price_lienhe{color: #F02223;display: inline-block}
 
 #accordion .panel-heading {
-    background: url("../images/nav-background.png") repeat-x center;
+    background: #ffffff;
 }
 
 .table>tbody>tr>td {
@@ -846,9 +846,8 @@ footer #info-company span{
 #footer_link a{font-weight: bold;font-size: 1em;color:#323132;}
 
 #accordion a:not(.collapsed){
-     text-decoration: underline !important;
      font-weight: bold;
-     color: #2957a4 !important;
+     font-size: 18px;
 }
 
 .list-unstyled {
