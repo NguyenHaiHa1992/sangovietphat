@@ -9,6 +9,7 @@ class AdministratorMenu extends CWidget
 	{ 
 		$model=new AdminMenu();
 		$list_nodes=$model->list_active_nodes;
+                
 		foreach ($list_nodes as $id=>$level) {
 			$menu=AdminMenu::model()->findByPk($id);
 			$config=$model->getConfig_url();
