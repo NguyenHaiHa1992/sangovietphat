@@ -26,7 +26,7 @@ if($countMenu){
                                                             <td width="<?php echo $tdWid; ?>"> 
                                                                 <a href="#<?php echo $menu['hashtag'] ?>" data-parent="#accordion" data-toggle="collapse" <?php if ($key == 0) {
                                                             echo 'aria-expanded="true"';
-                                                        } ?>style="color: #666;" class="<?php if($key !== 0){echo 'collapsed';}?>">
+                                                        } ?>style="color: #ffffff;text-transform: uppercase;" class="<?php if($key !== 0){echo 'collapsed';}?>">
                                                             <?php echo $menu['name']; ?>
                                                                 </a>
                                                             </td> 

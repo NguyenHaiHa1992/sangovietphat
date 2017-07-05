@@ -192,13 +192,14 @@ header .brand{
 }
 #news .item > .image{
     float: left;
-    width: 120px;
+    width: 180px;
     margin-right: 10px;
 }
 
 #news .item > .information{
     font-size: 12px;
-    height: 72px;
+    height: auto;
+    min-height: 90px;
     overflow: hidden ;
 }
 #news .item > .information a.title{
@@ -219,7 +220,7 @@ header .brand{
     font-family: "Roboto Italic";
 }
 .category li{
-    width: 33.3333333333%;
+    width: 50%;
     padding: 0 5px;
 }
 .category li:nth-child(1), .category li:nth-child(2), .category li:nth-child(3){
@@ -789,7 +790,7 @@ footer #info-company span{
 .price_lienhe{color: #F02223;display: inline-block}
 
 #accordion .panel-heading {
-    background: #ffffff;
+    background: url("../images/nav-background.png") repeat-x center;
 }
 
 .table>tbody>tr>td {
@@ -835,7 +836,7 @@ footer #info-company span{
 }
 
 #accordion .panel-body{
-    background: #e8eef7;
+    /*background: #e8eef7;*/
     text-transform: uppercase;
     color: #ffffff;
     padding: 0 10px;
@@ -847,7 +848,6 @@ footer #info-company span{
 
 #accordion a:not(.collapsed){
      font-weight: bold;
-     font-size: 18px;
 }
 
 .list-unstyled {
@@ -866,3 +866,4 @@ footer #info-company span{
 #footer_link{background: #f9fbff;}
 #footer_link .panel-body{background: #f9fbff;}
 .bg-blur{background: #f9fbff;}
+.none-border{border:0 !important;}

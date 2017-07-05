@@ -83,30 +83,29 @@
                 <div class="content_box">
                     <!-- wCarouselSlider -->
                     <?php
-//                    $this->widget('wCarouselSlider', array(
-//                        'id'=>'carousel-hot-products',
-//                        'class'=>'slide',
-//                        'data'=>Product::getItems(12, array(
-//                            'status' => true,
-//                            'best_sell' => 1
-//                        )),
-//                    ));
+                    $this->widget('wCarouselSlider', array(
+                        'id'=>'carousel-hot-products',
+                        'class'=>'slide',
+                        'data'=>Product::getItems(12, array(
+                            'status' => true,
+                            'best_sell' => 1
+                        )),
+                    ));
                     ?>
                     <?php
-                        $this->widget('wListItem', array(
-                            'class'=>'list-unstyled',
-                            'data'=>Product::getItems(12, array(
-                                'status' => true,
-                                'best_sell' => 1
-                            )),
-                            'template'=>'
-                                <div class="image"><a href="{detail_url}" title="{name}"><img src="[getIntroimage_thumb(220,137)]" alt="{name}" title="{name}" class="img-responsive"></a></div>
-                                <div class="information">
-                                    <a href="{detail_url}" title="{name}">[getTitle_text(6)]</a>
-                                </div>
-                            ',
-                        ));
-                    ?>
+//                        $this->widget('wListItem', array(
+//                            'class'=>'list-unstyled',
+//                            'data'=>Product::getItems(12, array(
+//                                'status' => true,
+//                                'best_sell' => 1
+//                            )),
+//                            'template'=>'
+//                                <div class="image"><a href="{detail_url}" title="{name}"><img src="[getIntroimage_thumb(220,137)]" alt="{name}" title="{name}" class="img-responsive"></a></div>
+//                                <div class="information">
+//                                    <a href="{detail_url}" title="{name}">[getTitle_text(6)]</a>
+//                                </div>
+//                            ',
+//                        ));                    ?>
                     <!-- end of wCarouselSlider -->
                 </div>
             </div>
