@@ -7,7 +7,7 @@
         });
     });
 </script>
-<?php $list_category = ProductCategory::getItems(array('parent_id' => 0,)); ?>
+<?php $list_category = ProductCategory::getItems(5, array('parent_id' => 0,)); ?>
 <div class="col-md-8 pull-right" id="main-content">
     <div class="col-sm-12">
         <!--<div id="slider" class="carousel slide wContentBox" data-ride="carousel">-->
