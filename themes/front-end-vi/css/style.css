@@ -868,3 +868,6 @@ footer #info-company span{
 .bg-blur{background: #f9fbff;}
 .none-border{border:0 !important;}
 #map{height: 100%;}
+i.print_icon{background-image: url('../images/icons/print-icon.png');height: 30px;width: 30px;}
+.print{padding: 0px;margin-left: 10px;float: left;}
+.print a{color: #000000;}

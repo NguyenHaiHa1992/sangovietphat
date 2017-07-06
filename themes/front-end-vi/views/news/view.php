@@ -70,6 +70,11 @@
                                 <script type="text/javascript" src="https://apis.google.com/js/plusone.js" ></script>
                                 <g:plusone size="medium" ></g:plusone>
                             </div>
+                            <div class="print">
+                                <a href="javascript:void(0);" onclick="print();">
+                                    <strong>In <span class="glyphicon glyphicon-print"></span></strong>
+                                </a>
+                            </div>
                         </div>
                     </div>
                     <!-- wCommentBox -->
