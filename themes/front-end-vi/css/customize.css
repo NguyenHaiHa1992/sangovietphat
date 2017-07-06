@@ -18,10 +18,11 @@
 }
 #hot-products .carousel-inner .item>a:first-child,#hot-products .carousel-inner .item>a:nth-child(2){
     padding-bottom: 7px;
-    border-bottom: 1px dotted #C3BFB8;
+    padding-top: 7px;
+    /*border-bottom: 1px dotted #C3BFB8;*/
 }
 #hot-products .carousel-inner .item>a:last-child,#hot-products .carousel-inner .item>a:nth-child(3){
-    padding-top: 8px;
+    padding-top: 7px;
 }
 #hot-products .carousel-inner .item>a:first-child,#hot-products .carousel-inner .item>a:nth-child(3){
     padding-right: 5px;
