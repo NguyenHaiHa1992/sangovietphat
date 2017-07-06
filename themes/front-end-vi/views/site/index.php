@@ -7,7 +7,7 @@
         });
     });
 </script>
-<?php $list_category = ProductCategory::getItems(); ?>
+<?php $list_category = ProductCategory::getItems(array('parent_id' => 0,)); ?>
 <div class="col-md-8 pull-right" id="main-content">
     <div class="col-sm-12">
         <!--<div id="slider" class="carousel slide wContentBox" data-ride="carousel">-->
@@ -132,7 +132,7 @@
                             <?php
                                 $this->widget('wListItem', array(
                                     'class'=>'list-unstyled',
-                                    'data'=>Product::getItems(6,array('cat_id'=>$category->id , 'parent_id' => 0,)),
+                                    'data'=>Product::getItems(6,array('cat_id'=>$category->id ,)),
                                     'template'=>'
                                         <div class="image"><a href="{detail_url}" title="{name}"><img src="[getIntroimage_thumb(220,137)]" alt="{name}" title="{name}" class="img-responsive"></a></div>
                                         <div class="information">
