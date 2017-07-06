@@ -161,7 +161,7 @@
     <!-- end of wContentBox -->
     <!-- wContentBox -->
     <?php $category = NewsCategory::model()->findbyPk(49);?>
-    <?php if(isset($category)):?>
+    <?php if(false):?>
     <!--<div id="warehouse" class="wContentBox">
         <div class="contentBox">
             <div class="title_box"><?php echo $category->name;?></div>
@@ -186,11 +186,11 @@
     <?php endif;?>
     <!-- end of wContentBox -->
     <?php
-    $this->widget('wBanner', array(
-        'id'=>'banner_partner',
-        'class'=>'interested-news wContentBox',
-        'data'=>Banner::getBannerPosition(Banner::CAT_BANNER_PARTNER,1),
-    ));
+//    $this->widget('wBanner', array(
+//        'id'=>'banner_partner',
+//        'class'=>'interested-news wContentBox',
+//        'data'=>Banner::getBannerPosition(Banner::CAT_BANNER_PARTNER,1),
+//    ));
     ?>
 
 <!--    <div id="count-traffic">
