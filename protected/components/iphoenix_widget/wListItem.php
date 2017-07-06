@@ -7,6 +7,7 @@ class wListItem extends CWidget
 	public $view = 'wListItem';
 	public $id = '';
 	public $class = '';
+        public $type = '';
 
 	public function init(){
 		parent::init();
@@ -22,6 +23,7 @@ class wListItem extends CWidget
 			'template'=>$this->template,
 			'id'=>$this->id,
 			'class'=>$this->class,
+                        'type' => $this->type
 		));
 	}
 }
