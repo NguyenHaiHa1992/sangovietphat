@@ -16,7 +16,7 @@ if($countMenu){
                                 <p style="text-align: center;color: #666;font-weight: 600;font-size: 20px;">
                                     HỆ THỐNG BÁN HÀNG<br>
                                 </p>
-                                <div class="panel panel-default" style="background:#ffffff">
+                                <div class="panel panel-default" style="border: none;background:#ffffff;">
                                     <div class="panel-heading">
                                         <div class="table-responsive">
                                             <table width="100%" height="25">
