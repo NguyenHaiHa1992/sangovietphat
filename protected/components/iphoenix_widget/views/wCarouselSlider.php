@@ -50,10 +50,11 @@
         <?php else:
             ?>
             <?php foreach($data as $key => $model):?>
-                <?php if($key % 2 == 0):?>
+                <?php if($key % 4 == 0):?>
                     <div class="item <?php if($key == 0){echo 'active';}?>">
                         <?php
-                            if(isset($data[$key])){
+                        for($j = $key ; $j < $key+4;$j++){
+                            if(isset($data[$j])){
                                 $this->widget('wItem', array(
                                     'data'=>$data[$key],
                                     'template'=>'
@@ -61,14 +62,7 @@
                                     ',
                                 ));
                             }
-                            if(isset($data[$key+1])){
-                                $this->widget('wItem', array(
-                                    'data'=>$data[$key+1],
-                                    'template'=>'
-                                        <a href="{category_url}"><img src="[getIntroimage_thumb(120,90)]" width="120px" height="90px" alt="{title_text}" title="{title_text}" class="img-responsive"><span class="title">{title_text}</span> </a>
-                                    ',
-                                ));
-                            }
+                        }
                         ?>
                     </div>
                 <?php endif;?>
