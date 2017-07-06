@@ -139,6 +139,7 @@
                                             <a href="{detail_url}" title="{name}">[getTitle_text(6)]</a>
                                         </div>
                                     ',
+                                    'type' => 'product'
                                 ));
                             ?>
                             <!-- end of wListItem -->
@@ -175,7 +176,8 @@
                                 <a href="{detail_url}" title="{name}"><b>{title_text}</b></a>
                                 <div class="quote">[getIntro_text(20)]</div>
                             </div>
-                        '
+                        ',
+                        'type' => 'news'
                     ));
                     ?>
                     <!-- end of wListItem -->

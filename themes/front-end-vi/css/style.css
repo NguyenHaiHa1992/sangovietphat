@@ -220,7 +220,7 @@ header .brand{
     font-family: "Roboto Italic";
 }
 .category li{
-    width: 50%;
+    width: 33.3333333333%;
     padding: 0 5px;
 }
 .category li:nth-child(1), .category li:nth-child(2), .category li:nth-child(3){

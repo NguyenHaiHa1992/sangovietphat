@@ -1,3 +1,6 @@
+<?php
+$end = $type == 'news' ? 2 : 1;
+?>
 <!-- wListItem -->
 <!--<ul id="<?php echo $id;?>" class="wListItem <?php echo $class;?>">-->	
 <?php if(is_array($data)):?>
@@ -9,7 +12,7 @@
     <?php
     endif;
     ?>
-    <li class="item item<?php echo $i;?>">
+    <li class="item item<?php echo $i;?>" <?= $type == 'news' ? 'style="width: 50%"' : '' ?>>
         <?php echo iPhoenixTemplate::parseTemplate($item, $template);?>
     </li>
     <?php
