@@ -29,7 +29,7 @@ $datas = array_chunk($data, $row);
                               <?php endforeach;?>
 
                             <div class="col-xs-12 col-sm-6 col-md-6 pull-right">
-                                <iframe width="100%" height="220" src="https://www.google.com/maps/d/embed?mid=1xHioeCHPf5Iaj6FQeLRtVjrfeX0"></iframe>
+                                <?php $this->widget('wGooglemap');?>
                             </div>
                     </div>
                 </div>
