@@ -72,7 +72,7 @@
                             </div>
                             <div class="print">
                                 <a href="javascript:void(0);" onclick="print();">
-                                    <strong>In <span class="glyphicon glyphicon-print"></span></strong>
+                                    <strong><span class="glyphicon glyphicon-print"></span></strong>
                                 </a>
                             </div>
                         </div>
