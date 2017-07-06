@@ -90,7 +90,7 @@
                             'status' => true,
                             'best_sell' => 1
                         )),
-                        'row' => 1,
+//                        'row' => 1,
                     ));
                     ?>
                     <?php

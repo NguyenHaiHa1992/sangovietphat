@@ -79,7 +79,7 @@
                         echo '<li class="dropdown'.$class_li.'">';
 
                         // echo '<a id="'.$id.'" class="dropdown-toggle '.$class.'" href="'.$menu->url.'" target="'.$menu->target.'" data-toggle="'.$menu->url.'">'.$menu->name.'</a>';
-                        echo '<a id="'.$id.'" class="dropdown-toggle '.$class.'" href="'.$menu->url.'" target="'.$menu->target.'" data-toggle="dropdown">'.$menu->name.'<b class="caret"></b></a>';
+                        echo '<a id="'.$id.'" class="dropdown-toggle '.$class.'" href="'.$menu->url.'" target="'.$menu->target.'" data-toggle="'.$menu->url.'">'.$menu->name.'<b class="caret"></b></a>';
 
                         echo '<ul class="dropdown-menu">';
                     }
