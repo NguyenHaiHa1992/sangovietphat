@@ -112,25 +112,6 @@
             </div>
         </div>
     </div>
-<!--    <div id="support" class="wContentBox">
-        <div class="contentBox">
-            <div class="title_box">Hỗ trợ khách hàng</div>
-            <div class="content_box">
-                 wListItem 
-                <ul class="wListItem list-unstyled">
-                     Repeat 5 
-                    <li class="item mobile"><span class="department">Phòng kinh doanh Hà Nội</span><span class="phone"><?php echo Setting::s('KD_HANOI','INFORMATION') ?></span> </li>
-                    <li class="item mobile"><span class="department">Phòng kinh doanh TP.Hồ Chí Minh</span><span class="phone"><?php echo Setting::s('KD_TPHCM','INFORMATION') ?></span> </li>
-                    <li class="item mobile"><span class="department">Phòng kinh doanh Đà Nẵng</span><span class="phone"><?php echo Setting::s('KD_DANANG','INFORMATION') ?></span> </li>
-                    <li class="item mobile"><span class="department">Phòng kinh doanh Hải Phòng</span><span class="phone"><?php echo Setting::s('KD_HAIPHONG','INFORMATION') ?></span> </li>
-                    <li class="item email"><?php echo Setting::s('EMAIL','INFORMATION') ?> </li>
-                     end of repeat 5 
-                </ul>
-                 end of wListItem 
-            </div>
-        </div>
-    </div>-->
-    <!-- end of wContentBox #support-->
     <!-- wContentBox -->
     
     <!--hide new products 26/06/2017-->
@@ -185,37 +166,13 @@
     </div>-->
     <?php endif;?>
     <!-- end of wContentBox -->
-    <?php
-//    $this->widget('wBanner', array(
-//        'id'=>'banner_partner',
-//        'class'=>'interested-news wContentBox',
-//        'data'=>Banner::getBannerPosition(Banner::CAT_BANNER_PARTNER,1),
-//    ));
-    ?>
-
-<!--    <div id="count-traffic">
-        <div class="item">
-            <span class="title">Tổng truy cập: </span><span class="quantity"><?php echo Yii::app()->counter->getTotal(); ?></span>
-        </div>
-        <div class="item">
-            <span class="title">Hôm nay: </span><span class="quantity"><?php echo Yii::app()->counter->getToday(); ?></span>
-        </div>
-        <div class="item">
-            <span class="title">Online: </span><span class="quantity"><?php echo Yii::app()->counter->getOnline(); ?></span>
-        </div>
-    </div>-->
 </div>
 </section>
 <footer>	
-    <!-- <div id="company-name"><?php echo Setting::s('COMPANY_NAME','INFORMATION'); ?></div> -->
     
     <div id="footer">
         <?php $this->widget('wFooter');?>
     </div>
-    
-    <!-- <div class="col-xs-12 col-sm-6 col-md-3 column"> -->
-        <?php  Setting::s('ADDRESS_GOOGLE_MAPS','INFORMATION');?>
-   <!-- </div> -->
     <?php $this->widget('wFooterLink',array(
             'id'=>'footer_link',
             'class'=>'footer-center',
@@ -223,11 +180,6 @@
     ))?>
 
     <div id="info-company">
-    	<!--
-        <span>Địa chỉ: <?php echo Setting::s('ADDRESS','INFORMATION'); ?></span>
-        <span>Điện thoại: <?php echo Setting::s('PHONE','INFORMATION'); ?> - Hotline: <?php echo Setting::s('HOT_LINE','INFORMATION'); ?></span>
-        <span>E-mail: <?php echo Setting::s('EMAIL','INFORMATION'); ?></span>
-       	-->
         <a href="<?php echo Setting::s('FACEBOOK_ADDRESS','INFORMATION'); ?>" target="_blank"><span>Facebook: <?php echo Setting::s('FACEBOOK_PAGE','INFORMATION'); ?></span></a>
         <span>All content © 2014 SangoVietPhat. Website made by IHB.</span>
     </div>
