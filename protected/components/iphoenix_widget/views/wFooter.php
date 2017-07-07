@@ -11,27 +11,50 @@ if($countMenu){
             <div class="col-lg-12 col-md-12 col-sm-12 col-xs-12 border-line ">
                 <div class="widget-html">
                     <div class="widget-inner">
-                        <div class="col-lg-12  listmap hidden-xs footer-nm">
+                        <div class="col-lg-12 footer-nm">
                             <div id="accordion" class="panel-group">
                                 <p style="text-align: center;color: #666;font-weight: 600;font-size: 20px;">
                                     HỆ THỐNG BÁN HÀNG<br>
                                 </p>
                                 <div class="panel panel-default" style="border: none;background:#ffffff;">
                                     <div class="panel-heading">
-                                        <div class="table-responsive">
-                                            <table width="100%" height="25">
+                                        <div class="table-responsive mb-no-border">
+                                            <table width="100%">
                                                 <tbody>
+                                                    <?php if($isMobile) :?>
+                                                        <?php for($i = 0 ; $i < count($menus) ; $i+=2): ?>
+                                                           <tr>
+                                                               <?php if($menus[$i]):?>
+                                                               <td width="50%"> 
+                                                                    <a href="#<?php echo $menus[$i]['hashtag'] ?>" data-parent="#accordion" data-toggle="collapse" <?php if ($i == 0) {
+                                                                        echo 'aria-expanded="true"';
+                                                                    } ?>style="color: #ffffff;text-transform: uppercase;" class="<?php if($i !== 0){echo 'collapsed';}?>">
+                                                                        <?php echo $menus[$i]['name']; ?>
+                                                                    </a>
+                                                                </td> 
+                                                               <?php endif;?>
+                                                                <?php if($menus[$i+1]):?>
+                                                                <td> 
+                                                                    <a href="#<?php echo $menus[$i+1]['hashtag'] ?>" data-parent="#accordion" data-toggle="collapse" style="color: #ffffff;text-transform: uppercase;" class="collapsed">
+                                                                        <?php echo $menus[$i+1]['name']; ?>
+                                                                    </a>
+                                                                </td> 
+                                                               <?php endif;?>
+                                                           </tr>
+                                                        <?php endfor;?>
+                                                    <?php else:?>
                                                     <tr>
                                                         <?php foreach ($menus as $key => $menu): ?>
-                                                            <td width="<?php echo $tdWid; ?>"> 
+                                                        <td width="<?php echo $tdWid; ?>"> 
                                                                 <a href="#<?php echo $menu['hashtag'] ?>" data-parent="#accordion" data-toggle="collapse" <?php if ($key == 0) {
                                                             echo 'aria-expanded="true"';
                                                         } ?>style="color: #ffffff;text-transform: uppercase;" class="<?php if($key !== 0){echo 'collapsed';}?>">
                                                             <?php echo $menu['name']; ?>
                                                                 </a>
                                                             </td> 
-<?php endforeach; ?>
+                                                        <?php endforeach; ?>
                                                     </tr>     
+                                                    <?php endif;?>
                                                 </tbody>
                                             </table>
                                         </div>   
@@ -42,7 +65,7 @@ if($countMenu){
         echo 'in';
     } ?>" id="<?php echo $parent; ?>">
                                             <div class="panel-body"> 
-                                                <div class="table-responsive">
+                                                <div class="table-responsive mb-no-border">
                                                     <table class="table">
                                                         <tbody>   
                                                             <tr>

@@ -158,5 +158,21 @@
         padding-right: 5px;
         padding-left: 0px;
     }
-   
+    
+    #accordion .panel-heading{
+        background-size: auto 100%;
+    }
+    
+    .mb-no-border{
+        border: none !important;
+        margin-bottom: 0;
+    }
 }
+
+@media screen and (max-width: 1024px){
+    .mb-no-border{
+        border: none !important;
+        margin-bottom: 0;
+    }
+}
+

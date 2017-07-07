@@ -38,7 +38,12 @@ class wFooter extends CWidget
 			// 'footer'	=>	$footer,
 			'menus' 	=> 	$menus, // array
 			'childs' 	=> 	$childs, // array object (parent => (childs))
+                        'isMobile'      =>      $this->isMobile(),
 		));
 	}
+        
+        public function isMobile() {
+            return preg_match("/(android|avantgo|blackberry|bolt|boost|cricket|docomo|fone|hiptop|mini|mobi|palm|phone|pie|tablet|up\.browser|up\.link|webos|wos)/i", $_SERVER["HTTP_USER_AGENT"]);
+        }
 }
 ?>
