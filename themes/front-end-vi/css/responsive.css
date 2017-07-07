@@ -138,3 +138,25 @@
         clear: both;
     }
 }
+
+@media screen and (max-width: 664px){
+    #news .item > .information {
+        float: left;
+    }
+}
+
+@media screen and (max-width: 768px){
+    #news li.item{
+        width: 100% !important;
+    }
+    #news .item > .image{
+        width: 100% !important;
+        padding: 10px;
+    }
+    
+    #hot-products .carousel-inner .item>a:last-child,#hot-products .carousel-inner .item>a:nth-child(2) {
+        padding-right: 5px;
+        padding-left: 0px;
+    }
+   
+}
