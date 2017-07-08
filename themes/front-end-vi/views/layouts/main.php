@@ -71,9 +71,9 @@
 	        <?php endif;?>
 	        <div class="brand"><?php //echo Setting::s('COMPANY_NAME','INFORMATION');?></div>
         </div>
-        <div id="header-mobile" style="display:none">                                                                                   
+<!--        <div id="header-mobile" style="display:none">                                                                                   
 	    	<img class="image-bacground" src="<?php echo $background_header[0]->image->getAbsoluteUrl();?>" alt="<?php echo $background_header[0]->name;?>"> 
-	    </div>
+	    </div>-->
     </div>
     
     <!-- wMenu -->

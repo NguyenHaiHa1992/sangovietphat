@@ -9,6 +9,12 @@
 				<span class="icon-bar"></span>
 				<span class="icon-bar"></span>
 			</button>
+                    
+                    <div class="menu-title mobile-only">
+                        <p class="box-title">
+                           Sàn gỗ Việt Phát
+                        </p>
+                    </div>
 		</div>
 	
 		<!-- Collect the nav links, forms, and other content for toggling -->

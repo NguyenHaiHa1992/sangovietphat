@@ -23,7 +23,8 @@ class wListItem extends CWidget
 			'template'=>$this->template,
 			'id'=>$this->id,
 			'class'=>$this->class,
-                        'type' => $this->type
+                        'type' => $this->type,
+                        'isMobile' => iPhoenixUtility::isMobile(),
 		));
 	}
 }

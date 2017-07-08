@@ -893,3 +893,20 @@ i.print_icon{background-image: url('../images/icons/print-icon.png');height: 30p
     -moz-border-radius: 2px;
     -wekbit-border-radius: 2px;
 }
+.menu-title{
+    height: 30px;
+    line-height: 30px;
+    text-transform: uppercase;
+    color: #ffffff;
+    width: 100%;
+    padding: 10px;
+    font-family: "Roboto Medium";
+}
+
+@media screen and (max-width:768px){
+    #contact-form,#address-company{width: 100%;}
+    
+    .category li{
+        margin-bottom: 15px;
+    }
+}

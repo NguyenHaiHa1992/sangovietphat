@@ -1,7 +1,7 @@
 <?php
 $data = Product::getItemsWithPager(18,'page',array('cat_id'=>Yii::app()->getRequest()->getParam('cat_id',null)));
 $pages = Product::getPager(9,'page',array('cat_id'=>Yii::app()->getRequest()->getParam('cat_id',null)));
-$list_category = ProductCategory::getItems();
+$list_category = ProductCategory::getItems(5,array('status' => true , 'parent_id' => 0,));
 if(isset($_GET['cat_id'])){
     $category = ProductCategory::model()->findByPk($_GET['cat_id']);
     if(!isset($category)){
@@ -15,6 +15,7 @@ $this->widget('wMetaTag',array(
 ));
 
 //for sub category
+// remove sub category requirement 08/07/2017
 $sub_categories = ProductCategory::model()->findAllByAttributes(array(
     'parent_id' => isset($_GET['cat_id']) ? $_GET['cat_id'] : null));
 ?>
@@ -76,7 +77,7 @@ $sub_categories = ProductCategory::model()->findAllByAttributes(array(
                     </div>
                 <?php 
                 else:
-                    $product_limit = 3;
+                    $product_limit = 6;
                     if($sub_categories){
                         $product_limit = 6;
                         $list_category = $sub_categories;
