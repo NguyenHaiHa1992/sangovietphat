@@ -1,3 +1,9 @@
+<?php 
+    $controller = Yii::app()->controller;
+    $controllerName = $controller->id;
+    $action = $controller->action->id;
+?>
+
 <!-- wMenu -->
 <div id="<?php echo $id;?>" class="<?php echo $class;?>">
 	<nav class="navbar navbar-default" role="navigation">
@@ -9,12 +15,13 @@
 				<span class="icon-bar"></span>
 				<span class="icon-bar"></span>
 			</button>
-                    
+                    <?php if($controllerName !== 'site'  && $action !== 'index') :?>
                     <div class="menu-title mobile-only">
                         <p class="box-title">
                            Sàn gỗ Việt Phát
                         </p>
                     </div>
+                    <?php endif;?>
 		</div>
 	
 		<!-- Collect the nav links, forms, and other content for toggling -->
@@ -86,7 +93,6 @@
 
                         // echo '<a id="'.$id.'" class="dropdown-toggle '.$class.'" href="'.$menu->url.'" target="'.$menu->target.'" data-toggle="'.$menu->url.'">'.$menu->name.'</a>';
                         echo '<a id="'.$id.'" class="dropdown-toggle '.$class.'" href="'.$menu->url.'" target="'.$menu->target.'" data-toggle="'.$menu->url.'">'.$menu->name.'<b class="caret"></b></a>';
-
                         echo '<ul class="dropdown-menu">';
                     }
                     elseif (isset($item['havechild']) && $item['havechilgitd'] && $item['level'] >1){

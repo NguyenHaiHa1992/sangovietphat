@@ -910,3 +910,6 @@ i.print_icon{background-image: url('../images/icons/print-icon.png');height: 30p
         margin-bottom: 15px;
     }
 }
+.tit-mart{
+    font-weight: bold;
+}

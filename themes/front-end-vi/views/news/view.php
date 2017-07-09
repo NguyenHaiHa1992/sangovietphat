@@ -70,6 +70,14 @@
                                 <script type="text/javascript" src="https://apis.google.com/js/plusone.js" ></script>
                                 <g:plusone size="medium" ></g:plusone>
                             </div>
+<!--                            <div class="zalo-share">
+                                <li class="btnZalo zalo-share-button" data-href="'+r+'?utm_source=zalo&utm_medium=zalomsg&utm_campaign=zingdesktop" data-oaid="4564080408575020426" data-layout="icon-text" data-customize="true">
+                                    <a href="#" title="Chia sẻ Zaolo">
+                                        <span class="ti-zalo"></span>
+                                    </a>
+                                    <span class="label">Nhắn tin zalo</span>
+                                </li>
+                            </div>-->
                             <div class="print">
                                 <a href="javascript:void(0);" onclick="print();">
                                     <strong><span class="glyphicon glyphicon-print"></span></strong>

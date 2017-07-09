@@ -60,30 +60,59 @@ if($countMenu){
                                         </div>   
                                     </div>
                                     <!-- panel collapse -->  
-<?php foreach ($childs as $parent => $child) : ?>
+                                    <?php foreach ($childs as $parent => $child) : ?>
                                         <div class="panel-collapse collapse <?php if ($parent === $menus[0]['hashtag']) {
-        echo 'in';
-    } ?>" id="<?php echo $parent; ?>">
+                                            echo 'in';
+                                        } ?>" id="<?php echo $parent; ?>">
                                             <div class="panel-body"> 
                                                 <div class="table-responsive mb-no-border">
                                                     <table class="table">
-                                                        <tbody>   
+                                                        <tbody>
+                                                            <?php if($isMobile) :?>
+                                                                <?php foreach ($child as $c): ?>
+                                                                    <tr>
+                                                                        <td class="border-rb no-border-top">
+                                                                            <?php if (isset($c->name) && $c->name) : ?>
+                                                                                <div class="tit-mart"><?php echo $c->name; ?></div>
+                                                                            <?php endif; ?>
+                                                                                <?php if (isset($c->address) && $c->address) : ?>
+                                                                                <div class="address"><?php echo $c->address; ?></div>
+                                                                            <?php endif; ?>
+                                                                                 <?php if (isset($c->mobile) && $c->mobile) : ?>
+                                                                                <div class="mobile"><?php echo $c->mobile; ?></div>
+                                                                            <?php endif; ?>
+                                                                                <?php if (isset($c->content) && $c->content) : ?>
+                                                                                <div class="content"><?php echo $c->content; ?></div>
+                                                                            <?php endif; ?>
+                                                                        </td>
+                                                                    </tr>
+                                                                <?php endforeach;?>
+                                                            <?php else :?>
                                                             <tr>
-                                                                    <?php foreach ($child as $c): ?>
-                                                                    <td class="border-rb no-border-top">
-                                                                    <?php if (isset($c->name) && $c->name) : ?><div class="tit-mart"><?php echo $c->name; ?></div><?php endif; ?>
-                                                                    <?php if (isset($c->address) && $c->address) : ?><div class="address"><?php echo $c->address; ?></div><?php endif; ?>
-        <?php if (isset($c->mobile) && $c->mobile) : ?><div class="mobile"><?php echo $c->mobile; ?></div><?php endif; ?>
-        <?php if (isset($c->content) && $c->content) : ?><div class="tit-content"><?php echo $c->content; ?></div><?php endif; ?>
-                                                                    </td>
-    <?php endforeach; ?>                                                                                                
+                                                            <?php foreach ($child as $c): ?>
+                                                                <td class="border-rb no-border-top">
+                                                                <?php if (isset($c->name) && $c->name) : ?>
+                                                                    <div class="tit-mart"><?php echo $c->name; ?></div>
+                                                                <?php endif; ?>
+                                                                <?php if (isset($c->address) && $c->address) : ?>
+                                                                    <div class="address"><?php echo $c->address; ?></div>
+                                                                <?php endif; ?>
+                                                                <?php if (isset($c->mobile) && $c->mobile) : ?>
+                                                                    <div class="mobile"><?php echo $c->mobile; ?></div>
+                                                                <?php endif; ?>
+                                                                <?php if (isset($c->content) && $c->content) : ?>
+                                                                    <div class="tit-content"><?php echo $c->content; ?></div>
+                                                                <?php endif; ?>
+                                                                </td>
+                                                            <?php endforeach; ?>                                                                                                
                                                             </tr>
+                                                            <?php endif;?>
                                                         </tbody>
                                                     </table>  
                                                 </div> 
                                             </div>
                                         </div>
-<?php endforeach; ?>
+                                    <?php endforeach; ?>
                                 </div>
                             </div>
                         </div>

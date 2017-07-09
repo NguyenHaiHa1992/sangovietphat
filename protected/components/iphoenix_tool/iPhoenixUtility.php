@@ -9,5 +9,16 @@ class iPhoenixUtility {
         }
         return false;
     }
+    
+    public static function isHomePage(){
+        $controller = Yii::app()->controller;
+        $controllerName = $controller->id;
+        $actionName = $controller->action->id;
+        
+        if($controllerName == 'site' && $actionName === 'index'){
+            return true;
+        }
+        return false;
+    }
 }
 

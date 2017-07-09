@@ -1,4 +1,5 @@
 $(document).ready(function(){
+    
     $("textarea", $("#contact")).css({
         width: $("#contact").width() - 210
     })
@@ -22,5 +23,9 @@ $(document).ready(function(){
 
         }
 
+    });
+    
+    $('.caret').on('click', function(e){
+        e.preventDefault();
     });
 })
