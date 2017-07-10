@@ -104,5 +104,20 @@ class SystemStore extends CActiveRecord
 	{
 		return parent::model($className);
 	}
-
+        
+        /**
+	 * Returns order view of brother nodes
+	 * @return array $result, the array sibling of this node
+	 */
+	public function getList_order_view(){
+		$result=array();
+		$criteria=new CDbCriteria;
+		$criteria->compare('status', true);
+		$list=self::model()->findAll($criteria);
+	
+		foreach ($list as $cat){
+			$result[$cat->id]=$cat->order_view;
+		}
+		return $result;
+	}
 }

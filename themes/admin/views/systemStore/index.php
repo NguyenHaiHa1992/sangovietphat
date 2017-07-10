@@ -74,15 +74,15 @@ Yii::app()->clientScript->registerScriptFile(Yii::app()->theme->baseUrl . '/js/j
         <!--end box search-->		
         <?php
         $this->widget('iPhoenixGridView', array(
-            'iclass' => 'Product',
-            'id' => 'product-list',
+            'iclass' => 'SystemStore',
+            'id' => 'system-store-list',
             'dataProvider' => $model->search(),
             'columns' => array(
                 array(
                     'class' => 'CCheckBoxColumn',
                     'selectableRows' => 2,
                     'headerHtmlOptions' => array('width' => '2%', 'class' => 'table-title'),
-                    'checked' => 'in_array($data->id,Yii::app()->session["checked-product-list"])'
+//                    'checked' => 'in_array($data->id,Yii::app()->session["checked-product-list"])'
                 ),
                 array(
                     'name' => 'name',
@@ -105,130 +105,46 @@ Yii::app()->clientScript->registerScriptFile(Yii::app()->theme->baseUrl . '/js/j
                     'headerHtmlOptions' => array('width' => '10%', 'class' => 'table-title'),
                 ),
                 array(
-                    'header' => iPhoenixLang::admin_t('Display', 'main'),
-                    'class' => 'iPhoenixStatusButtonColumn',
-                    'template' => '{reverse_status}{reverse_new}{reverse_home}',
-                    'buttons' => array
-                        (
-                        'reverse_status' => array
-                            (
-                            'label' => $model->getAttributeLabel('status'),
-                            'imageUrl' => '$data->imageStatus',
-                            'url' => 'iPhoenixUrl::createUrl("admin/product/reverseStatus", array("id"=>$data->id))',
-                            'click' => 'function(){
-								var th=this;									
-								jQuery.ajax({
-									type:"POST",
-									dataType:"json",
-									url:$(this).attr("href"),
-									success:function(data) {
-										if(data.success){
-											$(th).find("img").attr("src",data.src);
-										}
-									},
-									error: function (request, status, error) {
-    										jAlert(request.responseText);
-									}
-									});
-							return false;}',
-                        ),
-                        'reverse_new' => array
-                            (
-                            'label' => $model->getAttributeLabel('new'),
-                            'imageUrl' => '$data->imageNew',
-                            'url' => 'iPhoenixUrl::createUrl("admin/product/reverseNew", array("id"=>$data->id))',
-                            'click' => 'function(){
-								var th=this;									
-								jQuery.ajax({
-									type:"POST",
-									dataType:"json",
-									url:$(this).attr("href"),
-									success:function(data) {
-										if(data.success){
-											$(th).find("img").attr("src",data.src);
-											}
-									},
-									error: function (request, status, error) {
-    										jAlert(request.responseText);
-									}
-									});
-							return false;}',
-                        ),
-                        'reverse_home' => array
-                            (
-                            'label' => $model->getAttributeLabel('home'),
-                            'imageUrl' => '$data->imageHome',
-                            'url' => 'iPhoenixUrl::createUrl("admin/product/reverseHome", array("id"=>$data->id))',
-                            'click' => 'function(){
-								var th=this;									
-								jQuery.ajax({
-									type:"POST",
-									dataType:"json",
-									url:$(this).attr("href"),
-									success:function(data) {
-										if(data.success){
-											$(th).find("img").attr("src",data.src);
-											}
-									},
-									error: function (request, status, error) {
-    										jAlert(request.responseText);
-									}
-									});
-							return false;}',
-                        ),
-                    ),
-                    'headerHtmlOptions' => array('width' => '10%', 'class' => 'table-title'),
-                ),
-                array(
                     'header' => iPhoenixLang::admin_t('Function', 'main'),
                     'class' => 'iPhoenixToolButtonColumn',
-                    'template' => '{clipboard}{copy}{update}{delete}',
+                    'template' => '{copy}{update}{delete}',
                     'deleteConfirmation' => iPhoenixLang::admin_t('Are you sure you want to delete this item?', 'main'),
                     'afterDelete' => 'function(link,success,data){ if(success) jAlert("' . iPhoenixLang::admin_t("Delete successfully", "main") . '"); }',
                     'buttons' => array
                         (
                         'update' => array(
                             'label' => iPhoenixLang::admin_t('Update', 'main'),
-                            'url' => 'iPhoenixUrl::createUrl("admin/product/update",array("id"=>$data->id))'
+                            'url' => 'iPhoenixUrl::createUrl("admin/systemStore/update",array("id"=>$data->id))'
                         ),
                         'delete' => array(
                             'label' => iPhoenixLang::admin_t('Delete', 'main'),
-                            'url' => 'iPhoenixUrl::createUrl("admin/product/delete",array("id"=>$data->id))'
+                            'url' => 'iPhoenixUrl::createUrl("admin/systemStore/delete",array("id"=>$data->id))'
                         ),
                         'copy' => array
                             (
                             'label' => iPhoenixLang::admin_t('Copy', 'main'),
                             'imageUrl' => Yii::app()->theme->baseUrl . '/images/copy.png',
-                            'url' => 'iPhoenixUrl::createUrl("admin/product/copy", array("id"=>$data->id))',
-                        ),
-                        'clipboard' => array
-                            (
-                            'label' => iPhoenixLang::admin_t('Copy to clipboard', 'main'),
-                            'url' => '$data->detail_url',
-                            'imageUrl' => Yii::app()->theme->baseUrl . '/images/clipboard.png',
-                            'options' => array(
-                                'class' => 'clipboard'
-                            )
+                            'url' => 'iPhoenixUrl::createUrl("admin/systemStore/copy", array("id"=>$data->id))',
                         ),
                     ),
                     'headerHtmlOptions' => array('width' => '10%', 'class' => 'table-title'),
                 ),
             ),
             'template' => '{displaybox}{checkbox}{summary}{items}{pager}',
-            'summaryText' => '{count} ' . iPhoenixLang::admin_t('Product'),
+            'summaryText' => '{count} ' . iPhoenixLang::admin_t('SystemStore'),
             'pager' => array('class' => 'CLinkPager', 'header' => '', 'prevPageLabel' => '< ' . iPhoenixLang::admin_t('Previous'), 'nextPageLabel' => iPhoenixLang::admin_t('Next') . ' >', 'htmlOptions' => array('class' => 'pages fr')),
             'actions' => array(
                 'delete' => array(
                     'action' => 'delete',
                     'label' => iPhoenixLang::admin_t('Delete', 'main'),
                     'imageUrl' => Yii::app()->theme->baseUrl . '/images/delete.png',
-                    'url' => 'admin/product/checkbox'
+                    'url' => 'admin/systemStore/checkbox'
                 ),
                 'copy' => array(
                     'action' => 'copy',
                     'label' => iPhoenixLang::admin_t('Copy', 'main'),
                     'imageUrl' => Yii::app()->theme->baseUrl . '/images/copy.png',
-                    'url' => 'admin/product/checkbox'
+                    'url' => 'admin/systemStore/checkbox'
                 )
             ),
         ));
@@ -238,7 +154,7 @@ Yii::app()->clientScript->registerScriptFile(Yii::app()->theme->baseUrl . '/js/j
 <!--end inside content-->
 <script type="text/javascript">
     $("body").ajaxComplete(function () {
-        $("a[class^=edit-order-view-]").editable("<?php echo iPhoenixUrl::createUrl('admin/product/edit') ?>", {
+        $("a[class^=edit-systemStore-view-]").editable("<?php echo iPhoenixUrl::createUrl('admin/systemStore/edit') ?>", {
             submitdata: function (value, settings) {
                 return {"id": $(this).attr("class").substr("16"), "attribute": "order_view"};
             },
@@ -252,7 +168,7 @@ Yii::app()->clientScript->registerScriptFile(Yii::app()->theme->baseUrl . '/js/j
         });
     });
 
-    $("a[class^=edit-order-view-]").editable("<?php echo iPhoenixUrl::createUrl('admin/product/edit') ?>", {
+    $("a[class^=edit-systemStore-view-]").editable("<?php echo iPhoenixUrl::createUrl('admin/systemStore/edit') ?>", {
         submitdata: function (value, settings) {
             return {"id": $(this).attr("class").substr("16"), "attribute": "order_view"};
         },
