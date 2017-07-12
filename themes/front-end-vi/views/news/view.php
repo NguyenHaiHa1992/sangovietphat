@@ -57,7 +57,9 @@
                     <div id="plugin-social">
                         <div class="title">Chia sẻ: </div>
                         <div class="social-container">
-                            <?php $pageUrl = $data->detail_url;?>
+                            <?php $pageUrl = $data->detail_url;
+                                $absolutePageUrl = Yii::app()->getBaseUrl(true) . $pageUrl;
+                            ?>
                             <div class="fb-like" data-href="<?php echo $pageUrl;?>" data-layout="button_count" data-action="like" data-show-faces="false" data-share="true"></div>
 
                             <div class="twitter-share-container">
@@ -66,18 +68,14 @@
                                     !function(d,s,id){var js,fjs=d.getElementsByTagName(s)[0],p=/^http:/.test(d.location)?'http':'https';if(!d.getElementById(id)){js=d.createElement(s);js.id=id;js.src=p+'://platform.twitter.com/widgets.js';fjs.parentNode.insertBefore(js,fjs);}}(document, 'script', 'twitter-wjs');
                                 </script>
                             </div>
+                            <div class="zalo-share">
+                                <script src="https://sp.zalo.me/plugins/sdk.js" type="text/javascript" charset="utf-8" async defer></script>
+                                <li class="btnZalo zalo-share-button" data-href="<?php echo $absolutePageUrl?>" data-color="blue" data-oaid="1165315223958386417" data-layout="1" data-customize="false"></li>
+                            </div>
                             <div class="gplus-share">
                                 <script type="text/javascript" src="https://apis.google.com/js/plusone.js" ></script>
                                 <g:plusone size="medium" ></g:plusone>
                             </div>
-<!--                            <div class="zalo-share">
-                                <li class="btnZalo zalo-share-button" data-href="'+r+'?utm_source=zalo&utm_medium=zalomsg&utm_campaign=zingdesktop" data-oaid="4564080408575020426" data-layout="icon-text" data-customize="true">
-                                    <a href="#" title="Chia sẻ Zaolo">
-                                        <span class="ti-zalo"></span>
-                                    </a>
-                                    <span class="label">Nhắn tin zalo</span>
-                                </li>
-                            </div>-->
                             <div class="print">
                                 <a href="javascript:void(0);" onclick="print();">
                                     <strong><span class="glyphicon glyphicon-print"></span></strong>
