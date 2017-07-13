@@ -148,4 +148,10 @@ class SystemStore extends CActiveRecord
             SystemAddress::model()->deleteAll($criteria);
             return parent::beforeDelete();
         }
+        
+        public static function getAll(){
+            $criteria = new CDbCriteria();
+            $criteria->compare('status', true);
+            $list=self::model()->findAll($criteria);
+        }
 }

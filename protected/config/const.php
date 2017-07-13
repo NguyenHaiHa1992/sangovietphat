@@ -6,3 +6,4 @@
  * and open the template in the editor.
  */
 define('LIMIT_MAIN_PRODUCT', 10);
+define('VERSION','1.0');

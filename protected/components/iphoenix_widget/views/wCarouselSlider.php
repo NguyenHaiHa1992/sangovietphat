@@ -56,7 +56,7 @@
                         for($j = $key ; $j < $key+4;$j++){
                             if(isset($data[$j])){
                                 $this->widget('wItem', array(
-                                    'data'=>$data[$key],
+                                    'data'=>$data[$j],
                                     'template'=>'
                                         <a href="{category_url}"><img src="[getIntroimage_thumb(120,90)]" width="120px" height="90px" alt="{title_text}" title="{title_text}" class="img-responsive"><span class="title">{title_text}</span> </a>
                                     ',

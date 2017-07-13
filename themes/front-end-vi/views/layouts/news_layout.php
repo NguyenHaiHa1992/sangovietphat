@@ -23,7 +23,7 @@
     <link rel="canonical" href="<?php echo $this->canonical;?>" />
     <title><?php echo $this->meta_title;?></title>
     <base href="<?php echo Yii::app()->getBaseurl(true);?>"/>
-    <?php $this->widget('wScript', array('js'=>'jquery.js,bootstrap.min.js,style.js,flux.js','css'=>'bootstrap-theme.min.css,bootstrap.min.css,customize.css,responsive.css,style.css'));?>
+    <?php $this->widget('wScript', array('js'=>'jquery.js,bootstrap.min.js,style.js,flux.js','css'=>'bootstrap-theme.min.css,bootstrap.min.css,customize.css,responsive.css,style.css' ,'version' => VERSION,));?>
     <script>
   (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
   (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
