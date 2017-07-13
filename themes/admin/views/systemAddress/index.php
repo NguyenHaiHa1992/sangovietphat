@@ -1,6 +1,5 @@
 <?php
 Yii::app()->clientScript->registerScriptFile(Yii::app()->theme->baseUrl . '/js/jquery.jeditable.mini.js');
-$listSystemStore = SystemStore::getAll();
 ?>
 <!--begin inside content-->
 <div id="main-content" class="folder top">
@@ -54,9 +53,16 @@ $listSystemStore = SystemStore::getAll();
             <div class="fr" style="width:600px;">
                 <ul>      
                     <li>
-<?php echo $form->label($model, 'status', array('style' => 'width:200px')); ?>
+                        <?php echo $form->label($model, 'status', array('style' => 'width:200px')); ?>
                         <?php echo $form->dropDownList($model, 'status', array('' => iPhoenixLang::admin_t('All', 'main'), 0 => iPhoenixLang::admin_t('Hide', 'main'), 1 => iPhoenixLang::admin_t('Show', 'main')), array('style' => 'width:200px')); ?>
                     </li> 	             
+                </ul>
+                <ul>
+                    <?php $list_systemStore = array_merge(array('' => iPhoenixLang::admin_t('All', 'main')) ,$list_systemStore)?>
+                    <li>
+                        <?php echo $form->label($model, 'parent_id', array('style' => 'width:200px')); ?>
+                        <?php echo $form->dropDownList($model, 'parent_id', $list_systemStore, array('style' => 'width:200px')); ?>
+                    </li>
                 </ul>
             </div>
             <div>
@@ -90,6 +96,13 @@ $listSystemStore = SystemStore::getAll();
                     'headerHtmlOptions' => array('width' => '10%', 'class' => 'table-title'),
                 ),
                 array(
+                    'name' => 'parent_id',
+                    'header' => iPhoenixLang::admin_t('SystemStore' , 'systemStore'),
+                    'value' => function($data) use($list_systemStore){
+                        return isset($list_systemStore[$data['parent_id']]) ? $list_systemStore[$data['parent_id']] : '';
+                    },
+                ),
+                array(
                     'name' => 'mobile',
                     'type' => 'html',
                     'headerHtmlOptions' => array('class' => 'table-title'),
@@ -109,7 +122,7 @@ $listSystemStore = SystemStore::getAll();
                 array(
                     'header' => iPhoenixLang::admin_t('Function', 'main'),
                     'class' => 'iPhoenixToolButtonColumn',
-                    'template' => '{copy}{update}{delete}',
+                    'template' => '{update}{delete}',
                     'deleteConfirmation' => iPhoenixLang::admin_t('Are you sure you want to delete this item?', 'main'),
                     'afterDelete' => 'function(link,success,data){ if(success) jAlert("' . iPhoenixLang::admin_t("Delete successfully", "main") . '"); }',
                     'buttons' => array
@@ -156,7 +169,7 @@ $listSystemStore = SystemStore::getAll();
 <!--end inside content-->
 <script type="text/javascript">
     $("body").ajaxComplete(function () {
-        $("a[class^=edit-systemAddress-view-]").editable("<?php echo iPhoenixUrl::createUrl('admin/systemAddress/edit') ?>", {
+        $("a[class^=edit-order-view-]").editable("<?php echo iPhoenixUrl::createUrl('admin/systemAddress/edit') ?>", {
             submitdata: function (value, settings) {
                 return {"id": $(this).attr("class").substr("16"), "attribute": "order_view"};
             },
@@ -170,7 +183,7 @@ $listSystemStore = SystemStore::getAll();
         });
     });
 
-    $("a[class^=edit-systemAddress-view-]").editable("<?php echo iPhoenixUrl::createUrl('admin/systemAddress/edit') ?>", {
+    $("a[class^=edit-order-view-]").editable("<?php echo iPhoenixUrl::createUrl('admin/systemAddress/edit') ?>", {
         submitdata: function (value, settings) {
             return {"id": $(this).attr("class").substr("16"), "attribute": "order_view"};
         },

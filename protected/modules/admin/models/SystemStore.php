@@ -152,6 +152,12 @@ class SystemStore extends CActiveRecord
         public static function getAll(){
             $criteria = new CDbCriteria();
             $criteria->compare('status', true);
-            $list=self::model()->findAll($criteria);
+            $criteria->select = 'id,name';
+            $listStore=self::model()->findAll($criteria);
+            $tmp_list = array();
+            foreach ($listStore as $store){
+                $tmp_list[$store->id] = $store->name;
+            }
+            return $tmp_list;
         }
 }

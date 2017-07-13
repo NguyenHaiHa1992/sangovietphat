@@ -61,7 +61,7 @@ class SystemAddressController extends Controller {
         $this->performAjaxValidation($model);
         // Uncomment the following line if AJAX validation is needed
         // $this->performAjaxValidation($model);
-
+        $list_systemStore = SystemStore::getAll();
         if (isset($_POST['SystemAddress'])) {
             $model->attributes = $_POST['SystemAddress'];
             if ($model->save())
@@ -70,6 +70,7 @@ class SystemAddressController extends Controller {
 
         $this->iPhoenixRender('create', array(
             'model' => $model,
+            'list_systemStore' => $list_systemStore,
         ));
     }
 
@@ -94,7 +95,7 @@ class SystemAddressController extends Controller {
         $model = $this->loadModel($id);
         if (Yii::app()->user->checkAccess('systemAddress_update', array('systemAddress' => $model))) {
             $this->performAjaxValidation($model);
-
+            $list_systemStore = SystemStore::getAll();
             if (isset($_POST['SystemAddress'])) {
                 $model->attributes = $_POST['SystemAddress'];
                 if ($model->save()) {
@@ -104,6 +105,7 @@ class SystemAddressController extends Controller {
 
             $this->iPhoenixRender('update', array(
                 'model' => $model,
+                'list_systemStore' => $list_systemStore,
             ));
         } else
             throw new CHttpException(400, 'Bạn không có quyền chỉnh sửa bài viết này.');
@@ -218,8 +220,10 @@ class SystemAddressController extends Controller {
         if (isset($_GET['SystemAddress']))
             $model->attributes = $_GET['SystemAddress'];
         //Group categories that contains product
+        $list_systemStore = SystemStore::getAll();
         $this->iPhoenixRender('index', array(
             'model' => $model,
+            'list_systemStore' => $list_systemStore,
         ));
     }
 

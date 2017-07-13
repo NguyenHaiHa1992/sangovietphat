@@ -8,6 +8,8 @@
  * @property string $parent_id
  * @property string $name
  * @property string $content
+ * @property string $mobile
+ * @property string $address
  * @property integer $status
  * @property integer $order_view
  * @property integer $created_time
@@ -31,14 +33,14 @@ class SystemAddress extends CActiveRecord
 		// NOTE: you should only define rules for those attributes that
 		// will receive user inputs.
 		return array(
-			array('parent_id', 'required'),
+			array('parent_id, name', 'required'),
 			array('status, order_view, created_time, created_by', 'numerical', 'integerOnly'=>true),
 			array('parent_id', 'length', 'max'=>10),
 			array('name', 'length', 'max'=>255),
-			array('content', 'safe'),
+			array('content, mobile , address', 'safe'),
 			// The following rule is used by search().
 			// @todo Please remove those attributes that should not be searched.
-			array('id, parent_id, name, content, status, order_view, created_time, created_by', 'safe', 'on'=>'search'),
+			array('id, parent_id, name, content, mobile , address, status, order_view, created_time, created_by', 'safe', 'on'=>'search'),
 		);
 	}
 
@@ -60,13 +62,15 @@ class SystemAddress extends CActiveRecord
 	{
 		return array(
 			'id' => 'ID',
-			'parent_id' => 'Parent',
+			'parent_id' => iPhoenixLang::admin_t('SystemStore','systemStore'),
 			'name' => 'Name',
 			'content' => 'Content',
 			'status' => 'Status',
 			'order_view' => 'Order View',
 			'created_time' => 'Created Time',
 			'created_by' => 'Created By',
+                        'mobile' => 'Mobile',
+                        'address' => 'Address',
 		);
 	}
 
@@ -92,6 +96,8 @@ class SystemAddress extends CActiveRecord
 		$criteria->compare('parent_id',$this->parent_id,true);
 		$criteria->compare('name',$this->name,true);
 		$criteria->compare('content',$this->content,true);
+                $criteria->compare('mobile',$this->mobile,true);
+                $criteria->compare('address',$this->address,true);
 		$criteria->compare('status',$this->status);
 		$criteria->compare('order_view',$this->order_view);
 		$criteria->compare('created_time',$this->created_time);
@@ -111,5 +117,21 @@ class SystemAddress extends CActiveRecord
 	public static function model($className=__CLASS__)
 	{
 		return parent::model($className);
+	}
+        
+        /**
+	 * Returns order view of brother nodes
+	 * @return array $result, the array sibling of this node
+	 */
+	public function getList_order_view(){
+		$result=array();
+		$criteria=new CDbCriteria;
+		$criteria->compare('status', true);
+		$list=self::model()->findAll($criteria);
+	
+		foreach ($list as $cat){
+			$result[$cat->id]=$cat->order_view;
+		}
+		return $result;
 	}
 }
