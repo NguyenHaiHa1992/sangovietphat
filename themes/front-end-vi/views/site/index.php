@@ -8,7 +8,7 @@
     });
 </script>
 <?php $list_category = ProductCategory::getItems(5, array('parent_id' => 0,)); ?>
-<div class="col-md-8 pull-right" id="main-content">
+<div class="col-md-12" id="main-content">
     <div class="col-sm-12">
         <!--<div id="slider" class="carousel slide wContentBox" data-ride="carousel">-->
             <!-- Indicators -->
@@ -66,7 +66,7 @@
 		        <?php $i++;?>
 		        <?php endforeach;?>        
 		    </div>
-		</div>
+	</div>
         <?php
         $this->widget('wBanner', array(
             'id'=>'slider',
@@ -132,7 +132,7 @@
                             <?php
                                 $this->widget('wListItem', array(
                                     'class'=>'list-unstyled',
-                                    'data'=>Product::getItems(6,array('cat_id'=>$category->id ,)),
+                                    'data'=>Product::getItems(8,array('cat_id'=>$category->id ,)),
                                     'template'=>'
                                         <div class="image"><a href="{detail_url}" title="{name}"><img src="[getIntroimage_thumb(220,137)]" alt="{name}" title="{name}" class="img-responsive"></a></div>
                                         <div class="information">
@@ -161,7 +161,7 @@
                     <?php
                     $this->widget('wListItem', array(
                         'class'=>'list-unstyled',
-                        'data'=>News::getItems(2,array('cat_id'=>2,'home'=>true)),
+                        'data'=>News::getItems(6,array('cat_id'=>2,'home'=>true)),
 //                        'template'=>'
 //                            <div class="image"><a href="{detail_url}" title="{name}"><img src="[getIntroimage_thumb(120,85)]" alt="{name}" title="{name}" class="img-responsive"></a></div>
 //                            <div class="information">

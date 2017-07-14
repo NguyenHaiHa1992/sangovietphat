@@ -7,7 +7,7 @@ $end = $type == 'news' ? 2 : 1;
     <?php if($isMobile) :?>
         <ul id="<?php echo $id;?>" class="wListItem <?php echo $class;?>">
             <?php $i=0;foreach($data as $item):?>
-            <li class="item item<?php echo $i;?>" <?= $type == 'news' ? 'style="width: 50%"' : '' ?>>
+            <li class="item item<?php echo $i;?>" <?= $type == 'news' ? 'style="width: 33.33333333333333%"' : '' ?>>
                     <?php echo iPhoenixTemplate::parseTemplate($item, $template);?>
             </li>
             <?php $i++;endforeach;?>
@@ -21,7 +21,7 @@ $end = $type == 'news' ? 2 : 1;
                 <?php
                 endif;
                 ?>
-                <li class="item item<?php echo $i;?>" <?= $type == 'news' ? 'style="width: 50%"' : '' ?>>
+                <li class="item item<?php echo $i;?>" <?= $type == 'news' ? 'style="width: 33.333333333333333%"' : '' ?>>
                     <?php echo iPhoenixTemplate::parseTemplate($item, $template);?>
                 </li>
                 <?php

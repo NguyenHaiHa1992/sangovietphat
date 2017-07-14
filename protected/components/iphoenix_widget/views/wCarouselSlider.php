@@ -50,10 +50,10 @@
         <?php else:
             ?>
             <?php foreach($data as $key => $model):?>
-                <?php if($key % 4 == 0):?>
+                <?php if($key % 5 == 0):?>
                     <div class="item <?php if($key == 0){echo 'active';}?>">
                         <?php
-                        for($j = $key ; $j < $key+4;$j++){
+                        for($j = $key ; $j < $key+5;$j++){
                             if(isset($data[$j])){
                                 $this->widget('wItem', array(
                                     'data'=>$data[$j],

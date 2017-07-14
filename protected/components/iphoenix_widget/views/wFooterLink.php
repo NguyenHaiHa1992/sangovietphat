@@ -2,9 +2,8 @@
 
 <?php 
 $count = count($data);
-$row = 6;
+$row = ceil($count /4);
 $datas = array_chunk($data, $row);
-
 ?>
 <div id="<?php echo $id;?>" class="<?php echo $class;?>">
         <div class="inside space-padding-tb-40">
@@ -26,11 +25,7 @@ $datas = array_chunk($data, $row);
                                     </div>
                                 </div>
                               </div>
-                              <?php endforeach;?>
-
-                            <div class="col-xs-12 col-sm-6 col-md-6 pull-right">
-                                <?php $this->widget('wGooglemap');?>
-                            </div>
+                            <?php endforeach;?>
                     </div>
                 </div>
             </div>

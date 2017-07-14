@@ -8,7 +8,7 @@
 
 #hot-products .carousel-inner .item>a{
     display: inline-block;
-    width: 25%;
+    width: 20%;
     float: left;
 }
 #hot-products .carousel-inner .item>a >span.title{
@@ -16,15 +16,15 @@
     margin-top: 5px;
     display: block;
 }
-#hot-products .carousel-inner .item>a:first-child,#hot-products .carousel-inner .item>a:nth-child(2){
+#hot-products .carousel-inner .item>a:first-child,#hot-products .carousel-inner .item>a:nth-child{
     padding-bottom: 7px;
     padding-top: 7px;
     /*border-bottom: 1px dotted #C3BFB8;*/
 }
-#hot-products .carousel-inner .item>a:last-child,#hot-products .carousel-inner .item>a:nth-child(3){
+#hot-products .carousel-inner .item>a:last-child,#hot-products .carousel-inner .item>a:nth-child{
     padding-top: 7px;
 }
-#hot-products .carousel-inner .item>a:first-child,#hot-products .carousel-inner .item>a:nth-child(3){
+#hot-products .carousel-inner .item>a:first-child,#hot-products .carousel-inner .item>a:nth-child{
     padding-right: 5px;
 }
 #hot-products .carousel-inner .item>a:last-child,#hot-products .carousel-inner .item>a:nth-child(2){
