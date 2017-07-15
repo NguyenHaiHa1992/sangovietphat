@@ -24,7 +24,7 @@
     <meta property="twitter:image:src" content="<?=$this->og_image?>"/>
     <?php }?>
 
-    <?php $this->widget('wScript', array('js'=>'jquery.js,bootstrap.min.js,style.js,flux.js','css'=>'bootstrap-theme.min.css,bootstrap.min.css,customize.css,responsive.css,style.css','version' =>VERSION,));?>
+    <?php $this->widget('wScript', array('js'=>'jquery.js,bootstrap.min.js,style.js','css'=>'bootstrap-theme.min.css,bootstrap.min.css,customize.css,responsive.css,style.css','version' =>VERSION,));?>
     <script>
   (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
   (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
@@ -87,7 +87,7 @@ ZA.trackPageview('http://w.news.zing.vn/' + cate_path + window.location.pathname
 	        <div class="brand"><?php //echo Setting::s('COMPANY_NAME','INFORMATION');?></div>
         </div>
         <div id="header-mobile" style="display:none">                                                                                   
-	    	<img class="image-bacground" src="<?php echo $background_header[0]->image->getAbsoluteUrl();?>" alt="<?php echo $background_header[0]->name;?>"> 
+	    	<img class="image-bacground" src="<?php echo Yii::app()->theme->baseUrl;?>/images/header-mobile.jpg" alt="">  
 	</div>
     </div>
     

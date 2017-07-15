@@ -20,19 +20,19 @@ $sub_categories = ProductCategory::model()->findAllByAttributes(array(
     'parent_id' => isset($_GET['cat_id']) ? $_GET['cat_id'] : null));
 ?>
 
-<div class="col-md-8 pull-right" id="main-content">
+<div class="col-md-12 pull-right" id="main-content">
     <div class="col-sm-12">
         <!-- wContentBox -->
         <div id="list-products" class="wContentBox">
             <div class="contentBox">
                 <?php if(isset($category) && !$sub_categories):?>
-                    <div class="title_box">
+                    <div class="title_box pc-only">
                         <!-- wBreadcrumb -->
                             <?php
                                 $this->widget('wBreadCrumb',array(
                                     'data'=>array(
-                                        'Trang chủ'=>Yii::app()->createUrl('site/index'),
-                                        'Sản phẩm'=>Yii::app()->createUrl('product/list'),
+//                                        'Trang chủ'=>Yii::app()->createUrl('site/index'),
+//                                        'Sản phẩm'=>Yii::app()->createUrl('product/list'),
                                         $category->name => $category->detail_url,
                                     ),
                                 ));
@@ -86,12 +86,12 @@ $sub_categories = ProductCategory::model()->findAllByAttributes(array(
                         }
                     }
                 ?>
-                    <div class="title_box">
+                    <div class="title_box pc-only">
                         <!-- wBreadcrumb -->
                         <?php
                         $this->widget('wBreadCrumb',array(
                             'data'=>array(
-                                'Trang chủ'=>Yii::app()->createUrl('site/index'),
+//                                'Trang chủ'=>Yii::app()->createUrl('site/index'),
                                 'Sản phẩm'=>Yii::app()->createUrl('product/list'),
                             ),
                         ));

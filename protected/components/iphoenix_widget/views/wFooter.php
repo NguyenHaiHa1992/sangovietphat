@@ -25,18 +25,18 @@ if($countMenu){
                                                         <?php for($i = 0 ; $i < count($menus) ; $i+=2): ?>
                                                            <tr>
                                                                <?php if($menus[$i]):?>
-                                                               <td width="50%"> 
+                                                               <td width="50%" class="provinces"> 
                                                                     <a href="#<?php echo $menus[$i]['hashtag'] ?>" data-parent="#accordion" data-toggle="collapse" <?php if ($i == 0) {
                                                                         echo 'aria-expanded="true"';
                                                                     } ?>style="color: #ffffff;text-transform: uppercase;" class="<?php if($i !== 0){echo 'collapsed';}?>">
-                                                                        <?php echo $menus[$i]['name']; ?>
+                                                                        <span class="dt"><?php echo $menus[$i]['name']; ?></span>
                                                                     </a>
-                                                                </td> 
+                                                                </td>
                                                                <?php endif;?>
                                                                 <?php if($menus[$i+1]):?>
-                                                                <td> 
+                                                                <td class="provinces"> 
                                                                     <a href="#<?php echo $menus[$i+1]['hashtag'] ?>" data-parent="#accordion" data-toggle="collapse" style="color: #ffffff;text-transform: uppercase;" class="collapsed">
-                                                                        <?php echo $menus[$i+1]['name']; ?>
+                                                                        <span class="dt"><?php echo $menus[$i+1]['name']; ?> </span>
                                                                     </a>
                                                                 </td> 
                                                                <?php endif;?>
@@ -45,11 +45,11 @@ if($countMenu){
                                                     <?php else:?>
                                                     <tr>
                                                         <?php foreach ($menus as $key => $menu): ?>
-                                                        <td width="<?php echo $tdWid; ?>"> 
+                                                        <td width="<?php echo $tdWid; ?>" class="provinces"> 
                                                                 <a href="#<?php echo $menu['hashtag'] ?>" data-parent="#accordion" data-toggle="collapse" <?php if ($key == 0) {
                                                             echo 'aria-expanded="true"';
                                                         } ?>style="color: #ffffff;text-transform: uppercase;" class="<?php if($key !== 0){echo 'collapsed';}?>">
-                                                            <?php echo $menu['name']; ?>
+                                                                    <span class="dt"><?php echo $menu['name']; ?> </span>
                                                                 </a>
                                                             </td> 
                                                         <?php endforeach; ?>

@@ -18,7 +18,7 @@ $this->widget('wMetaTag',array(
                     <?php
                     $this->widget('wBreadCrumb',array(
                         'data'=>array(
-                            'Trang chủ'=>Yii::app()->createUrl('site/index'),
+//                            'Trang chủ'=>Yii::app()->createUrl('site/index'),
                             'Tin tức'=>Yii::app()->createUrl('news/list')
                         ),
                     ));

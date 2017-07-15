@@ -12,20 +12,20 @@
         </div>
     </div>
 </div>
-<div class="col-md-8 pull-right" id="main-content">
+<div class="col-md-12 pull-right" id="main-content">
     <div class="col-sm-12">
         <!-- wContentBox -->
         <div id="contact" class="wContentBox">
             <div class="contentBox">
-                <div class="title_box">
+                <!--<div class="title_box">-->
                     <!-- wBreadcrumb -->
                     <?php
-                    $this->widget('wBreadCrumb',array(
-                        'data'=>array('Trang chủ'=>Yii::app()->createUrl('site/index')),
-                    ));
+//                    $this->widget('wBreadCrumb',array(
+//                        'data'=>array('Trang chủ'=>Yii::app()->createUrl('site/index')),
+//                    ));
                     ?>
                     <!-- end of wBreadcrumb -->
-                </div>
+                <!--</div>-->
                 <div class="content_box">
                     <div id="address-company">
                         <div class="wrapper">

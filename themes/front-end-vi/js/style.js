@@ -28,4 +28,21 @@ $(document).ready(function(){
     $('.caret').on('click', function(e){
         e.preventDefault();
     });
+    
+    setTimeout(function(){
+        $('#accordion').find('a[data-parent="#accordion"]').each(function(t){
+            $(this).hover(function(e){
+                $(this).trigger('click');
+            });
+        });
+    },300);
+    
+    $(window).on('load',function(){
+        var text = $('#menu_box_title').text();
+        if(text.trim() === ''){
+            var li = $('#main-content').find('.breadcrumb').find('li');
+            text = $(li[0]).find('a').text();
+            $('#menu_box_title').text(text);
+        }
+    });
 })

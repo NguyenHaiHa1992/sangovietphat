@@ -51,21 +51,21 @@
 <div class="container">
     <div class="row">
         <header>        	
-            <div id="container-header">
+            <!--<div id="container-header">-->
                 <?php
-                $this->widget('wBanner', array(
-                    'id'=>'logo',
-                    'data'=>Banner::getBannerPosition(Banner::CAT_BANNER_LOGO,1),
-                ));
+//                $this->widget('wBanner', array(
+//                    'id'=>'logo',
+//                    'data'=>Banner::getBannerPosition(Banner::CAT_BANNER_LOGO,1),
+//                ));
                 ?>
-                <?php $background_header = Banner::getBannerPosition(Banner::CAT_BANNER_BACKGROUND_HEADER,1);?>
-                <?php if(sizeof($background_header) !=0):?>
-                    <a href="<?php echo $background_header[0]->url;?>"><img class="image-bacground" src="<?php echo $background_header[0]->image->getAbsoluteUrl();?>" alt="<?php echo $background_header[0]->name;?>"></a>
-                <?php else:?>
-                    <img class="image-bacground" src="<?php echo Yii::app()->theme->baseUrl;?>/images/header.png" alt="">
-                <?php endif;?>
-                <div class="brand"><?php //echo Setting::s('COMPANY_NAME','INFORMATION');?></div>
-            </div>
+                <?php // $background_header = Banner::getBannerPosition(Banner::CAT_BANNER_BACKGROUND_HEADER,1);?>
+                <?php // if(sizeof($background_header) !=0):?>
+                    <!--<a href="//<?php // echo $background_header[0]->url;?>"><img class="image-bacground" src="<?php // echo $background_header[0]->image->getAbsoluteUrl();?>" alt="<?php // echo $background_header[0]->name;?>"></a>-->
+                <?php // else:?>
+                    <!--<img class="image-bacground" src="//<?php // echo Yii::app()->theme->baseUrl;?>/images/header.png" alt="">-->
+                <?php // endif;?>
+                <!--<div class="brand"><?php //echo Setting::s('COMPANY_NAME','INFORMATION');?></div>-->
+            <!--</div>-->
             
             <!-- wMenu --> 
             <?php
@@ -78,125 +78,20 @@
             <!-- end of wMenu -->
         </header>
         <section>
-            <div class="col-md-4 pull-left" id="sub-content">
-                <div id="main-products" class="wContentBox">
-                    <div class="contentBox">
-                        <div class="title_box">Sản phẩm chính</div>
-                        <div class="content_box">
-                            <!-- wListItem -->
-                            <?php
-                            $this->widget('wListItemHome', array(
-                                'id'=>'list-main-producst',
-                                'class'=>'list-products list-unstyled',
-                                'data'=>ProductCategory::getItems(4),
-                                'template'=>'
-                            <a href="{detail_url}" title={name}>
-                                <img src="[getIntroimage_thumb(160,46)]" class="img-responsive">
-                            </a>
-                        ',
-                            ));
-                            ?>
-                            <!-- end of wListItem -->
-                        </div>
-                    </div>
-                </div>
-<!--                <div id="support" class="wContentBox">
-                    <div class="contentBox">
-                        <div class="title_box">Hỗ trợ khách hàng</div>
-                        <div class="content_box">
-                             wListItem 
-                            <ul class="wListItem list-unstyled">
-                                 Repeat 5 
-                                <li class="item mobile"><span class="department">Phòng kinh doanh Hà Nội</span><span class="phone"><?php echo Setting::s('KD_HANOI','INFORMATION') ?></span> </li>
-                                <li class="item mobile"><span class="department">Phòng kinh doanh TP.Hồ Chí Minh</span><span class="phone"><?php echo Setting::s('KD_TPHCM','INFORMATION') ?></span> </li>
-                                <li class="item mobile"><span class="department">Phòng kinh doanh Đà Nẵng</span><span class="phone"><?php echo Setting::s('KD_DANANG','INFORMATION') ?></span> </li>
-                                <li class="item mobile"><span class="department">Phòng kinh doanh Hải Phòng</span><span class="phone"><?php echo Setting::s('KD_HAIPHONG','INFORMATION') ?></span> </li>
-                                <li class="item email"><?php echo Setting::s('EMAIL','INFORMATION') ?> </li>
-                                 end of repeat 5 
-                            </ul>
-                             end of wListItem 
-                        </div>
-                    </div>
-                </div>-->
-                <!-- end of wContentBox #support-->
-                <!-- wContentBox -->
-                <div id="new-products" class="wContentBox">
-                    <div class="contentBox">
-                        <div class="title_box">Sản phẩm mới</div>
-                        <div class="content_box">
-                            <!-- wListItem -->
-                            <?php
-                            $this->widget('wListItem', array(
-                                'id'=>'list-main-producst',
-                                'class'=>'list-unstyled',
-                                'data'=>Product::getItems(3,array('new'=>true,'home'=>true,)),
-                                'template'=>'
-                        <div class="image"><a href="{detail_url}" title="{name}"><img src="[getIntroimage_thumb(135,95)]" alt="{name}"></a></div>
-                        <div class="information">
-                            <a href="{detail_url}" title={name}>{name}</a>
-                        </div>
-                    ',
-                            ));
-                            ?>
-                            <!-- end of wListItem -->
-                        </div>
-                    </div>
-                </div>
-                <!-- end of wContentBox -->
-                <!-- wContentBox -->
-                <?php $category = NewsCategory::model()->findbyPk(49);?>
-                <?php if(isset($category)):?>
-<!--                    <div id="warehouse" class="wContentBox">
-                        <div class="contentBox">
-                            <div class="title_box"><?php echo $category->name;?></div>
-                            <div class="content_box">
-                                 wListItem 
-                                <?php
-//                                $this->widget('wListItem', array(
-//                                    'class'=>'list-unstyled',
-//                                    'data'=>News::getItems(3,array('cat_id'=>49,'home'=>true)),
-//                                    'template'=>'
-//                        <div class="image"><a href="{detail_url}"><img src="[getIntroimage_thumb(220,200)]"></a></div>
-//                        <div class="information">
-//                            <a href="{detail_url}">[getTitle_text(10)]</a>
-//                        </div>
-//                    ',
-//                                ));
-                                ?>
-                                 end of wListItem 
-                            </div>
-                        </div>
-                    </div>-->
-                <?php endif;?>
-                <!-- end of wContentBox -->
-                <?php
-//                $this->widget('wBanner', array(
-//                    'id'=>'banner_partner',
-//                    'class'=>'interested-news wContentBox',
-//                    'data'=>Banner::getBannerPosition(Banner::CAT_BANNER_PARTNER,1),
-//                ));
-                ?>
-<!--                <div id="count-traffic">
-                <div class="item">
-                    <span class="title">Người truy cập: </span><span class="quantity"><?php echo Yii::app()->counter->getTotal(); ?></span>
-                </div>
-                <div class="item">
-		            <span class="title">Hôm nay: </span><span class="quantity"><?php echo Yii::app()->counter->getToday(); ?></span>
-		        </div>
-                <div class="item">
-                    <span class="title">Người online: </span><span class="quantity"><?php echo Yii::app()->counter->getOnline(); ?></span>
-                </div>
-            </div>-->
-            </div>
             <?php echo $content;?>				                    
         </section>
-        <footer>
-            <div id="company-name"><?php echo Setting::s('COMPANY_NAME','INFORMATION') ?></div>
+        <footer>	
+            <div id="footer">
+                <?php $this->widget('wFooter');?>
+            </div>
+            <?php $this->widget('wFooterLink',array(
+                    'id'=>'footer_link',
+                    'class'=>'footer-center',
+                    'data'=>UserMenu::getListItem(),
+            ))?>
+
             <div id="info-company">
-                <span>Địa chỉ: <?php echo Setting::s('ADDRESS','INFORMATION') ?></span>
-                <span>Điện thoại: <?php echo Setting::s('PHONE','INFORMATION') ?> - Hotline: <?php echo Setting::s('HOT_LINE','INFORMATION') ?></span>
-                <span>E-mail: <?php echo Setting::s('EMAIL','INFORMATION') ?></span>
-                <span>Facebook: <?php echo Setting::s('FACEBOOK_PAGE','INFORMATION') ?></span>
+                <a href="<?php echo Setting::s('FACEBOOK_ADDRESS','INFORMATION'); ?>" target="_blank"><span>Facebook: <?php echo Setting::s('FACEBOOK_PAGE','INFORMATION'); ?></span></a>
                 <span>All content © 2014 SangoVietPhat. Website made by IHB.</span>
             </div>
         </footer>

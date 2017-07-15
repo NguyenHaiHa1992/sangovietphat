@@ -1,22 +1,23 @@
-<!-- wBanner -->
 
-<div id="<?php echo $id;?>" class="<?php echo $class;?>">
-<?php if(isset($sample)):?>
-	<?php foreach($sample as $image):?>
-	<img src="<?php echo Yii::app()->theme->baseUrl.'/images/'.$image;?>">
-	<?php endforeach;?>
-<?php else:?>	
-	<?php foreach($data as $banner):?>
-	<?php if(isset($banner->image)):?>
-	<?php if($banner->url==''):?>
-	<img src="<?php echo $banner->image->getAbsoluteUrl();?>">
-	<?php else:?>
-		<a href="<?php echo $banner->url;?>" title="<?php echo $banner->name;?>">			
-			<img class="img-responsive" src="<?php echo $banner->image->getAbsoluteUrl();?>">								
-		</a>
-	<?php endif;?>
-	<?php endif;?>
-	<?php endforeach;?>
-<?php endif;?>
+<div id="<?php echo $id; ?>" class="carousel slide <?php echo $class; ?>" data-ride="carousel">
+    <!-- Indicators -->
+    <ol class="carousel-indicators">
+        <?php $i = 0;
+        foreach ($data as $banner): ?>
+            <li data-target="#slider" data-slide-to="<?php echo $i; ?>" class="<?php if ($i == 0) echo 'active'; ?>"></li>
+            <?php $i++; ?>
+        <?php endforeach; ?>        
+    </ol>
+    <!-- Wrapper for slides -->
+    <div class="carousel-inner">
+        <?php $i = 0;
+        foreach ($data as $banner): ?>
+                    <div class="item <?php if ($i == 0) echo 'active'; ?>">
+                        <a href = "<?php echo $banner->url; ?>">
+                            <img src="<?php echo $banner->image->getAbsoluteUrl(); ?>" alt="<?php echo $banner->url; ?>" class="img-responsive img-banner">
+                        </a>
+                    </div>
+            <?php $i++; ?>
+        <?php endforeach; ?>        
+    </div>
 </div>
-<!-- end of wBanner -->

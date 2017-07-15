@@ -10,12 +10,12 @@
         $this->og_image = $image;
     }    
 ?>
-<div class="col-md-8" id="main-content">
+<div class="col-md-12" id="main-content">
     <div class="col-sm-12">
         <!-- wContentBox -->
         <div id="news-detail" class="wContentBox">
             <div class="contentBox">
-                <div class="title_box">
+                <div class="title_box pc-only">
                     <ol class="breadcrumb">
                         <?php $this->widget('wBreadCrumb',array(
                             'data'=>iPhoenixUrl::createBreadcrumb($data),

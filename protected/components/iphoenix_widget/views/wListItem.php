@@ -1,5 +1,6 @@
 <?php
-$end = $type == 'news' ? 2 : 1;
+$end = $type == 'news' ? 3 : 4;
+//var_dump($type);exit;
 ?>
 <!-- wListItem -->
 <!--<ul id="<?php echo $id;?>" class="wListItem <?php echo $class;?>">-->	
@@ -15,7 +16,7 @@ $end = $type == 'news' ? 2 : 1;
     <?php else:?>
             <?php $i=0; foreach($data as $item): $i++;?>
                 <?php
-                if($i%3 == 1):
+                if($i%$end == 1):
                 ?>
                 <ul id="<?php echo $id;?>" class="wListItem <?php echo $class;?>">
                 <?php
@@ -25,7 +26,7 @@ $end = $type == 'news' ? 2 : 1;
                     <?php echo iPhoenixTemplate::parseTemplate($item, $template);?>
                 </li>
                 <?php
-                if($i%3 == 0 || $i == count($data)):
+                if($i%$end == 0 || $i == count($data)):
                 ?>
                 </ul>
                 <?php

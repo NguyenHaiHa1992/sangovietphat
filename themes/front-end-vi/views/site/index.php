@@ -1,12 +1,12 @@
-<script type="text/javascript" charset="utf-8">
+<!--<script type="text/javascript" charset="utf-8">
     $(function(){
         if(!flux.browser.supportsTransitions)
             alert("Flux Slider requires a browser that supports CSS3 transitions");
         window.f = new flux.slider('#slider', {
-            pagination: true
+            pagination: true,
         });
     });
-</script>
+</script>-->
 <?php $list_category = ProductCategory::getItems(5, array('parent_id' => 0,)); ?>
 <div class="col-md-12" id="main-content">
     <div class="col-sm-12">

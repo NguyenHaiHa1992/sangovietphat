@@ -2,6 +2,7 @@
     $controller = Yii::app()->controller;
     $controllerName = $controller->id;
     $action = $controller->action->id;
+    $actual_link = (isset($_SERVER['HTTPS']) ? "https" : "http") . "://$_SERVER[HTTP_HOST]$_SERVER[REQUEST_URI]";
 ?>
 
 <!-- wMenu -->
@@ -15,13 +16,26 @@
 				<span class="icon-bar"></span>
 				<span class="icon-bar"></span>
 			</button>
-                    <?php if($controllerName !== 'site'  && $action !== 'index') :?>
+                    
                     <div class="menu-title mobile-only">
-                        <p class="box-title">
-                           Sàn gỗ Việt Phát
+                        
+                        <p class="box-title" id="menu_box_title">
+                            <?php if($controllerName == 'site'  && $action == 'index') :?>
+                                Sàn gỗ Việt Phát
+                            <?php endif;?>
                         </p>
+                        
+                        <div class="contact">
+                            <div class="zalo-share">
+                                <script src="https://sp.zalo.me/plugins/sdk.js" type="text/javascript" charset="utf-8" async defer></script>
+                                <li class="btnZalo zalo-share-button" data-href="<?php echo $actual_link;?>" data-color="blue" data-oaid="1165315223958386417" data-layout="1" data-customize="false"></li>
+                            </div>
+                            <a href="tel:<?php echo Setting::s('PHONE','INFORMATION')?>">
+                                <?php echo Setting::s('PHONE','INFORMATION')?>
+                                <i class="glyphicon glyphicon-phone"></i>
+                            </a>
+                        </div>
                     </div>
-                    <?php endif;?>
 		</div>
 	
 		<!-- Collect the nav links, forms, and other content for toggling -->

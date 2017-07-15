@@ -224,6 +224,12 @@ header .brand{
     width: 25%;
     padding: 0 5px;
 }
+
+@media screen and (max-width:320px){
+    .category li{
+        width: 23%;
+    }
+}
 .category li,.category li:nth-child(1), .category li:nth-child(2), .category li:nth-child(3), .category li:nth-child(4){
     margin-bottom: 15px;
 }
@@ -461,7 +467,7 @@ footer #info-company span{
 }
 #list-products .item{
     float: left;
-    width: 33.33333333333%;
+    width: 25%;
     padding: 10px 5px;
 }
 #list-products .item .title{
@@ -483,6 +489,11 @@ footer #info-company span{
     float: left;
     margin-right: 10px;
     height: 136px;
+}
+@media screen and (max-width:768px){
+    .image#main-image{
+        width:100%;
+    }
 }
 #short-description{
     overflow: hidden;
@@ -909,6 +920,9 @@ i.print_icon{background-image: url('../images/icons/print-icon.png');height: 30p
     .category li{
         margin-bottom: 15px;
     }
+    #list-news .item .image {
+        width: 100%;
+    }
 }
 .tit-mart{
     font-weight: bold;
@@ -918,3 +932,63 @@ i.print_icon{background-image: url('../images/icons/print-icon.png');height: 30p
     margin-left: 10px;
     float: left;
 }
+.provinces {
+    float: left;
+    position: relative;
+    display: inline-block;
+    padding-bottom: 3px;
+    padding-top: 2px;
+}
+.provinces a.title_kho {
+    color: #F26B35;
+    padding: 0.2em 0.8em;
+    display: block;
+    float: left;
+    font-size: 10px;
+    font-weight: bold;
+    height: 25px;
+    line-height: 30px;
+    outline: 0 none;
+    text-align: center;
+    text-shadow: none;
+}
+.dt {
+    float: left;
+}
+.dt::after {
+    content: '.';
+    display: block;
+    float: left;
+    width: 20px;
+    height: 0;
+    padding-top: 20px;
+    overflow: hidden;
+    background: url(../images/dia-diem.png) no-repeat;
+    margin-right: 5px;
+    /*margin-top: 5px;*/
+}
+@media screen and (min-width:1024px){
+    li.item img{
+        max-height: 171px;
+    }
+}
+
+@media screen and (max-width :375px){
+    .write-cm-box button.submit-btn{
+        float: none;
+        margin-left: 0px;
+    }
+    .write-cm-box input.userName{
+        margin-bottom: 5px;
+    }
+}
+
+.img-responsive.img-banner{
+    width: 100%;
+    max-height: 300px;
+}
+
+#menu_box_title.box-title{float: left;}
+.menu-title .contact{float: right;}
+.menu-title .contact .zalo-share{margin-bottom: 0px;height: 20px;margin-top: 5px; margin-right: 5px;}
+.menu-title .contact a{color:#ffffff;}

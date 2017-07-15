@@ -25,12 +25,12 @@ if(isset($data->introimage)){
         </div>
     </div>
 </div>
-<div class="col-md-8 pull-right" id="main-content">
+<div class="col-md-12 pull-right" id="main-content">
     <div class="col-sm-12">
         <!-- wContentBox -->
         <div id="detail-product" class="wContentBox">
             <div class="contentBox">
-                <div class="title_box">
+                <div class="title_box pc-only">
                     <?php $this->widget('wBreadCrumb',array(
                         'data'=>iPhoenixUrl::createBreadcrumb($data),
                     ));?>

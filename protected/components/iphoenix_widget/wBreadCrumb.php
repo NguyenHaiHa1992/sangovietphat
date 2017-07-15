@@ -5,7 +5,7 @@ class wBreadcrumb extends CWidget
 	public $sample;
 	public $view = 'wBreadcrumb';
 	public $id = '';
-	public $class = '';
+	public $class = 'pc-only';
 
 	public function init(){
 		parent::init();
