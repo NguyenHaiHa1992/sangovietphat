@@ -30,10 +30,15 @@ $(document).ready(function(){
     });
     
     setTimeout(function(){
+        
         $('#accordion').find('a[data-parent="#accordion"]').each(function(t){
             $(this).hover(function(e){
-                $(this).trigger('click');
-            });
+                $('#accordion a[data-parent="#accordion"]').addClass('collapsed').removeClass('collapse');
+                $('#accordion .collapse').removeClass('in').css('style','height:0px');
+                $(this).removeClass('collapsed');
+                var id = $(this).attr('href');
+                $(id).addClass('in').css('style','height:auto');
+            },false);
         });
     },300);
     
