@@ -185,7 +185,7 @@
         height: auto !important;
     }
     #container-header.homepage{
-        height: 218px !important;
+        height: 165px !important;
     }
 }
 .mobile-only,.pc-only{display: none;}
