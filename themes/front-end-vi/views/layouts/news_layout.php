@@ -48,6 +48,22 @@
     }(document, 'script', 'facebook-jssdk'));
 </script>
 
+<script src="https://sp.zalo.me/plugins/sdk.js" type="text/javascript" charset="utf-8" async defer></script>
+<script>
+    var _zap = _zap || [];
+_zap.push(["_setAccount", "ZA-42975759760372"]);
+_zap.push(["_disableAutoTrack", true]);
+(function(e,t,n,r,a,o,c){
+e[a+"_q"]=e[a+"_q"]||[],e[a]=e[a]||{};var s=["trackPageview","trackEvent","getVisitorID"];
+for(i in s)e[a][s[i]]=function(t){return function(){e[a+"_q"].push([t,arguments])}}(s[i]);
+o=t.createElement(n),c=t.getElementsByTagName(n)[0],o.async=1,o.src=r+"?"+Math.floor((new Date).getTime()/1000/60/60/24),c.parentNode.insertBefore(o,c)
+})
+(window,document,"script","http://stc.za.zaloapp.com/v3/za.js","ZA");
+ZA.trackPageview('http://w.news.zing.vn/' + window.location.pathname + window.location.search + window.location.hash);
+</script>
+<?php 
+    $isHomepage = iPhoenixUtility::isHomePage();
+?>
 <div class="container">
     <div class="row">
         <header>        	
@@ -95,6 +111,19 @@
                 <span>All content © 2014 SangoVietPhat. Website made by IHB.</span>
             </div>
         </footer>
+        <div id="top" class="toolbar-right">
+            <?php $actual_link = (isset($_SERVER['HTTPS']) ? "https" : "http") . "://$_SERVER[HTTP_HOST]$_SERVER[REQUEST_URI]"; ?>
+            <div class="mobile-only">
+                <div class="zalo-share"></div>
+                <br />
+                <div class="phone">
+                    <a href="tel:<?php echo Setting::s('PHONE', 'INFORMATION') ?>">
+                        <i class="glyphicon glyphicon-phone-alt"></i>
+                        Call me
+                    </a>
+                </div>
+            </div>
+        </div>
     </div>
 </div>
 <?php echo Setting::s('ADD_THIS_SCRIPT','INFORMATION') ?>

@@ -33,12 +33,13 @@ $(document).ready(function(){
         
         $('#accordion').find('a[data-parent="#accordion"]').each(function(t){
             $(this).hover(function(e){
-                $('#accordion a[data-parent="#accordion"]').addClass('collapsed').removeClass('collapse');
-                $('#accordion .collapse').removeClass('in').css('style','height:0px');
-                $(this).removeClass('collapsed');
-                var id = $(this).attr('href');
-                $(id).addClass('in').css('style','height:auto');
+                e.preventDefault();
+                hideShowToggle(this);
             },false);
+            $(this).click(function(e){
+                e.preventDefault();
+                hideShowToggle(this);
+            });
         });
     },300);
     
@@ -49,5 +50,33 @@ $(document).ready(function(){
             text = $(li[0]).find('a').text();
             $('#menu_box_title').text(text);
         }
+        
+        setTimeout(function(){
+            //set share zalo for float button
+            var $menuZa = $('#main-menu').find('.zalo-share').html();
+            $('#top .zalo-share').html($menuZa);
+        },500);
     });
-})
+    
+    // <![CDATA[
+    $(function() {
+        var pageTop = $('#top');
+        pageTop.hide();
+        var mainMenu = $('#main-menu').offset().top + $('#main-menu').height();
+        $(window).scroll(function () {
+            if ($(this).scrollTop() > mainMenu) {
+              pageTop.fadeIn();
+            } else {
+              pageTop.fadeOut();
+            }
+        });
+    });
+});
+
+function hideShowToggle(that){
+    $('#accordion a[data-parent="#accordion"]').addClass('collapsed').removeClass('collapse');
+    $('#accordion .collapse').removeClass('in').css('style','height:0px');
+    $(that).removeClass('collapsed');
+    var id = $(that).attr('href');
+    $(id).addClass('in').css('style','height:auto');
+}

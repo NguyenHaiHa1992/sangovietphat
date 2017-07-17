@@ -126,7 +126,6 @@ if(isset($data->introimage)){
                                 </script>
                             </div>
                             <div class="zalo-share">
-                                <script src="https://sp.zalo.me/plugins/sdk.js" type="text/javascript" charset="utf-8" async defer></script>
                                 <li class="btnZalo zalo-share-button" data-href="<?php echo $absolutePageUrl?>" data-color="blue" data-oaid="1165315223958386417" data-layout="1" data-customize="false"></li>
                             </div>
                             <div class="gplus-share">

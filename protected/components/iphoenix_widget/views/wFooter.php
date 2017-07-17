@@ -26,7 +26,7 @@ if($countMenu){
                                                            <tr>
                                                                <?php if($menus[$i]):?>
                                                                <td width="50%" class="provinces"> 
-                                                                    <a href="#<?php echo $menus[$i]['hashtag'] ?>" data-parent="#accordion" data-toggle="collapse" <?php if ($i == 0) {
+                                                                    <a href="#<?php echo $menus[$i]['hashtag'] ?>" data-parent="#accordion" <?php if ($i == 0) {
                                                                         echo 'aria-expanded="true"';
                                                                     } ?>style="color: #ffffff;text-transform: uppercase;" class="<?php if($i !== 0){echo 'collapsed';}?>">
                                                                         <span class="dt"><?php echo $menus[$i]['name']; ?></span>
@@ -35,7 +35,7 @@ if($countMenu){
                                                                <?php endif;?>
                                                                 <?php if($menus[$i+1]):?>
                                                                 <td class="provinces"> 
-                                                                    <a href="#<?php echo $menus[$i+1]['hashtag'] ?>" data-parent="#accordion" data-toggle="collapse" style="color: #ffffff;text-transform: uppercase;" class="collapsed">
+                                                                    <a href="#<?php echo $menus[$i+1]['hashtag'] ?>" data-parent="#accordion" style="color: #ffffff;text-transform: uppercase;" class="collapsed">
                                                                         <span class="dt"><?php echo $menus[$i+1]['name']; ?> </span>
                                                                     </a>
                                                                 </td> 
@@ -46,7 +46,7 @@ if($countMenu){
                                                     <tr>
                                                         <?php foreach ($menus as $key => $menu): ?>
                                                         <td width="<?php echo $tdWid; ?>" class="provinces"> 
-                                                                <a href="#<?php echo $menu['hashtag'] ?>" data-parent="#accordion" data-toggle="collapse" <?php if ($key == 0) {
+                                                                <a href="#<?php echo $menu['hashtag'] ?>" data-parent="#accordion" <?php if ($key == 0) {
                                                             echo 'aria-expanded="true"';
                                                         } ?>style="color: #ffffff;text-transform: uppercase;" class="<?php if($key !== 0){echo 'collapsed';}?>">
                                                                     <span class="dt"><?php echo $menu['name']; ?> </span>

@@ -992,3 +992,24 @@ i.print_icon{background-image: url('../images/icons/print-icon.png');height: 30p
 .menu-title .contact{float: right;}
 .menu-title .contact .zalo-share{margin-bottom: 0px;height: 20px;margin-top: 5px; margin-right: 5px;}
 .menu-title .contact a{color:#ffffff;}
+
+#top{
+    position: fixed;
+    bottom: 70%;
+    right: 15px;
+    z-index: 99;
+    background: url("../images/nav-background.png") repeat-x center;
+    /*opacity: .8;*/
+    -webkit-transition: all .3s ease;
+    -moz-transition: all .3s ease;
+    -o-transition: all .3s ease;
+    -ms-transition: all .3s ease;
+    transition: all .3s ease;   
+}
+#top, #top i{
+   text-align: center;
+    cursor: pointer; 
+}
+#top a{color:#ffffff;}
+#top .zalo-share{margin-left: 0px;}
+#top .phone{margin-bottom: 5px;float: left;padding-left: 7px;font-size: 12px;}
