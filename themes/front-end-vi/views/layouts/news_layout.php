@@ -111,19 +111,6 @@ ZA.trackPageview('http://w.news.zing.vn/' + window.location.pathname + window.lo
                 <span>All content © 2014 SangoVietPhat. Website made by IHB.</span>
             </div>
         </footer>
-        <div id="top" class="toolbar-right">
-            <?php $actual_link = (isset($_SERVER['HTTPS']) ? "https" : "http") . "://$_SERVER[HTTP_HOST]$_SERVER[REQUEST_URI]"; ?>
-            <div class="mobile-only">
-                <div class="zalo-share"></div>
-                <br />
-                <div class="phone">
-                    <a href="tel:<?php echo Setting::s('PHONE', 'INFORMATION') ?>">
-                        <i class="glyphicon glyphicon-phone-alt"></i>
-                        Call me
-                    </a>
-                </div>
-            </div>
-        </div>
     </div>
 </div>
 <?php echo Setting::s('ADD_THIS_SCRIPT','INFORMATION') ?>
