@@ -990,7 +990,7 @@ i.print_icon{background-image: url('../images/icons/print-icon.png');height: 30p
 
 #menu_box_title.box-title{float: left;}
 .menu-title .contact{float: right;}
-.menu-title .contact .zalo-share{margin-bottom: 0px;height: 20px;margin-top: 5px; margin-right: 5px;}
+.menu-title .contact .zalo-share{margin-bottom: 0px;height: 20px;margin-top: 5px; margin-right: 15px;}
 .menu-title .contact a{color:#ffffff;}
 
 #main-menu.fixed{

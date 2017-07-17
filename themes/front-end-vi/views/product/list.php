@@ -9,7 +9,6 @@ if(isset($_GET['cat_id'])){
         $this->redirect(iPhoenixUrl::createUrl('product/list'));
     }
 }
-
 $this->widget('wMetaTag',array(
     'setting'=>'PRODUCT',
 ));
@@ -40,13 +39,13 @@ $sub_categories = ProductCategory::model()->findAllByAttributes(array(
                         <!-- end of wBreadcrumb -->
                     </div>
                     <div class="content_box">
-                        <div class="image-category">
-                            <?php if(isset($category->catimage)):?>
-                                <img class="img-responsive" src="<?php echo $category->catimage->getAbsoluteThumbUrl(680,200,false);?>" alt="<?php echo $category->name;?>"/>
-                            <?php else:?>
-                                <img class="img-responsive" src="<?php echo Yii::app()->theme->baseUrl;?>/images/data/slider-01.png" alt="..."/>
-                            <?php endif;?>
-                        </div>
+                        <!--<div class="image-category">-->
+                            <?php // if(isset($category->catimage)):?>
+                                <!--<img class="img-responsive" src="<?php // echo $category->catimage->getAbsoluteThumbUrl(680,200,false);?>" alt="<?php // echo $category->name;?>"/>-->
+                            <?php // else:?>
+                                <!--<img class="img-responsive" src="<?php // echo Yii::app()->theme->baseUrl;?>/images/data/slider-01.png" alt="..."/>-->
+                            <?php // endif;?>
+                        <!--</div>-->
                         <div class="intro-category">
                             <?php echo $category->description;?>
                         </div>
@@ -92,7 +91,7 @@ $sub_categories = ProductCategory::model()->findAllByAttributes(array(
                         $this->widget('wBreadCrumb',array(
                             'data'=>array(
 //                                'Trang chủ'=>Yii::app()->createUrl('site/index'),
-                                'Sản phẩm'=>Yii::app()->createUrl('product/list'),
+                                $category->name => $category->detail_url,
                             ),
                         ));
                         ?>
