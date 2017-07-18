@@ -999,3 +999,18 @@ i.print_icon{background-image: url('../images/icons/print-icon.png');height: 30p
     width: 100%;
     z-index: 99;
 }
+.dt-phone{
+    float: left;
+}
+.dt-phone::after {
+    content: '.';
+    display: block;
+    float: left;
+    width: 20px;
+    height: 0;
+    padding-top: 20px;
+    overflow: hidden;
+    background: url(../images/phone.png) no-repeat;
+    margin-right: 5px;
+    margin-top: 5px;
+}
