@@ -2,6 +2,7 @@
 $data = Product::getItemsWithPager(18,'page',array('cat_id'=>Yii::app()->getRequest()->getParam('cat_id',null)));
 $pages = Product::getPager(9,'page',array('cat_id'=>Yii::app()->getRequest()->getParam('cat_id',null)));
 $list_category = ProductCategory::getItems(5,array('status' => true , 'parent_id' => 0,));
+$category = null;
 if(isset($_GET['cat_id'])){
     $category = ProductCategory::model()->findByPk($_GET['cat_id']);
     if(!isset($category)){
@@ -84,15 +85,16 @@ $sub_categories = ProductCategory::model()->findAllByAttributes(array(
                             $list_category[] = $category;
                         }
                     }
+                    $bread = array('Sản phẩm'=>Yii::app()->createUrl('product/list'),);
+                    if($category){
+                       $bread = array( $category->name => $category->detail_url,);
+                    }
                 ?>
                     <div class="title_box pc-only">
                         <!-- wBreadcrumb -->
                         <?php
                         $this->widget('wBreadCrumb',array(
-                            'data'=>array(
-//                                'Trang chủ'=>Yii::app()->createUrl('site/index'),
-                                $category->name => $category->detail_url,
-                            ),
+                            'data'=>$bread,
                         ));
                         ?>
                         <!-- end of wBreadcrumb -->
