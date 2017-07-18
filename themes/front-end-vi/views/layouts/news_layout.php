@@ -67,7 +67,7 @@ ZA.trackPageview('http://w.news.zing.vn/' + window.location.pathname + window.lo
 <div class="container">
     <div class="row">
         <header>        	
-            <!--<div id="container-header">-->
+            <div id="container-header">
                 <?php
 //                $this->widget('wBanner', array(
 //                    'id'=>'logo',
@@ -81,7 +81,7 @@ ZA.trackPageview('http://w.news.zing.vn/' + window.location.pathname + window.lo
                     <!--<img class="image-bacground" src="//<?php // echo Yii::app()->theme->baseUrl;?>/images/header.png" alt="">-->
                 <?php // endif;?>
                 <!--<div class="brand"><?php //echo Setting::s('COMPANY_NAME','INFORMATION');?></div>-->
-            <!--</div>-->
+            </div>
             
             <!-- wMenu --> 
             <?php
