@@ -1006,7 +1006,7 @@ i.print_icon{background-image: url('../images/icons/print-icon.png');height: 30p
     content: '.';
     display: block;
     float: left;
-    width: 20px;
+    width: 30px;
     height: 0;
     padding-top: 20px;
     overflow: hidden;
