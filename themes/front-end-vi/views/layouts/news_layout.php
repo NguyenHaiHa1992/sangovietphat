@@ -74,13 +74,15 @@ ZA.trackPageview('http://w.news.zing.vn/' + window.location.pathname + window.lo
 //                    'data'=>Banner::getBannerPosition(Banner::CAT_BANNER_LOGO,1),
 //                ));
                 ?>
-                <?php // $background_header = Banner::getBannerPosition(Banner::CAT_BANNER_BACKGROUND_HEADER,1);?>
-                <?php // if(sizeof($background_header) !=0):?>
-                    <!--<a href="//<?php // echo $background_header[0]->url;?>"><img class="image-bacground" src="<?php // echo $background_header[0]->image->getAbsoluteUrl();?>" alt="<?php // echo $background_header[0]->name;?>"></a>-->
-                <?php // else:?>
-                    <!--<img class="image-bacground" src="//<?php // echo Yii::app()->theme->baseUrl;?>/images/header.png" alt="">-->
-                <?php // endif;?>
+                <?php if(!iPhoenixUtility::isMobile()) :?>
+                <?php $background_header = Banner::getBannerPosition(Banner::CAT_BANNER_BACKGROUND_HEADER,1);?>
+                <?php if(sizeof($background_header) !=0):?>
+                    <a href="//<?php echo $background_header[0]->url;?>"><img class="image-bacground" src="<?php echo $background_header[0]->image->getAbsoluteUrl();?>" alt="<?php echo $background_header[0]->name;?>"></a>
+                <?php else:?>
+                    <img class="image-bacground" src="//<?php echo Yii::app()->theme->baseUrl;?>/images/header.png" alt="">
+                <?php endif;?>
                 <!--<div class="brand"><?php //echo Setting::s('COMPANY_NAME','INFORMATION');?></div>-->
+               <?php endif;?>
             </div>
             
             <!-- wMenu --> 
