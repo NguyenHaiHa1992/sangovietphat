@@ -12,7 +12,7 @@
         </div>
     </div>
 </div>
-<div class="col-md-12 pull-right" id="main-content">
+<div class="col-md-12" id="main-content">
     <div class="col-sm-12">
         <!-- wContentBox -->
         <div id="contact" class="wContentBox">

@@ -30,7 +30,7 @@
                                 <li class="btnZalo zalo-share-button" data-href="<?php echo $actual_link;?>" data-color="blue" data-oaid="1165315223958386417" data-layout="1" data-customize="false"></li>
                             </div>
                             <a href="tel:<?php echo Setting::s('PHONE','INFORMATION')?>">
-                                <i class="glyphicon glyphicon-phone-alt"></i>
+                                <span class="dt-phone"></span>
                             </a>
                         </div>
                     </div>
