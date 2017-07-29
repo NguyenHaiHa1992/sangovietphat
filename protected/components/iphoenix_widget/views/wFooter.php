@@ -18,7 +18,7 @@ if($countMenu){
                                 </p>
                                 <div class="panel panel-default" style="border: none;background:#ffffff;">
                                     <div class="panel-heading">
-                                        <div class="table-responsive mb-no-border">
+                                        <div class="table mb-no-border">
                                             <table width="100%">
                                                 <tbody>
                                                     <?php if($isMobile) :?>
@@ -65,7 +65,7 @@ if($countMenu){
                                             echo 'in';
                                         } ?>" id="<?php echo $parent; ?>">
                                             <div class="panel-body"> 
-                                                <div class="table-responsive mb-no-border">
+                                                <div class="table mb-no-border">
                                                     <table class="table">
                                                         <tbody>
                                                             <?php if($isMobile) :?>
