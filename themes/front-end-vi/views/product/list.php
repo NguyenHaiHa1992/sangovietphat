@@ -1,6 +1,6 @@
 <?php
-$data = Product::getItemsWithPager(18,'page',array('cat_id'=>Yii::app()->getRequest()->getParam('cat_id',null)));
-$pages = Product::getPager(9,'page',array('cat_id'=>Yii::app()->getRequest()->getParam('cat_id',null)));
+$data = Product::getItemsWithPager(12,'page',array('cat_id'=>Yii::app()->getRequest()->getParam('cat_id',null)));
+$pages = Product::getPager(12,'page',array('cat_id'=>Yii::app()->getRequest()->getParam('cat_id',null)));
 $list_category = ProductCategory::getItems(5,array('status' => true , 'parent_id' => 0,));
 $category = null;
 if(isset($_GET['cat_id'])){
