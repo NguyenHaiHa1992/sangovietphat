@@ -77,13 +77,13 @@ $sub_categories = ProductCategory::model()->findAllByAttributes(array(
                     </div>
                 <?php 
                 else:
-                    $product_limit = 6;
+                    $product_limit = 12;
                     if($sub_categories){
-                        $product_limit = 6;
+                        $product_limit = 12;
                         $list_category = $sub_categories;
-                        if($category){
-                            $list_category[] = $category;
-                        }
+//                        if($category){
+//                            $list_category[] = $category;
+//                        }
                     }
                     $bread = array('Sản phẩm'=>Yii::app()->createUrl('product/list'),);
                     if($category){
@@ -114,9 +114,10 @@ $sub_categories = ProductCategory::model()->findAllByAttributes(array(
                                     <div class="content_box">
                                         <!-- wListItem -->
                                         <?php
+                                        $dataCat = Product::getItemsWithPager($product_limit,"pageCategory-".($key+1),array('cat_id'=>$category->id));
                                         $this->widget('wListItem', array(
                                             'class'=>'list-unstyled',
-                                            'data'=>Product::getItems($product_limit, array('cat_id'=>$category->id)),
+                                            'data'=>$dataCat,
                                             'template'=>'
                                         <div class="image"><a href="{detail_url}" title="{name}"><img src="[getIntroimage_thumb(220,137)]" alt="{name}" title="{name}" class="img-responsive"></a></div>
                                         <div class="information">
@@ -127,6 +128,18 @@ $sub_categories = ProductCategory::model()->findAllByAttributes(array(
                                         ?>
                                         <!-- end of wListItem -->
                                     </div>
+                                </div>
+                                <?php
+                                $page_category = Product::getPager($product_limit,"pageCategory-".($key+1),array('cat_id'=>$category->id));
+                                ?>
+                                <div id="pager">
+                                    <ul class="list-unstyled">
+                                        <?php
+                                        $this->widget('wMyPager', array(
+                                            'pages'=>$page_category,
+                                        ));
+                                        ?>
+                                    </ul>
                                 </div>
                             </div>
                             <!-- end of wContentBox -->
