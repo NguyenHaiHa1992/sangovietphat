@@ -1,6 +1,7 @@
 <!DOCTYPE html>
 <html>
 <head>
+    <?php $this->meta_title = Setting::s('TITLE_DEFAULT','SEO');?>
     <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=1.0" />
     <link rel="shortcut icon" href="<?php $favicon = Banner::getItem(Banner::CAT_BANNER_FAVICON); echo isset($favicon)?Yii::app()->baseUrl.'/'.$favicon->image->url:'';?>" type="image/x-icon" />

@@ -1,6 +1,7 @@
 <!DOCTYPE html>
 <html>
 <head>
+    <?php $this->meta_title = Setting::s('TITLE_DEFAULT','SEO');?>
     <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=1.0" />
     <link rel="shortcut icon" href="<?php $favicon = Banner::getItem(Banner::CAT_BANNER_FAVICON); echo isset($favicon)?Yii::app()->baseUrl.'/'.$favicon->image->url:'';?>" type="image/x-icon" />
@@ -87,8 +88,11 @@ ZA.trackPageview('http://w.news.zing.vn/' + window.location.pathname + window.lo
 	        <?php endif;?>
 	        <div class="brand"><?php //echo Setting::s('COMPANY_NAME','INFORMATION');?></div>
         </div>
-        <div id="header-mobile" style="display:none">                                                                                   
-	    	<img class="image-bacground" src="<?php echo Yii::app()->theme->baseUrl;?>/images/header-mobile.jpg" alt="">  
+        <div id="header-mobile" style="display:none">         
+                <?php $backgroundHeaderMobile = Banner::getBannerPosition(Banner::CAT_BANNER_BACKGROUND_HEADER_MOBILE,1);
+                    $scrMobile = sizeof($backgroundHeaderMobile) != 0 ? $backgroundHeaderMobile[0]->image->getAbsoluteUrl() : Yii::app()->theme->baseUrl."/images/header-mobile.jpg";
+                ?>
+	    	<img class="image-bacground" src="<?php echo $scrMobile?>" alt="">  
 	</div>
     </div>
     

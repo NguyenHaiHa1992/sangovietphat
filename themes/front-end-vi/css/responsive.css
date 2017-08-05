@@ -199,3 +199,6 @@
         display: block;
     }
 }
+.table.mb-no-border{
+    margin-bottom: 0px;
+}

@@ -28,6 +28,7 @@ class Banner extends CActiveRecord
     const CAT_BANNER_FAVICON=8;
     const CAT_BANNER_SLIDER=9;
     const CAT_BANNER_BACKGROUND_HEADER=10;
+    const CAT_BANNER_BACKGROUND_HEADER_MOBILE = 11;
 	
 	static $list_cat=array(
 		self::CAT_BANNER_HEADLINE,
@@ -37,10 +38,12 @@ class Banner extends CActiveRecord
 		self::CAT_BANNER_PARTNER,
 		self::CAT_BANNER_SUPPORT,
 		self::CAT_BANNER_LEFT_PANEL,
-        self::CAT_BANNER_LOGO,
-        self::CAT_BANNER_FAVICON,
-        self::CAT_BANNER_SLIDER,
-        self::CAT_BANNER_BACKGROUND_HEADER,
+                self::CAT_BANNER_LOGO,
+                self::CAT_BANNER_FAVICON,
+                self::CAT_BANNER_SLIDER,
+                self::CAT_BANNER_BACKGROUND_HEADER,
+                self::CAT_BANNER_BACKGROUND_HEADER_MOBILE,
+           
 	);
 	
 	static $view_list_cat=array(
@@ -51,10 +54,11 @@ class Banner extends CActiveRecord
 		self::CAT_BANNER_PARTNER=>'Banner đối tác',
 		self::CAT_BANNER_SUPPORT=>'Banner trang tư vấn',
 		self::CAT_BANNER_LEFT_PANEL=>'Banner cột trái',
-        self::CAT_BANNER_LOGO=>'Logo',
-        self::CAT_BANNER_FAVICON=>'Favicon',
-        self::CAT_BANNER_SLIDER=>'Ảnh slide trang chủ',
-        self::CAT_BANNER_BACKGROUND_HEADER=>'Hình nền header',
+                self::CAT_BANNER_LOGO=>'Logo',
+                self::CAT_BANNER_FAVICON=>'Favicon',
+                self::CAT_BANNER_SLIDER=>'Ảnh slide trang chủ',
+                self::CAT_BANNER_BACKGROUND_HEADER=>'Hình nền header',
+                self::CAT_BANNER_BACKGROUND_HEADER_MOBILE=>'Hình nền header Mobile',
 	);
 	
 	private $config_other_attributes=array('url','slogan','description');	
