@@ -114,6 +114,11 @@ ZA.trackPageview('http://w.news.zing.vn/' + window.location.pathname + window.lo
     <div id="footer">
         <?php $this->widget('wFooter');?>
     </div>
+    <?php $this->widget('wPartner',array(
+            'id'=>'partner',
+            'class' => 'partner',
+            'title' => 'Đối tác',
+    ))?>
     <?php $this->widget('wFooterLink',array(
             'id'=>'footer_link',
             'class'=>'footer-center',

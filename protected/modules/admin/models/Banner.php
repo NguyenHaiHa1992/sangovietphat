@@ -384,4 +384,10 @@ class Banner extends CActiveRecord
 		if(isset($this->image))
 			return $this->image->getAbsoluteThumbUrl($width, $height, $scale);
 	}
+        
+        public function getIntroimage_thumb($width,$height,$ratio = true){
+        if(isset($this->image))
+            return $this->image->getAbsoluteThumbUrl($width,$height,$ratio);
+            return Yii::app()->theme->baseUrl.'/images/data/no_image.jpg';
+        }
 }
