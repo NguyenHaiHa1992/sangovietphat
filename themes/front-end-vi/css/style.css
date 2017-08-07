@@ -1021,12 +1021,14 @@ i.print_icon{background-image: url('../images/icons/print-icon.png');height: 30p
 }
 
 .title_dt {
-    font-size: 36px;
-    color: #333534;
+    text-transform: uppercase;
+    font-size: 25px;
+    color: #666;
     text-align: center;
     background: url(../images/noithatxuyenviet-fat_23.png) bottom center no-repeat;
     padding: 10px 0 20px 10px;
     margin-bottom: 20px;
+    font-weight: 600;
 }
 #partner .carousel-inner .item>a:first-child, #partner .carousel-inner .item>a {
     padding: 0 5px;
