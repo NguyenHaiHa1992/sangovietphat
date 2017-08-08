@@ -11,7 +11,7 @@
                         $this->widget('wItem', array(
                             'data'=>$model,
                             'template'=>'
-                            <a href="{detail_url}"><img src="[getIntroimage_thumb(120,90)]" width="120px" height="90px" alt="{title_text}" title="{title_text}" class="img-responsive"><span class="title">{title_text}</span> </a>
+                            <a href="{detail_url}"><img src="[getIntroimage_thumb(120,90)]" width="120px" height="90px" alt="{title_text}" title="{title_text}" class="img-responsive" style="width:120px;height:90px;"><span class="title">{title_text}</span> </a>
                         ',
                         ));
                     ?>
@@ -26,7 +26,7 @@
                     $this->widget('wItem', array(
                         'data'=>$model,
                         'template'=>'
-                            <a href="{detail_url}"><img src="[getIntroimage_thumb(120,90)]" width="120px" height="90px" alt="{title_text}" title="{title_text}" class="img-responsive"><span class="title">{title_text}</span> </a>
+                            <a href="{detail_url}"><img src="[getIntroimage_thumb(120,90)]" width="120px" height="90px" alt="{title_text}" title="{title_text}" class="img-responsive" style="width:120px;height:90px;"><span class="title">{title_text}</span> </a>
                         ',
                     ));
                     ?>
@@ -40,7 +40,7 @@
                     $this->widget('wItem', array(
                         'data'=>$model,
                         'template'=>'
-                            <a href="{detail_url}"><img src="[getIntroimage_thumb(120,90)]" width="120px" height="90px" alt="{title_text}" title="{title_text}" class="img-responsive"><span class="title">{title_text}</span> </a>
+                            <a href="{detail_url}"><img src="[getIntroimage_thumb(120,90)]" width="120px" height="90px" alt="{title_text}" title="{title_text}" style="width:120px;height:60px;" class="img-responsive"><span class="title">{title_text}</span> </a>
                         ',
                     ));
                     ?>
@@ -59,7 +59,7 @@
                                 $this->widget('wItem', array(
                                     'data'=>$data[$j],
                                     'template'=>'
-                                        <a href="{detail_url}"><img src="[getIntroimage_thumb(120,90)]" width="120px" height="90px" alt="{title_text}" title="{title_text}" class="img-responsive"><span class="title">{title_text}</span> </a>
+                                        <a href="{detail_url}"><img src="[getIntroimage_thumb(120,90)]" width="120px" height="90px" alt="{title_text}" style="width:120px;height:60px;" title="{title_text}" class="img-responsive"><span class="title">{title_text}</span> </a>
                                     ',
                                 ));
                             }

@@ -876,7 +876,7 @@ footer #info-company span{
 
 .none-shadow{box-shadow:none !important;-webkit-box-shadow: none !important;}
 #footer_link{background: #f9fbff;}
-#footer_link .panel-body{background: #f9fbff;}
+#footer_link .panel-body{background: #f0f0f0;}
 .bg-blur{background: #f9fbff;}
 .none-border{border:0 !important;}
 #map{height: 100%;}
