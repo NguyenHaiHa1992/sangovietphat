@@ -877,7 +877,7 @@ footer #info-company span{
 .none-shadow{box-shadow:none !important;-webkit-box-shadow: none !important;}
 #footer_link{background: #f9fbff;}
 #footer_link .panel-body{background: #f0f0f0;}
-.bg-blur{background: #f9fbff;}
+.bg-blur{background: #f0f0f0;}
 .none-border{border:0 !important;}
 #map{height: 100%;}
 i.print_icon{background-image: url('../images/icons/print-icon.png');height: 30px;width: 30px;}
@@ -1018,6 +1018,7 @@ i.print_icon{background-image: url('../images/icons/print-icon.png');height: 30p
     background: #f0f0f0;
     padding: 30px 90px;
     overflow: hidden;
+    margin-bottom: 20px;
 }
 
 .title_dt {
