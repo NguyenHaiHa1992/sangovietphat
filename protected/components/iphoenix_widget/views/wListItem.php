@@ -13,9 +13,8 @@ $end = $type == 'news' ? 3 : 4;
                 if($i % $end == 0){
                         $clear = 'clear :left;';
                 }
-                $style = $type == 'news' ? 'style="width: 33.33333333333333%;'.$clear.'"' : '';
-
-            } 
+                $style = $type == 'news' ? 'style="width: 33.33333333333333%;'.$clear.'"' : 'style="'.$clear.'"';
+                
             ?>
             <li class="item item<?php echo $i;?>" <?php echo $style;?>>
                     <?php echo iPhoenixTemplate::parseTemplate($item, $template);?>
