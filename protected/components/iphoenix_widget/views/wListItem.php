@@ -8,7 +8,16 @@ $end = $type == 'news' ? 3 : 4;
     <?php if($isMobile) :?>
         <ul id="<?php echo $id;?>" class="wListItem <?php echo $class;?>">
             <?php $i=0;foreach($data as $item):?>
-            <li class="item item<?php echo $i;?>" <?= $type == 'news' ? 'style="width: 33.33333333333333%"' : '' ?>>
+            <?php 
+                $clear = '';
+                if($i % $end == 0){
+                        $clear = 'clear :left;';
+                }
+                $style = $type == 'news' ? 'style="width: 33.33333333333333%;'.$clear.'"' : '';
+
+            } 
+            ?>
+            <li class="item item<?php echo $i;?>" <?php echo $style;?>>
                     <?php echo iPhoenixTemplate::parseTemplate($item, $template);?>
             </li>
             <?php $i++;endforeach;?>
