@@ -1069,4 +1069,7 @@ i.print_icon{background-image: url('../images/icons/print-icon.png');height: 30p
     #list-products .category li:nth-child(2n+1){
         clear:left;
     }
+    #list-products .wListItem li:nth-child(2n+1){
+        clear: left;
+    }
 }
