@@ -6,6 +6,7 @@ class wCarouselSlider extends CWidget
     public $id = '';
     public $class = '';
     public $row = 4; // set number item in one row
+    public $template = "";
 
     public function init(){
         parent::init();
@@ -20,6 +21,7 @@ class wCarouselSlider extends CWidget
             'id'=>$this->id,
             'class'=>$this->class,
             'row' => $this->row,
+            'template' => $this->template,
         ));
     }
 }

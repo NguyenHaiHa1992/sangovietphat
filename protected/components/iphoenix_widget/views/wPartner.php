@@ -8,6 +8,7 @@
             'row' => 1,
             'class' => 'slide',
             'id' => $id,
+            'template' => $template,
         ));?>
     </div>
 </div>

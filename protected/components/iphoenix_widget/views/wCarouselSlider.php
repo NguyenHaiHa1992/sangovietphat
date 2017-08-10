@@ -1,4 +1,10 @@
 <!-- wCarouselSlider -->
+
+<?php 
+    if($template == null || strlen($template) == 0){
+        $template = '<a href="{detail_url}"><img src="[getIntroimage_thumb(120,90)]" width="120px" height="90px" alt="{title_text}" title="{title_text}" class="img-responsive" style="width:120px;height:90px;"><span class="title">{title_text}</span> </a>';
+    }
+?>
 <div id="<?php echo $id;?>" class="carousel <?php echo $class;?>" data-ride="carousel">
     <!-- Wrapper for slides -->
     <div class="carousel-inner">
@@ -10,9 +16,7 @@
                     <?php
                         $this->widget('wItem', array(
                             'data'=>$model,
-                            'template'=>'
-                            <a href="{detail_url}"><img src="[getIntroimage_thumb(120,90)]" width="120px" height="90px" alt="{title_text}" title="{title_text}" class="img-responsive" style="width:120px;height:90px;"><span class="title">{title_text}</span> </a>
-                        ',
+                            'template'=>$template,
                         ));
                     ?>
                 <?php endif; $i++;?>
@@ -25,9 +29,7 @@
                     <?php
                     $this->widget('wItem', array(
                         'data'=>$model,
-                        'template'=>'
-                            <a href="{detail_url}"><img src="[getIntroimage_thumb(120,90)]" width="120px" height="90px" alt="{title_text}" title="{title_text}" class="img-responsive" style="width:120px;height:90px;"><span class="title">{title_text}</span> </a>
-                        ',
+                        'template'=> $template,
                     ));
                     ?>
                 <?php endif; $i++;?>
@@ -39,9 +41,7 @@
                     <?php
                     $this->widget('wItem', array(
                         'data'=>$model,
-                        'template'=>'
-                            <a href="{detail_url}"><img src="[getIntroimage_thumb(120,90)]" width="120px" height="90px" alt="{title_text}" title="{title_text}" style="width:120px;height:60px;" class="img-responsive"><span class="title">{title_text}</span> </a>
-                        ',
+                        'template'=>$template,
                     ));
                     ?>
                 <?php endif; $i++;?>
@@ -58,9 +58,7 @@
                             if(isset($data[$j])){
                                 $this->widget('wItem', array(
                                     'data'=>$data[$j],
-                                    'template'=>'
-                                        <a href="{detail_url}"><img src="[getIntroimage_thumb(120,90)]" width="120px" height="90px" alt="{title_text}" style="width:120px;height:60px;" title="{title_text}" class="img-responsive"><span class="title">{title_text}</span> </a>
-                                    ',
+                                    'template'=> $template,
                                 ));
                             }
                         }
