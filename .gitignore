@@ -1,0 +1,8 @@
+/nbproject/private/
+/nbproject/*
+/assets/*
+/data/thumb/*
+/protected/models/
+/protected/runtime/*
+protected/runtime/
+data/upload/image/
