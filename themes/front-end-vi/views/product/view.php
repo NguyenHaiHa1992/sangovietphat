@@ -42,38 +42,12 @@ if(isset($data->introimage)){
                                 'data'=>$data,
                                 'template'=>'
                                     <div id="short-description">
-                                        <div class="image" id="main-image"><a href="#" data-toggle="modal" data-target="#myDetail"><img src="[getIntroimage_thumb(218,142)]" class="thumb img-responsive"></a></div>
-                                        <div class="title">Mã: {name}</div>
-                                        <div class="quote">{introduction}.</div>
-                                        <!--
-                                        <div class="price">Giá hoàn hiện: {price}</div> <span class="notice">*Đã bao gồm công thợ, phụ liệu lót sàn cao cấp</span>
-                                        -->
+                                        <div class="image"><a href="#" data-toggle="modal" data-target="#myDetail"><img src="[getIntroimage_thumb(500,300)]" class="thumb img-responsive"></a></div>
                                     </div>
                                     <div id="specifications" class="info_box">
-                                        <div class="title">Thông số kỹ thuật</div>
+                                        <div class="title name-title">Mã: {name}</div>
                                         <div class="content">
-                                            <table>
-                                                <tr>
-                                                    <td>Model</td>
-                                                    <td>{model}</td>
-                                                </tr>
-                                                <tr>
-                                                    <td>Độ dày</td>
-                                                    <td>{thickness}</td>
-                                                </tr>
-                                                <tr>
-                                                    <td>Chiều rộng</td>
-                                                    <td>{width}</td>
-                                                </tr>
-                                                <tr>
-                                                    <td>Chiều dài</td>
-                                                    <td>{height}</td>
-                                                </tr>
-                                                <tr>
-                                                    <td>Bảo hành</td>
-                                                    <td>{warranty}</td>
-                                                </tr>
-                                            </table>
+                                            <div class="quote">{introduction}.</div>
                                         </div>
                                     </div>
                                     <div id="description" class="info_box">

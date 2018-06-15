@@ -48,7 +48,7 @@
             <?php endforeach;?>
         </div>
         <?php else:
-            $maxItem = iPhoenixUtility::isMobile() ? 4 : 5;
+            $maxItem = iPhoenixUtility::isMobile() ? 2 : 5;
             ?>
             <?php foreach($data as $key => $model):?>
                 <?php if($key % $maxItem == 0):?>

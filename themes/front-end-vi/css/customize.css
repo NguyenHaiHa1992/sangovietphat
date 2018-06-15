@@ -13,7 +13,7 @@
 }
 @media screen and (max-width:768px){
     #hot-products .carousel-inner .item>a{
-        width: 25%
+        width: 50%
     }
 }
 #hot-products .carousel-inner .item>a >span.title{
@@ -188,6 +188,14 @@
 .breadcrumb>.active{
     color: #ffffff;
 }
-.image#main-image img{
-    height: 136px;
+.image img{
+    height: auto;
+    width: 95%;
+    margin: auto;
+}
+
+#specifications .name-title {
+    color: #F02223 !important;
+    font-size: 18px;
+    font-family: "Roboto Medium";
 }

@@ -33,7 +33,7 @@
         margin: 20px 10px 0 10px;
     }
     #list-products .item{
-        width: 50% !important;
+        width: 100% !important;
     }
     #list-products .item > .thumb{
         width: 100%;

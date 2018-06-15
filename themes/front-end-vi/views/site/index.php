@@ -133,7 +133,7 @@
                                 $this->widget('wListItem', array(
                                     'class'=>'list-unstyled',
                                     'data'=>Product::getItems(8,array('cat_id'=>$category->id ,)),
-                                    'template'=>'
+                                    'template'=>'   
                                         <div class="image"><a href="{detail_url}" title="{name}"><img src="[getIntroimage_thumb(220,137)]" alt="{name}" title="{name}" class="img-responsive"></a></div>
                                         <div class="information">
                                             <a href="{detail_url}" title="{name}">[getTitle_text(6)]</a>
