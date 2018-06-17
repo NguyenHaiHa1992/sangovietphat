@@ -25,19 +25,19 @@ $sub_categories = ProductCategory::model()->findAllByAttributes(array(
         <div id="list-products" class="wContentBox">
             <div class="contentBox">
                 <?php if(isset($category) && !$sub_categories):?>
-                    <div class="title_box pc-only">
-                        <!-- wBreadcrumb -->
+<!--                    <div class="title_box pc-only">
+                         wBreadcrumb 
                             <?php
-                                $this->widget('wBreadCrumb',array(
-                                    'data'=>array(
-//                                        'Trang chủ'=>Yii::app()->createUrl('site/index'),
-//                                        'Sản phẩm'=>Yii::app()->createUrl('product/list'),
-                                        $category->name => $category->detail_url,
-                                    ),
-                                ));
+//                                $this->widget('wBreadCrumb',array(
+//                                    'data'=>array(
+////                                        'Trang chủ'=>Yii::app()->createUrl('site/index'),
+////                                        'Sản phẩm'=>Yii::app()->createUrl('product/list'),
+//                                        $category->name => $category->detail_url,
+//                                    ),
+//                                ));
                             ?>
-                        <!-- end of wBreadcrumb -->
-                    </div>
+                         end of wBreadcrumb 
+                    </div>-->
                     <div class="content_box">
                         <!--<div class="image-category">-->
                             <?php // if(isset($category->catimage)):?>

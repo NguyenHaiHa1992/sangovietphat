@@ -757,7 +757,8 @@ footer #info-company span{
 }
 .intro-category{
     margin: 10px 0 20px;
-    border-bottom: solid 1px;
+    padding: 10px;
+    border-bottom: 1px solid #f8ceaf;
 }
 .category #pager li{
     width: auto;
