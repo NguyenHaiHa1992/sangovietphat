@@ -10,7 +10,6 @@ if(isset($_GET['cat_id'])){
         $this->redirect(iPhoenixUrl::createUrl('product/list'));
     }
 }
-//var_dump($category->name, $category->description);exit;
 $this->widget('wMetaTag',array(
     'setting'=>'PRODUCT',
 ));
@@ -90,16 +89,16 @@ $sub_categories = ProductCategory::model()->findAllByAttributes(array(
                        $bread = array( $category->name => $category->detail_url,);
                     }
                 ?>
-                    <div class="title_box pc-only">
-                        <!-- wBreadcrumb -->
+<!--                    <div class="title_box pc-only">
+                         wBreadcrumb 
                         <?php
-                        $this->widget('wBreadCrumb',array(
-                            'data'=>$bread,
-                        ));
+                        //$this->widget('wBreadCrumb',array(
+                          //  'data'=>$bread,
+                        //));
                         ?>
-                        <!-- end of wBreadcrumb -->
-                    </div>
-                    <?php if(strlen($category->description)): ?>
+                         end of wBreadcrumb 
+                    </div>-->
+                    <?php if(isset($category) && strlen($category->description)): ?>
                         <div class="intro-category">
                             <?php echo $category->description;?>
                         </div>

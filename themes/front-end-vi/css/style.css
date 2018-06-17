@@ -757,6 +757,7 @@ footer #info-company span{
 }
 .intro-category{
     margin: 10px 0 20px;
+    border-bottom: solid 1px;
 }
 .category #pager li{
     width: auto;
@@ -1154,5 +1155,16 @@ i.print_icon{background-image: url('../images/icons/print-icon.png');height: 30p
 @media (max-width: 767px){
     .header .content .search {
         width: 100%;
+    }
+}
+
+@media (max-width: 375px) {
+    .header .content .search .input input {
+        width: 250px;
+    }
+}
+@media (max-width: 320px){
+    .header .content .search .input input {
+        width: 230px;
     }
 }
