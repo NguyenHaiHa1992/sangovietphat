@@ -135,13 +135,14 @@ class Controller extends CController {
 
 
     public function actionSearch(){
-        if(isset($_POST['keyword'])){
-            $keyword = $_POST['keyword'];
-            Yii::app()->session['keyword'] = $keyword;
+        $keyword = "";
+        if(isset($_GET['keyword'])){
+            $keyword = $_GET['keyword'];
+//            Yii::app()->session['keyword'] = $keyword;
         }
-        else{
-            $keyword = Yii::app()->session['keyword'];
-        }
+//        else{
+//            $keyword = Yii::app()->session['keyword'];
+//        }
         $this->render('/site/search',array(
             'keyword'=>$keyword,
         ));

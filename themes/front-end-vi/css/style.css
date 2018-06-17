@@ -43,7 +43,7 @@ ul{
 /*---------- index.html file -------------*/
 /*header*/
 header{
-    box-shadow: 0 0 3px 1px #555;
+    /*box-shadow: 0 0 3px 1px #555;*/
     /*overflow:hidden ;*/
 }
 #container-header{
@@ -975,7 +975,7 @@ i.print_icon{background-image: url('../images/icons/print-icon.png');height: 30p
 }
 @media screen and (min-width:1024px){
     li.item img{
-        max-height: 171px;
+        max-height: 185px;
     }
 }
 
@@ -1080,3 +1080,68 @@ i.print_icon{background-image: url('../images/icons/print-icon.png');height: 30p
     }
 }
 
+
+
+.header {
+    padding: 20px 0 15px;
+}
+.clearFix {
+    display: inline-block;
+    clear: both;
+    width: 100%;
+}
+.header .logo {
+    width: 280px;
+    float: left;
+}
+
+@media (min-width: 768px){
+    .header .content {
+        margin-left: 30%;
+    }
+}
+
+.header .content .search {
+    float: left;
+    width: 430px;
+}
+
+.header .content .search .input{
+    border: 1px solid #00483e;
+    margin-bottom: 10px;
+    display: inline-block;
+    clear: both;
+}
+
+.header .content .search .input .control {
+    float: left;
+}
+.header .content .search .input input {
+    background: none;
+    border: 0;
+    font: normal 12px Arial,Helvetica,sans-serif;
+    color: #555;
+    padding: 10px 8px 8px 15px;
+    width: 303px;
+}
+.header .content .search .input button {
+    height: 33px;
+    float: right;
+    background: #00483e;
+    border: 0;
+    color: #fff;
+    font: normal 12px Arial,Helvetica,sans-serif;
+    padding: 8px 15px 8px 15px;
+    cursor: pointer;
+}
+.main-width {
+    /*width: 1200px;*/
+    margin: 0 auto;
+    text-align:center;
+    /*min-width: 1200px;*/
+}
+@media (min-width: 768px){
+    .container {
+        width: 1200px !important;
+    }  
+}

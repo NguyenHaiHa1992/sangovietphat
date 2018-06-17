@@ -10,10 +10,10 @@ if(isset($_GET['cat_id'])){
         $this->redirect(iPhoenixUrl::createUrl('product/list'));
     }
 }
+//var_dump($category->name, $category->description);exit;
 $this->widget('wMetaTag',array(
     'setting'=>'PRODUCT',
 ));
-
 //for sub category
 // remove sub category requirement 08/07/2017
 $sub_categories = ProductCategory::model()->findAllByAttributes(array(
@@ -99,6 +99,11 @@ $sub_categories = ProductCategory::model()->findAllByAttributes(array(
                         ?>
                         <!-- end of wBreadcrumb -->
                     </div>
+                    <?php if(strlen($category->description)): ?>
+                        <div class="intro-category">
+                            <?php echo $category->description;?>
+                        </div>
+                    <?php endif;?>
                     <?php foreach($list_category as $key => $category):?>
                         <div class="col-sm-12">
                             <!-- wContentBox -->

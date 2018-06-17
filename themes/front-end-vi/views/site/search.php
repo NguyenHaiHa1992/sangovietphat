@@ -12,7 +12,7 @@ $this->widget('wMetaTag',array(
 ?>
 
 
-<div class="col-md-8 pull-right" id="main-content">
+<div class="col-md-12 pull-right" id="main-content">
     <div class="col-sm-12">
         <!-- wContentBox -->
         <div id="list-news" class="wContentBox">
