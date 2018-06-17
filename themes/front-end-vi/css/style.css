@@ -1080,11 +1080,12 @@ i.print_icon{background-image: url('../images/icons/print-icon.png');height: 30p
     }
 }
 
-
-
-.header {
-    padding: 20px 0 15px;
+@media (min-width: 768px){
+    .header {
+        padding: 20px 0 15px;
+    }
 }
+
 .clearFix {
     display: inline-block;
     clear: both;
@@ -1140,8 +1141,18 @@ i.print_icon{background-image: url('../images/icons/print-icon.png');height: 30p
     text-align:center;
     /*min-width: 1200px;*/
 }
+
 @media (min-width: 768px){
     .container {
         width: 1200px !important;
     }  
+    .sencond-nav {
+        background-color: #9bf441;
+        width: 100%;
+    }
+}
+@media (max-width: 767px){
+    .header .content .search {
+        width: 100%;
+    }
 }

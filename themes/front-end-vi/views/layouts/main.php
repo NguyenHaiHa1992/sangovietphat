@@ -71,7 +71,7 @@ ZA.trackPageview('http://w.news.zing.vn/' + window.location.pathname + window.lo
 <div class="container">
 <div class="row">
 <header>
-    <div class="header clearFix">
+    <div class="header clearFix" id="search-container-header">
         <div class="main-width">
             <div class="logo">
                 <a href="/"><img src="/Content/v2.1/images/logo-text.png" alt=""></a>

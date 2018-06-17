@@ -64,26 +64,33 @@ ZA.trackPageview('http://w.news.zing.vn/' + window.location.pathname + window.lo
 </script>
 <?php 
     $isHomepage = iPhoenixUtility::isHomePage();
+    $search = isset($_GET['keyword']) ? $_GET['keyword'] : '';
 ?>
 <div class="container">
     <div class="row">
         <header>        	
-            <div id="container-header">
-                <?php
-//                $this->widget('wBanner', array(
-//                    'id'=>'logo',
-//                    'data'=>Banner::getBannerPosition(Banner::CAT_BANNER_LOGO,1),
-//                ));
-                ?>
-                <?php if(!iPhoenixUtility::isMobile()) :?>
-                <?php $background_header = Banner::getBannerPosition(Banner::CAT_BANNER_BACKGROUND_HEADER,1);?>
-                <?php if(sizeof($background_header) !=0):?>
-                    <a href="//<?php echo $background_header[0]->url;?>"><img class="image-bacground" src="<?php echo $background_header[0]->image->getAbsoluteUrl();?>" alt="<?php echo $background_header[0]->name;?>"></a>
-                <?php else:?>
-                    <img class="image-bacground" src="//<?php echo Yii::app()->theme->baseUrl;?>/images/header.png" alt="">
-                <?php endif;?>
-                <!--<div class="brand"><?php //echo Setting::s('COMPANY_NAME','INFORMATION');?></div>-->
-               <?php endif;?>
+            <div class="header clearFix" id="search-container-header">
+                <div class="main-width">
+                    <div class="logo">
+                        <a href="/"><img src="/Content/v2.1/images/logo-text.png" alt=""></a>
+                    </div>
+                    <div class="content">
+                        <div class="search">
+                            <div class="home">
+                                <a href="/">
+                                    <i class="fa fa-home" title=""></i></a>
+                            </div>
+                            <div class="input">
+                                <form action="/search" method="GET">
+                                    <div class="control">
+                                        <input name="keyword" placeholder="Nhập từ khóa tìm kiếm" autocomplete="off" value="<?php echo $search;?>">
+                                    </div>
+                                    <button type="submit"><i class="fa fa-search"></i> Tìm kiếm</button>
+                                </form>
+                            </div>
+                        </div>
+                    </div>
+                </div>
             </div>
             
             <!-- wMenu --> 

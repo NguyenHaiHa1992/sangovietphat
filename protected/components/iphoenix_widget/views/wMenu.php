@@ -5,6 +5,62 @@
     $actual_link = (isset($_SERVER['HTTPS']) ? "https" : "http") . "://$_SERVER[HTTP_HOST]$_SERVER[REQUEST_URI]";
 ?>
 
+<?php 
+    if(!function_exists ('gen_html_menu')) {
+        function gen_html_menu($data, $class_menu="") {
+            foreach ($data as $id=>$item){
+                $menu = $item['content'];
+                if(isset($menu->other['url'])){
+                    $class='';
+                    $class_li = $class_menu;
+                    if(isset($item['last-item']) && $item['last-item'])
+                        $class .= ' last-item';
+                    if(isset($item['first-item']) && $item['first-item'])
+                        $class .= '';
+                    if(isset($item['first']) && $item['first']){
+                        /*$class .= 'homepage';
+                        $menu->name = '';*/
+                    }
+                    if(isset($item['last']) && $item['last'])
+                        $class .= ' last';
+                    if(isset($item['havechild']) && $item['havechild'] && $item['level'] > 1)
+                        $class .=' x';
+                    if(isset($item['active']) && $item['active'])
+                        $class_li .= ' active';
+                    if(isset($item['havechild']) && $item['havechild'] && $item['level'] == 1){
+                        $class .= ' havechild';
+                        echo '<li class="dropdown'.$class_li.'">';
+
+                        // echo '<a id="'.$id.'" class="dropdown-toggle '.$class.'" href="'.$menu->url.'" target="'.$menu->target.'" data-toggle="'.$menu->url.'">'.$menu->name.'</a>';
+                        echo '<a id="'.$id.'" class="dropdown-toggle '.$class.'" href="'.$menu->url.'" target="'.$menu->target.'" data-toggle="'.$menu->url.'">'.$menu->name.'<b class="caret"></b></a>';
+                        echo '<ul class="dropdown-menu">';
+                    }
+                    elseif (isset($item['havechild']) && $item['havechilgitd'] && $item['level'] >1){
+                        echo '<li class="dropdown '.$class_li.'">';
+
+                        echo '<a id="'.$id.'" class="'.$class.'" href="'.$menu->url.'" target='.$menu->target.'>'.$menu->name.'</a>';
+
+                        echo '<ul>';
+                    }
+                    else {
+                        echo '<li class="dropdown'.$class_li.'">';
+
+                        echo '<a id="'.$id.'" class="'.$class.'" href="'.$menu->url.'" target='.$menu->target.'>'.$menu->name.'</a>';
+
+                        echo '</li>';
+                    }
+                    if(isset($item['level_close']) && $item['level_close']) {
+                        for ($i=0;$i<$item['level_close'];$i++) {
+                            echo '</ul>';
+                            echo '</li>';
+                        }
+                    }
+                }
+            }
+        }
+    }
+?>
+
 <!-- wMenu -->
 <div id="<?php echo $id;?>" class="<?php echo $class;?>">
 	<nav class="navbar navbar-default" role="navigation">
@@ -78,57 +134,19 @@
 		</div><!-- /.navbar-collapse -->
 		<?php else:?>
 		<div class="collapse navbar-collapse" id="navbar-collapse-1">
+                        <?php
+                        $len = count($data);
+                        $data1= array_slice($data,0, $len/2);
+                        $data2 = array_slice($data, $len/2+1);
+                        ?>
 			<ul class="nav navbar-nav">
 			<?php
-            foreach ($data as $id=>$item){
-                $menu = $item['content'];
-                if(isset($menu->other['url'])){
-                    $class='';
-                    $class_li ='';
-                    if(isset($item['last-item']) && $item['last-item'])
-                        $class .= ' last-item';
-                    if(isset($item['first-item']) && $item['first-item'])
-                        $class .= '';
-                    if(isset($item['first']) && $item['first']){
-                        /*$class .= 'homepage';
-                        $menu->name = '';*/
-                    }
-                    if(isset($item['last']) && $item['last'])
-                        $class .= ' last';
-                    if(isset($item['havechild']) && $item['havechild'] && $item['level'] > 1)
-                        $class .=' x';
-                    if(isset($item['active']) && $item['active'])
-                        $class_li .= ' active';
-                    if(isset($item['havechild']) && $item['havechild'] && $item['level'] == 1){
-                        $class .= ' havechild';
-                        echo '<li class="dropdown'.$class_li.'">';
-
-                        // echo '<a id="'.$id.'" class="dropdown-toggle '.$class.'" href="'.$menu->url.'" target="'.$menu->target.'" data-toggle="'.$menu->url.'">'.$menu->name.'</a>';
-                        echo '<a id="'.$id.'" class="dropdown-toggle '.$class.'" href="'.$menu->url.'" target="'.$menu->target.'" data-toggle="'.$menu->url.'">'.$menu->name.'<b class="caret"></b></a>';
-                        echo '<ul class="dropdown-menu">';
-                    }
-                    elseif (isset($item['havechild']) && $item['havechilgitd'] && $item['level'] >1){
-                        echo '<li class="dropdown'.$class_li.'">';
-
-                        echo '<a id="'.$id.'" class="'.$class.'" href="'.$menu->url.'" target='.$menu->target.'>'.$menu->name.'</a>';
-
-                        echo '<ul>';
-                    }
-                    else {
-                        echo '<li class="dropdown'.$class_li.'">';
-
-                        echo '<a id="'.$id.'" class="'.$class.'" href="'.$menu->url.'" target='.$menu->target.'>'.$menu->name.'</a>';
-
-                        echo '</li>';
-                    }
-                    if(isset($item['level_close']) && $item['level_close']) {
-                        for ($i=0;$i<$item['level_close'];$i++) {
-                            echo '</ul>';
-                            echo '</li>';
-                        }
-                    }
-                }
-            }
+                            gen_html_menu($data1);
+			?>
+			</ul>
+                        <ul class="nav navbar-nav sencond-nav">
+			<?php
+                            gen_html_menu($data2);
 			?>
 			</ul>
 		</div><!-- /.navbar-collapse -->

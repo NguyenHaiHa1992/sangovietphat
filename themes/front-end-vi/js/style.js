@@ -18,7 +18,7 @@ $(document).ready(function(){
     
     $('#page-top').on('click' ,function(e){
         e.preventDefault();
-        var $target = $('#container-header');
+        var $target = $('#search-container-header');
 
         if ($target.length) {
 
@@ -72,7 +72,7 @@ function hideShowToggle(that){
 }
 
 function fixNavMenu(){
-    var pageTop = $('#container-header');
+    var pageTop = $('#search-container-header');
     $('#main-menu').removeClass('fixed');
     if(window.mobilecheck()){
         $(window).scroll(function () {
