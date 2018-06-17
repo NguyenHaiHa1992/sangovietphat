@@ -137,7 +137,7 @@
                         <?php
                         $len = count($data);
                         $data1= array_slice($data,0, $len/2);
-                        $data2 = array_slice($data, $len/2+1);
+                        $data2 = array_slice($data, $len/2);
                         ?>
 			<ul class="nav navbar-nav">
 			<?php
